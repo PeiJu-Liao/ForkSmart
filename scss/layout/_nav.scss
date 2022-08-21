@@ -1,0 +1,223 @@
+.nav {
+  height: 5rem;
+
+  &__ham {
+    display: none;
+  }
+
+  // 左上角的漢堡排
+  &__button {
+    background-color: $color-third;
+    height: 4rem;
+    width: 4rem;
+    position: absolute;
+    top: 0.5rem;
+    left: 2rem;
+    z-index: 500; //前
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  // navbar-list的橘色背景
+  &__background {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 1rem;
+    left: 3rem;
+    // radial-gradient從中心往外擴散...
+    background-image: radial-gradient(#f59d55 1%,
+        $color-secondary 100%);
+    z-index: 100; //中
+    // 轉場效果與速度
+    transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__icon {
+    position: relative;
+    // 將bar置中在白圈裡
+    margin-top: 2rem;
+
+    &,
+    &::before,
+    &::after {
+      width: 2.5rem;
+      height: 0.25rem;
+      background-color: $color-primary;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.5s;
+    }
+
+    &::before {
+      top: -.8rem;
+      // transform-origin: left; //預設是middle
+    }
+
+    &::after {
+      top: .8rem;
+    }
+  }
+
+  &__button:hover &__icon::before {
+    top: -1rem;
+  }
+
+  &__button:hover &__icon::after {
+    top: 1rem;
+  }
+
+  // 中間那條漢堡線 
+  &__checkbox:checked+&__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked+&__button &__icon::before {
+    // top:0 改為0因為要從中心點做rotate旋轉
+    top: 0;
+    transform: rotate(135deg); //180deg-45deg更多旋轉效果
+  }
+
+  &__checkbox:checked+&__button &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+
+  &__hambg {
+    height: 100vh;
+    // width: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 300; //後
+    opacity: 0;
+    width: 0;
+    transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  &__list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    color: $color-dark;
+  }
+
+  //FUNCTIONALITY
+  &__checkbox:checked~&__background {
+    transform: scale(80);
+  }
+
+  &__checkbox:checked~&__hambg {
+    opacity: 1;
+    width: 100%;
+  }
+
+  &__tree {
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 12%;
+  }
+
+  &__logo {
+    line-height: 5rem;
+  }
+
+  &__wrap {
+    justify-content: space-between;
+  }
+
+  &__menu {
+    @include linkColor($color-dark);
+    margin-right: 3rem;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 2.5rem;
+    }
+
+    &:last-child {
+      margin-right: 3rem;
+    }
+
+    position: relative;
+
+    a {
+      padding: 1.5rem 0;
+    }
+
+    & a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 1rem;
+      border-radius: 0.5rem;
+      width: 0%;
+      height: 0.25rem;
+      background-color: $color-secondary;
+      transition: width 0.5s ease-in-out;
+    }
+
+    &:hover {
+      & a::after {
+        width: 110%;
+      }
+    }
+
+    &-login {
+      width: 5rem;
+      height: 3rem;
+      background: $color-primary;
+      line-height: 3rem;
+
+      &:hover {
+        background-color: $color-secondary;
+      }
+    }
+  }
+
+  @include ipad_horizontal {
+    .nav {
+      &__item:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  @include ipad {
+    .nav {
+      &__ham {
+        display: block;
+      }
+
+      &__wrap {
+        justify-content: center;
+      }
+
+      &__menuWrap {
+        display: none;
+      }
+
+      &__tree {
+        width: 18%;
+      }
+    }
+  }
+}

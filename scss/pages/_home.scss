@@ -1,0 +1,164 @@
+// 拯救隱性飢餓Section
+.hungryWarning {
+  padding-top: 5rem;
+
+  &__info {
+    margin-bottom: 5rem;
+  }
+
+  &__tree {
+    z-index: 1;
+    width: 12%;
+  }
+
+  &__card {
+    padding: 5rem 2.5rem;
+    border-radius: 1.125rem; //18px
+    position: relative;
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    &:hover {
+      box-shadow: $box-shawdow;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      height: 10px;
+      width: 90%;
+      border-radius: 1.125rem;
+      background-color: $color-secondary-100;
+    }
+  }
+
+  @include ipad_horizontal {
+    .hungryWarning {
+      &__card {
+        padding: 4rem 2rem;
+
+        h3 {
+          font-size: 1.2rem;
+        }
+      }
+
+      &__tree {
+        width: 18%;
+      }
+    }
+  }
+
+  @include ipad {
+    .hungryWarning {
+      &__info:last-child {
+        align-items: center;
+        flex-direction: column-reverse;
+      }
+
+      &__card {
+        h3 {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  @include phone {
+    .hungryWarning {
+      &__tree {
+        width: 30%;
+      }
+
+      // &__card {
+      //   h3 {
+      //     font-size: 1.5rem;
+      //   }
+      // }
+    }
+  }
+}
+
+.food {
+  margin-top: -3rem;
+
+  &__tree {
+    z-index: 1;
+    width: 20%;
+  }
+
+  &__wrap {
+    padding-top: 30rem;
+  }
+
+  &__topImg {
+    position: relative;
+  }
+
+  &__personStand {
+    width: 50%;
+    position: absolute;
+    top: -40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__bg-ground-btm {
+    padding-top: 5rem;
+    padding-bottom: 20rem;
+    background: url('../images/bg-ground-btm.jpeg') top / contain;
+    height: 100%;
+    text-align: center;
+  }
+
+  &__card {
+    &-img {
+      height: 15rem;
+      object-fit: cover;
+    }
+  }
+
+  @include ipad_horizontal {
+    .food {
+      &__tree {
+        width: 25%;
+      }
+
+      &__personStand {
+        width: 70%;
+      }
+
+      &__bg-ground-btm {
+        padding-top: 10rem;
+      }
+    }
+  }
+
+  @include ipad {
+    .food {
+      &__tree {
+        width: 30%;
+      }
+
+      &__personStand {
+        width: 90%;
+      }
+
+      &__bg-ground-btm {
+        padding-top: 15rem;
+      }
+    }
+  }
+
+  @include phone {
+    .food {
+      &__wrap {
+        padding-top: 25rem;
+      }
+    }
+  }
+}

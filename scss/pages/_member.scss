@@ -1,0 +1,32 @@
+.login,
+.register {
+
+  &__wrap {
+    // height: calc(100vh - 3rem);
+    position: relative;
+  }
+
+  &__form {
+    min-height: calc(100vh - 8rem);
+    width: 45%;
+    background-color: rgba($color-third, 0.7);
+  }
+
+  &__banner {
+    width: 50%;
+  }
+
+  @include ipad {
+
+    .register,
+    .login {
+      &__form {
+        width: 85%;
+      }
+
+      &__banner {
+        display: none;
+      }
+    }
+  }
+}

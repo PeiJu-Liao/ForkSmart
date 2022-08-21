@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {{!-- google meterial --}}
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="/stylesheet/helpers/bootstrap.css">
+  <link rel="stylesheet" href="/stylesheet/all.css">
+  <title>{{title}}</title>
+</head>
+
+<body>
+  <nav class="nav bg-light">
+    <div class="container ">
+      <div class="nav__wrap d-flex align-items-center">
+
+        {{!-- 漢堡排製作 --}}
+        <div class="nav__ham">
+          <input type="checkbox" class="nav__checkbox" id="navi-toggle">
+          <label for="navi-toggle" class="nav__button">
+            <span class="nav__icon">&nbsp;</span>
+          </label>
+          <div class="nav__background">&nbsp;</div>
+          <div class="nav__hambg">
+            <ul class="nav__list">
+              <li class="nav__list-item display-5 mb-4">
+                <a href="#" class="link-light">
+                  <span class="material-symbols-outlined display-5 align-top">
+                    emoji_people
+                  </span>
+                  健康體態
+                </a>
+              </li>
+              <li class="nav__list-item display-5 mb-4">
+                <a href="#" class="link-light">
+                  <span class="material-symbols-outlined display-5 align-top">
+                    book
+                  </span>
+                  健康日誌</a>
+              </li>
+              <li class="nav__list-item display-5 mb-4">
+                <a href="#" class="link-light">
+                  <span class="material-symbols-outlined display-5 align-top">
+                    restaurant
+                  </span>
+                  聰明飲食</a>
+              </li>
+              <li class="nav__list-item display-5">
+                <a href="/user/login" class="link-light">
+                  <span class="material-symbols-outlined display-5 align-top">
+                    login
+                  </span>
+                  會員登入
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <a href="#" class="link-dark nav__logo">
+          <h1 class="fs-3">ForkSmart</h1>
+        </a>
+
+        <div class="nav__menuWrap">
+          <ul class="nav__menu d-flex align-items-center">
+            <li class="nav__item">
+              <a href="#hungryWarning">健康體態</a>
+            </li>
+            <li class="nav__item">
+              <a href="#">健康日誌</a>
+            </li>
+            <li class="nav__item">
+              <a href="#foodCategory">聰明飲食</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact">聯絡我們</a>
+            </li>
+            <li class="nav__item-login text-center rounded-3">
+              <a href="/user/login" class="link-light">登入</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <img src="/images/header-tree-left@2x.png" alt="header-img" class="nav__tree">
+  </nav>
+
+  {{{body}}}
+
+
+  <footer class="contact bg-dark-100 d-flex flex-column justify-content-between pt-16 px-16" id="contact">
+    <img src="/images/illust-footer-tree@2x.png" alt="tree" class="contact__tree">
+
+    <img src="/images/footer_fruits.png" alt="fruits" class="contact__fruits">
+
+    <div class="container">
+      <div class="d-flex flex-column">
+        <h2 class="fs-2 text-light fw-bold mb-4">Fork Smart</h2>
+        <ul class="contact__menu">
+          <li class="fs-4 mb-2">
+            <a href="mailto:peiju.liao@gmail.com" class="link-light">
+              <span class="material-symbols-outlined align-text-top d-inline-block mr-4">
+                mail
+              </span>
+              peiju.liao@gmail.com
+            </a>
+          </li>
+          <li class="fs-4">
+            <a href="tel:0912345678" class="link-light">
+              <span class="material-symbols-outlined align-text-top d-inline-block mr-4">
+                phone_iphone
+              </span>
+              0912345678
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="text-center text-light">©Designed by ForkSmart all right reserved | Peggy</p>
+  </footer>
+
+  <script src="javascript/index.js"></script>
+</body>
+
+</html>
