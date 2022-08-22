@@ -1,8 +1,9 @@
 {
-  "name": "ForkSmart",
+  "name": "forksmart",
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "compiledSass": "npx sass --watch ./scss:./public/stylesheet",
     "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
