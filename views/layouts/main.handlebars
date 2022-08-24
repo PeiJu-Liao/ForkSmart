@@ -70,18 +70,30 @@
             <li class="nav__item">
               <a href="#hungryWarning">健康體態</a>
             </li>
+            {{#if login}}
             <li class="nav__item">
-              <a href="#">健康日誌</a>
+              <a href="/">健康日誌</a>
             </li>
+            {{else}}
+            <li class="nav__item">
+              <a href="/user/login">健康日誌</a>
+            </li>
+            {{/if}}
             <li class="nav__item">
               <a href="#foodCategory">聰明飲食</a>
             </li>
             <li class="nav__item">
               <a href="#contact">聯絡我們</a>
             </li>
+            {{#if login}}
+            <li class="nav__item-login text-center rounded-3">
+              <a href="/" class="link-light">登出</a>
+            </li>
+            {{else}}
             <li class="nav__item-login text-center rounded-3">
               <a href="/user/login" class="link-light">登入</a>
             </li>
+            {{/if}}
           </ul>
         </div>
       </div>
