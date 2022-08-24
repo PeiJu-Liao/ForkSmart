@@ -21,7 +21,7 @@ const passportCheck = function () {
         if (error) { return done(error) }
         // NOTE: 狀況二: 若找毋該使用者資料，則不提供有關密碼的資訊
         if (!user) { //這邊的false是指驗證失敗(帳號/密碼不符)
-          return done(null, false, req.flash("warning__msg", "該信箱或密碼已經註冊。"))
+          return done(null, false, req.flash("warning_msg", "該信箱或密碼已經註冊。"))
         }
         // NOTE: 狀況三: 使用者名稱正確，但密碼錯誤(此處需用bcrypt加密模組做確認)
         bcrypt.compare(password, user.password, function (err, result) {
@@ -30,7 +30,7 @@ const passportCheck = function () {
             //若帳密皆正確，提供password使用者資料
             return done(null, user)
           } else {
-            return done(null, false, req.flash("warning__msg", "您輸入的密碼有誤，請再次確認。"))
+            return done(null, false, req.flash("warning_msg", "您輸入的密碼有誤，請再次確認。"))
           }
         })
 
