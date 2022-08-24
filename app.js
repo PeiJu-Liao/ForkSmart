@@ -17,6 +17,13 @@ app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 // flash 
 app.use(flash())
+// setting local variable so we can use it anywhere in app
+app.use((req, res, next) => {
+  res.locals.success_msg = req.flash('success_msg')
+  res.locals.error_msg = req.flash('error_msg')
+  next()
+})
+
 
 // express-session middleware
 app.use(session({
