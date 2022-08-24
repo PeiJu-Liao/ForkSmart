@@ -20,7 +20,10 @@ router.get('/register', (req, res) => {
 })
 
 router.post('/login', (req, res) => {
-  console.log(`登入輸入`);
+  const { name, email, password, password2 } = req.body
+  res.render('index', {
+    login: true
+  })
 })
 
 router.post('/register', (req, res) => {
