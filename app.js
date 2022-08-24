@@ -5,6 +5,8 @@ const exphbs = require('express-handlebars')
 const routes = require('./routes')
 const path = require('path')
 const flash = require('connect-flash')
+const session = require('express-session')
+const passport = require('passport')
 require('./config/data')
 
 // Template Engine Setting
@@ -15,6 +17,18 @@ app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 // flash 
 app.use(flash())
+
+// express-session middleware
+app.use(session({
+  secret: 'member secret',
+  resave: true,
+  saveUninitialized: true,
+  // cookie: { secure: true }
+}))
+
+// passport middleware loading
+app.use(passport.initialize());
+app.use(passport.session());
 
 
 // 載入路由
