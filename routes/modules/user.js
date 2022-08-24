@@ -71,7 +71,7 @@ router.post('/register', (req, res) => {
           // NOTE: 存入資料庫前將使用者設定之密碼"加密"
           bcrypt.genSalt(10, function (err, salt) {
             bcrypt.hash(newUser.password, salt, function (err, hash) {
-              if (error) throw err
+              if (err) throw err
               // NOTE: "hash湊密"之後存入DB
               newUser.password = hash
               newUser.save()
