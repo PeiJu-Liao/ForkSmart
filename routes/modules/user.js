@@ -3,6 +3,8 @@ const router = express.Router()
 const forkSmartUser = require('../../models/User')
 const bcrypt = require('bcryptjs')
 const passport = require('passport')
+const { forwardAuthenticated } = require('../../config/auth');
+
 
 // 登入頁面
 router.get('/login', (req, res) => {
@@ -24,7 +26,7 @@ router.get('/register', (req, res) => {
 router.post('/login', (req, res, next) => {
   passport.authenticate('local', {
     failureRedirect: "/user/login",
-    successRedirect: "/dashbord",
+    successRedirect: "/",
     failureFlash: true
   })(req, res, next);
 })
@@ -95,6 +97,14 @@ router.post('/register', (req, res) => {
   }
 
 
+})
+
+
+// Logout
+router.get('/logout', (req, res) => {
+  req.logout()
+  req.flash('success_msg', '你已成功登出。')
+  res.redirect('user/login')
 })
 
 module.exports = router
