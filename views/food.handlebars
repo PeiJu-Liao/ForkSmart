@@ -1,121 +1,87 @@
-<article class="foods py-8 bg-light">
-  <div class="container">
+<article class="foods bg-dark">
+  <div class="foods__wrap">
+    <div class="container h-100">
+      <div class="h-100 pt-15">
+        <form action="" method="POST" class="foods__form py-8 px-8">
+          <div class="row justify-content-center">
+            {{!-- 食物分類 --}}
+            <div class="col-10 col-md-4">
+              <div class="foods__category mx-auto mb-6">
+                <select class="form-select form-select" aria-label=".form-select example">
+                  <option> 六大食物全部 </option>
+                  <option value="1">全穀雜糧類</option>
+                  <option value="2">蛋豆魚肉類</option>
+                  <option value="3">乳品類</option>
+                  <option value="3">蔬菜類</option>
+                  <option value="3">水果類</option>
+                  <option value="3">油脂與堅果種子類</option>
+                </select>
+              </div>
+            </div>
+            {{!-- 維生素分類 --}}
+            <div class="col-10 col-md-4">
+              <div class="foods__vitamin mx-auto mb-6">
+                <select class="form-select form-select" aria-label=".form-select example">
+                  <option> 維生素 </option>
+                  <option value="1">維生素A</option>
+                  <option value="2">維生素B</option>
+                  <option value="3">維生素D</option>
+                  <option value="3">維生素E</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-10 col-md-4">
+              <div class="foods__vitamin mx-auto mb-6">
+                <select class="form-select form-select" aria-label=".form-select example">
+                  <option> 礦物質 </option>
+                  <option value="1">鈣</option>
+                  <option value="2">鐵</option>
+                  <option value="3">鎂</option>
+                  <option value="3">鋅</option>
+                  <option value="3">碘</option>
+                </select>
+              </div>
+            </div>
 
-    {{!-- 食物分類 --}}
-    <div class="foods__sort d-flex flex-column mb-8">
-
-      <div class="foods__category d-md-none w-75 mx-auto mb-6">
-        <select class="form-select form-select-lg" aria-label=".form-select-sm example">
-          <option> 六大食物全部 </option>
-          <option value="1">全穀雜糧類</option>
-          <option value="2">蛋豆魚肉類</option>
-          <option value="3">乳品類</option>
-          <option value="3">蔬菜類</option>
-          <option value="3">水果類</option>
-          <option value="3">油脂與堅果種子類</option>
-        </select>
+            <div class="col-10">
+              <div class="input-group mb-3 mx-auto w-100">
+                <input type="text" class="form-control" placeholder="請輸入欲尋找的食物名稱或透過上述條件篩選..." aria-label="food_name"
+                  aria-describedby="button-addon2">
+                <button type="submit" class="btn btn-primary">搜尋</button>
+              </div>
+            </div>
+          </div>
+        </form>
       </div>
-
-      <ul class="foods__categoryXL d-none d-md-flex list-group list-group-horizontal text-center mb-md-4">
-        <a href="#" class="list-group-item flex-fill pe-auto" id="grain">全穀雜糧類</a>
-        <a href="#" class="list-group-item flex-fill pe-auto" id="eggs">蛋豆魚肉類</a>
-        <a href="#" class="list-group-item flex-fill pe-auto" id="milk">乳品類</a>
-        <a href="#" class="list-group-item flex-fill pe-auto" id="vegs">蔬菜類</a>
-        <a href="#" class="list-group-item flex-fill pe-auto" id="fruit">水果類</a>
-        <a href="#" class="list-group-item flex-fill pe-auto" id="oil">油脂與堅果種子類</a>
-      </ul>
-
-      <div class="foods__nutrition d-flex justify-content-around">
-
-        {{!-- 維生素 --}}
-        <div class="d-md-flex flex-wrap me-md-6">
-
-          <div class="form-check d-flex align-items-center me-md-2">
-            <input class="form-check-input me-2" type="checkbox" name="vitaminA" id="vitaminA">
-            <label class="form-check-label fs-5" for="vitaminA">
-              維生素 A
-            </label>
-          </div>
-          <div class="form-check d-flex align-items-center me-md-2">
-            <input class="form-check-input me-2" type="checkbox" name="vitaminC" id="vitaminC">
-            <label class="form-check-label fs-5" for="vitaminC">
-              維生素 C
-            </label>
-          </div>
-          <div class="form-check d-flex align-items-center me-md-2">
-            <input class="form-check-input me-2" type="checkbox" name="vitaminD" id="vitaminD">
-            <label class="form-check-label fs-5" for="vitaminD">
-              維生素 D
-          </div>
-          <div class="form-check d-flex align-items-center me-md-2">
-            <input class="form-check-input me-2" type="checkbox" name="vitaminE" id="vitaminE">
-            <label class="form-check-label fs-5" for="vitaminE">
-              維生素 E
-            </label>
-          </div>
-
-        </div>
-
-        {{!-- 礦物質 --}}
-        <div class="d-md-flex flex-md-wrap">
-          <div class="form-check d-flex align-items-center me-2">
-            <input class="form-check-input me-3" type="checkbox" name="calcium" id="calcium">
-            <label class="form-check-label fs-5" for="calcium">
-              鈣Calcium
-            </label>
-          </div>
-          <div class="form-check d-flex align-items-center me-2">
-            <input class="form-check-input me-3" type="checkbox" name="iron" id="iron">
-            <label class="form-check-label fs-5" for="iron">
-              鐵Iron
-            </label>
-          </div>
-          <div class="form-check d-flex align-items-center me-2">
-            <input class="form-check-input me-3" type="checkbox" name="magnesium" id="magnesium">
-            <label class="form-check-label fs-5" for="magnesium">
-              鎂Magnesium
-            </label>
-          </div>
-          <div class="form-check d-flex align-items-center me-2">
-            <input class="form-check-input me-3" type="checkbox" name="zinc" id="zinc">
-            <label class="form-check-label fs-5" for="zinc">
-              鋅Zinc
-            </label>
-          </div>
-          <div class="form-check d-flex align-items-center me-2">
-            <input class="form-check-input me-3" type="checkbox" name="iodine" id="iodine">
-            <label class="form-check-label fs-5" for="iodine">
-              碘Iodine
-            </label>
-          </div>
-        </div>
-      </div>
-
-      <div class="input-group mb-3 mx-auto w-75">
-        <input type="text" class="form-control" placeholder="請輸入欲搜尋的食物名稱" aria-label="food_name"
-          aria-describedby="button-addon2">
-        <button class="btn btn-outline-secondary" type="button" id="button-addon2">搜尋</button>
-      </div>
-
     </div>
-    {{!-- 食物 --}}
-    <div class="foods__cards row">
 
-      <div class="col-3">
-        <div class="card border-0 rounded-0">
-          <img src="/images/apple-compressed.jpeg" class="card-img-top rounded-0" alt="蘋果" style="height: 15rem;">
-          <div class="card-body">
-            <h5 class="card-title py-2 border-bottom border-primary fs-5 fw-bold">蘋果</h5>
-            <p class="card-text">
-              <span class="material-icons align-top">
-                calendar_month
-              </span>
-              April-August
-            </p>
+
+  </div>
+
+  <div class="foods__cards py-12">
+    <div class="container">
+      <div class="row justify-content-center">
+
+        <div class="col-10 col-md-4 col-lg-3">
+          <div class="card border-0 rounded-1 text-dark">
+            <img src="/images/apple-compressed.jpeg" class="card-img-top rounded-1" alt="蘋果" style="height: 15rem;">
+            <div class="card-body">
+              <h5 class="card-title py-2 border-bottom border-primary fw-bold">蘋果</h5>
+              <p class="card-text">
+                <span class="material-icons align-top">
+                  calendar_month
+                </span>
+                April-August
+              </p>
+            </div>
           </div>
         </div>
+
       </div>
-
-
     </div>
+  </div>
+
+
+
+
 </article>

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap"); /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -219,7 +220,7 @@ body {
   box-shadow: 0 10px 20px rgba(236, 126, 16, 0.8078431373);
 }
 .btn__primary::after {
-  background-color: #b94a12;
+  background-color: #ff7730;
 }
 .btn__outline-primary {
   border: 1px solid #EE8319;
@@ -239,7 +240,6 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
   overflow: hidden;
   opacity: 0.9;
 }
@@ -503,7 +503,7 @@ body {
   height: 10px;
   width: 90%;
   border-radius: 1.125rem;
-  background-color: #b94a12;
+  background-color: #ff7730;
 }
 @media (max-width: 992px) {
   .hungryWarning .hungryWarning__card {
@@ -619,11 +619,17 @@ body {
   }
 }
 
-.foods__categoryXL a:hover,
-.foods__categoryXL a.active {
-  background-color: #EE8319;
-  color: #fff;
-  transform: translateY(-0.25rem);
+.foods__wrap {
+  background-image: linear-gradient(to bottom, #fbf8e9, rgba(234, 87, 4, 0.7)), url("../images/orange-bf.jpg");
+  background-size: cover;
+  background-position: top;
+  /* 多邊形clip-path新語法 */
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 55vh, 0 80vh);
+  clip-path: polygon(0 0, 100% 0, 100% 55vh, 0 80vh);
+  height: calc(100vh - 8rem);
+}
+.foods__form {
+  background-color: rgba(238, 131, 25, 0.3);
 }
 .foods__cards .card img {
   object-fit: cover;

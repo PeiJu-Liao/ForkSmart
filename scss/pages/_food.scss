@@ -1,15 +1,21 @@
 .foods {
-  &__categoryXL {
+  &__wrap {
+    background-image: linear-gradient(to bottom, rgba($color-third, 1),
+        rgba($color-secondary, 0.7)), url('../images/orange-bf.jpg');
+    background-size: cover;
+    background-position: top;
+    /* 多邊形clip-path新語法 */
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 55vh, 0 80vh);
+    clip-path: polygon(0 0, 100% 0, 100% 55vh, 0 80vh);
+    height: calc(100vh - 8rem);
+  }
 
-    a:hover,
-    a.active {
-      background-color: $color-primary;
-      color: $color-white;
-      transform: translateY(-0.25rem);
-    }
+  &__form {
+    background-color: rgba($color-primary, 0.3);
   }
 
   &__cards {
+
     .card {
       img {
         object-fit: cover;
