@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const forkSmartUser = require('../../models/User')
 const bcrypt = require('bcryptjs')
+const passport = require('passport')
 
 // 登入頁面
 router.get('/login', (req, res) => {
@@ -19,12 +20,14 @@ router.get('/register', (req, res) => {
   })
 })
 
-router.post('/login', (req, res) => {
-  const { name, email, password, password2 } = req.body
-  res.render('index', {
-    login: true
-  })
-})
+router.post('/login',
+  passport.authenticate('local', {
+    successRedirect: '/welcome',
+    failureRedirect: '/login',
+    failureFlash: true
+  }), function (req, res) {
+    res.redirect('/' + req.user.name);
+  });
 
 router.post('/register', (req, res) => {
   const { name, email, password, password2 } = req.body
