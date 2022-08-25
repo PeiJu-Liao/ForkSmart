@@ -219,7 +219,7 @@ body {
   box-shadow: 0 10px 20px rgba(236, 126, 16, 0.8078431373);
 }
 .btn__primary::after {
-  background-color: #EA601D;
+  background-color: #b94a12;
 }
 .btn__outline-primary {
   border: 1px solid #EE8319;
@@ -503,7 +503,7 @@ body {
   height: 10px;
   width: 90%;
   border-radius: 1.125rem;
-  background-color: #EA601D;
+  background-color: #b94a12;
 }
 @media (max-width: 992px) {
   .hungryWarning .hungryWarning__card {
@@ -617,6 +617,10 @@ body {
 .register .login__banner {
     display: none;
   }
+}
+
+.foods {
+  margin-top: 5rem;
 }
 
 /*# sourceMappingURL=all.css.map */

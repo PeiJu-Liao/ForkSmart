@@ -1,36 +1,84 @@
-<article class="food">
+<article class="foods bg-light">
   <div class="container">
-    <ul class="food__category">
-      <li>
-        <a href="">
+    <div class="foods__sort py-8 d-flex flex-column">
 
-        </a>
-      </li>
-      <li>
-        <a href="">
 
-        </a>
-      </li>
-      <li>
-        <a href="">
+      <div class="food__category w-75 mx-auto mb-6 d-md-none">
+        <select class="form-select form-select-lg" aria-label=".form-select-sm example">
+          <option> 六大食物全部 </option>
+          <option value="1">全穀雜糧類</option>
+          <option value="2">蛋豆魚肉類</option>
+          <option value="3">乳品類</option>
+          <option value="3">蔬菜類</option>
+          <option value="3">水果類</option>
+          <option value="3">油脂與堅果種子類</option>
+        </select>
+      </div>
+      <div class="food__categoryScreen list-group list-group-horizontal">
+        <p class="list-group-item">全穀雜糧類</p>
+        <p class="list-group-item">蛋豆魚肉類</p>
+      </div>
 
-        </a>
-      </li>
-      <li>
-        <a href="">
 
-        </a>
-      </li>
-      <li>
-        <a href="">
+      <div class="food__nutrition d-flex justify-content-around">
+        <div>
+          <div class="form-check d-flex align-items-center ">
+            <input class="form-check-input me-2" type="checkbox" name="vitaminA" id="vitaminA">
+            <label class="form-check-label fs-5" for="vitaminA">
+              維生素 A
+            </label>
+          </div>
+          <div class="form-check d-flex align-items-center">
+            <input class="form-check-input me-2" type="checkbox" name="vitaminC" id="vitaminC">
+            <label class="form-check-label fs-5" for="vitaminC">
+              維生素 C
+            </label>
+          </div>
+          <div class="form-check d-flex align-items-center">
+            <input class="form-check-input me-2" type="checkbox" name="vitaminD" id="vitaminD">
+            <label class="form-check-label fs-5" for="vitaminD">
+              維生素 D
+          </div>
+          <div class="form-check d-flex align-items-center">
+            <input class="form-check-input me-2" type="checkbox" name="vitaminE" id="vitaminE">
+            <label class="form-check-label fs-5" for="vitaminE">
+              維生素 E
+            </label>
+          </div>
+        </div>
+        <div>
+          <div class="form-check d-flex align-items-center">
+            <input class="form-check-input me-2" type="checkbox" name="calcium" id="calcium">
+            <label class="form-check-label fs-5" for="calcium">
+              鈣 Calcium
+            </label>
+          </div>
+          <div class="form-check d-flex align-items-center">
+            <input class="form-check-input me-2" type="checkbox" name="iron" id="iron">
+            <label class="form-check-label fs-5" for="iron">
+              鐵 Iron
+            </label>
+          </div>
+          <div class="form-check d-flex align-items-center">
+            <input class="form-check-input me-2" type="checkbox" name="magnesium" id="magnesium">
+            <label class="form-check-label fs-5" for="magnesium">
+              鎂 Magnesium
+            </label>
+          </div>
+          <div class="form-check d-flex align-items-center">
+            <input class="form-check-input me-2" type="checkbox" name="zinc" id="zinc">
+            <label class="form-check-label fs-5" for="zinc">
+              鋅 Zinc
+            </label>
+          </div>
+          <div class="form-check d-flex align-items-center">
+            <input class="form-check-input me-2" type="checkbox" name="iodine" id="iodine">
+            <label class="form-check-label fs-5" for="iodine">
+              碘 Iodine
+            </label>
+          </div>
+        </div>
+      </div>
 
-        </a>
-      </li>
-      <li>
-        <a href="">
-
-        </a>
-      </li>
-    </ul>
-  </div>
+    </div>
 </article>
