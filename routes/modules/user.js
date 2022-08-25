@@ -20,15 +20,17 @@ router.get('/register', (req, res) => {
   })
 })
 
-router.post('/login',
+// Login 
+router.post('/login', (req, res, next) => {
   passport.authenticate('local', {
-    successRedirect: '/welcome',
-    failureRedirect: '/login',
+    failureRedirect: "/user/login",
+    successRedirect: "/dashbord",
     failureFlash: true
-  }), function (req, res) {
-    res.redirect('/' + req.user.name);
-  });
+  })(req, res, next);
+})
 
+
+// Register
 router.post('/register', (req, res) => {
   const { name, email, password, password2 } = req.body
   console.log(req.body)

@@ -8,6 +8,7 @@ const flash = require('connect-flash')
 const session = require('express-session')
 const passport = require('passport')
 require('./config/data')
+require('./config/passport')(passport)
 
 // Template Engine Setting
 app.engine('handlebars', exphbs.engine({ defaultLayout: 'main' }))
