@@ -1,4 +1,19 @@
 .foods {
-  margin-top: 5rem;
+  &__categoryXL {
 
+    a:hover,
+    a.active {
+      background-color: $color-primary;
+      color: $color-white;
+      transform: translateY(-0.25rem);
+    }
+  }
+
+  &__cards {
+    .card {
+      img {
+        object-fit: cover;
+      }
+    }
+  }
 }

@@ -619,8 +619,14 @@ body {
   }
 }
 
-.foods {
-  margin-top: 5rem;
+.foods__categoryXL a:hover,
+.foods__categoryXL a.active {
+  background-color: #EE8319;
+  color: #fff;
+  transform: translateY(-0.25rem);
+}
+.foods__cards .card img {
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=all.css.map */
