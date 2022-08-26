@@ -4,7 +4,7 @@ $light : #fbf8e9;
 $dark: #4E2F14;
 
 $border-radius: 2rem;
-$btn-border-width: 0;
+$btn-border-width: 1;
 $input-btn-padding-y: 0.5rem;
 $alert-padding-y: 0.5rem;
 $form-label-color: #ea5704;
@@ -13,15 +13,18 @@ $list-group-border-radius: 0.25rem;
 $list-group-border-color: transparent;
 $form-select-border-radius: 0.5rem;
 $form-select-color: #4E2F14;
-// $list-group-border-width: 2px;
 $btn-close-color: #ea5704;
 
+$input-border-radius: 0.5rem;
+// $input-height: 2.5rem;
+// $input-line-height: 2.5rem;
 
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
 // @import './variables';
 
 $custom-theme-colors: (
+  "light-100": #fdf5c9,
   "dark-100": #483107,
   "purple": rgb(92, 73, 128),
 );

@@ -240,6 +240,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: -1;
   overflow: hidden;
   opacity: 0.9;
 }
@@ -256,7 +257,7 @@ body {
   display: none;
 }
 .nav__button {
-  background-color: #fbf8e9;
+  background-color: #fdf5c9;
   height: 4rem;
   width: 4rem;
   position: absolute;
@@ -598,7 +599,7 @@ body {
 .register__form {
   min-height: calc(100vh - 8rem);
   width: 45%;
-  background-color: rgba(251, 248, 233, 0.7);
+  background-color: rgba(253, 245, 201, 0.7);
 }
 .login__banner,
 .register__banner {
@@ -620,7 +621,7 @@ body {
 }
 
 .foods__wrap {
-  background-image: linear-gradient(to bottom, #fbf8e9, rgba(234, 87, 4, 0.7)), url("../images/orange-bf.jpg");
+  background-image: linear-gradient(to bottom, #fdf5c9, rgba(234, 87, 4, 0.7)), url("../images/orange-bf.jpg");
   background-size: cover;
   background-position: top;
   /* 多邊形clip-path新語法 */
@@ -628,11 +629,52 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 55vh, 0 80vh);
   height: calc(100vh - 8rem);
 }
-.foods__form {
-  background-color: rgba(238, 131, 25, 0.3);
+.foods__wrap h2 {
+  font-size: 2.5rem;
+  margin-bottom: -2.5rem;
 }
-.foods__cards .card img {
+.foods__form {
+  background-color: rgba(253, 245, 201, 0.5);
+}
+.foods .card {
+  border-radius: 0.5rem;
+}
+.foods .card__imgWrap {
+  width: 100%;
+  height: 15rem;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+.foods .card__img {
+  height: 100%;
   object-fit: cover;
+  border-radius: 0.5rem 0.5rem 0 0;
+  transform: translateX(-2rem) scale(1.3);
+  backface-visibility: hidden;
+  transition: all 0.5s;
+}
+.foods .card__caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 20%);
+  font-size: 1.25rem;
+  text-align: center;
+  color: #fff;
+  opacity: 1;
+  transition: all 0.5s;
+  backface-visibility: hidden;
+}
+.foods .card:hover .foods .card__caption {
+  color: red;
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+.foods .card:hover .foods .card__img {
+  transform: translateX(0) scale(1);
+  filter: blur(3px) brightness(80%);
 }
 
 /*# sourceMappingURL=all.css.map */
