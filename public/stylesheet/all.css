@@ -636,10 +636,11 @@ body {
 .foods__form {
   background-color: rgba(253, 245, 201, 0.5);
 }
-.foods .card {
+
+.card {
   border-radius: 0.5rem;
 }
-.foods .card__imgWrap {
+.card__imgWrap {
   width: 100%;
   height: 15rem;
   position: relative;
@@ -647,7 +648,7 @@ body {
   overflow: hidden;
   border-radius: 0.5rem 0.5rem 0 0;
 }
-.foods .card__img {
+.card__img {
   height: 100%;
   object-fit: cover;
   border-radius: 0.5rem 0.5rem 0 0;
@@ -655,7 +656,7 @@ body {
   backface-visibility: hidden;
   transition: all 0.5s;
 }
-.foods .card__caption {
+.card__caption {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -663,18 +664,17 @@ body {
   font-size: 1.25rem;
   text-align: center;
   color: #fff;
-  opacity: 1;
+  opacity: 0;
   transition: all 0.5s;
   backface-visibility: hidden;
 }
-.foods .card:hover .foods .card__caption {
-  color: red;
+.card:hover .card__caption {
   opacity: 1;
   transform: translate(-50%, -50%);
 }
-.foods .card:hover .foods .card__img {
+.card:hover .card__img {
   transform: translateX(0) scale(1);
-  filter: blur(3px) brightness(80%);
+  filter: blur(1px) brightness(80%);
 }
 
 /*# sourceMappingURL=all.css.map */

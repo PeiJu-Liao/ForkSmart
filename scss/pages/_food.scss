@@ -19,50 +19,50 @@
     background-color: rgba($color-light-100, 0.5);
   }
 
-  .card {
-    border-radius: 0.5rem;
+}
 
-    &__imgWrap {
-      width: 100%;
-      height: 15rem;
-      position: relative;
-      float: left;
-      overflow: hidden;
-      border-radius: 0.5rem 0.5rem 0 0;
-    }
+.card {
+  border-radius: 0.5rem;
 
-    &__img {
-      height: 100%;
-      object-fit: cover;
-      border-radius: 0.5rem 0.5rem 0 0;
-      transform: translateX(-2rem) scale(1.3);
-      backface-visibility: hidden;
-      transition: all 0.5s;
-    }
+  &__imgWrap {
+    width: 100%;
+    height: 15rem;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
 
-    &__caption {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      // 製造hover時，有由下往上的效果，y軸起始點下移
-      transform: translate(-50%, 20%);
-      font-size: 1.25rem;
-      text-align: center;
-      color: $color-white;
-      opacity: 1;
-      transition: all 0.5s;
-      backface-visibility: hidden;
-    }
+  &__img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem 0.5rem 0 0;
+    transform: translateX(-2rem) scale(1.3);
+    backface-visibility: hidden;
+    transition: all 0.5s;
+  }
 
-    &:hover &__caption {
-      color: red;
-      opacity: 1;
-      transform: translate(-50%, -50%);
-    }
+  &__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    // 製造hover時，有由下往上的效果，y軸起始點下移
+    transform: translate(-50%, 20%);
+    font-size: 1.25rem;
+    text-align: center;
+    color: $color-white;
+    opacity: 0;
+    transition: all 0.5s;
+    backface-visibility: hidden;
+  }
 
-    &:hover &__img {
-      transform: translateX(0) scale(1);
-      filter: blur(3px) brightness(80%);
-    }
+  &:hover &__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover &__img {
+    transform: translateX(0) scale(1);
+    filter: blur(1px) brightness(80%);
   }
 }
