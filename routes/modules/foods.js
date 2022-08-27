@@ -6,7 +6,9 @@ router.get('/', (req, res) => {
 })
 
 router.get('/:id', (req, res) => {
-  res.render('show')
+  res.render('show', {
+    script: 'show.js'
+  })
 })
 
 module.exports = router

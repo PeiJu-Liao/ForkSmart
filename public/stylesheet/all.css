@@ -1,5 +1,7 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap"); /* http://meyerweb.com/eric/tools/css/reset/ 
+@import url("https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap");
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -178,15 +180,19 @@ body {
     opacity: 0;
     transform: translateX(-15rem);
   }
+
   80% {
     transform: translate(2rem);
   }
+
   100% {
     opacity: 1;
     transform: translate(0);
   }
 }
-.btn, .btn:link {
+
+.btn,
+.btn:link {
   display: inline-block;
   padding: 1rem;
   padding-right: 2.5rem;
@@ -195,6 +201,7 @@ body {
   position: relative;
   border-radius: 2rem;
 }
+
 .btn::after {
   content: "";
   display: inline-block;
@@ -207,27 +214,34 @@ body {
   z-index: -1;
   transition: all 0.4s;
 }
+
 .btn:hover::after {
   transform: scaleX(1.3) scaleY(1.6);
   opacity: 0;
 }
+
 .btn__primary {
   background-color: #EE8319;
 }
+
 .btn__primary:hover {
   background-color: #ea5704;
   transform: translateY(-0.25rem);
   box-shadow: 0 10px 20px rgba(236, 126, 16, 0.8078431373);
 }
+
 .btn__primary::after {
   background-color: #ff7730;
 }
+
 .btn__outline-primary {
   border: 1px solid #EE8319;
 }
+
 .btn__outline-primary:any-link {
   color: #ea5704;
 }
+
 .btn__outline-primary:hover {
   background-color: #4E2F14;
   transform: translateY(-0.5rem);
@@ -244,6 +258,7 @@ body {
   overflow: hidden;
   opacity: 0.9;
 }
+
 .bg-video__content {
   height: 100%;
   width: 100%;
@@ -253,9 +268,11 @@ body {
 .nav {
   height: 5rem;
 }
+
 .nav__ham {
   display: none;
 }
+
 .nav__button {
   background-color: #fdf5c9;
   height: 4rem;
@@ -268,6 +285,7 @@ body {
   text-align: center;
   cursor: pointer;
 }
+
 .nav__background {
   height: 2.5rem;
   width: 2.5rem;
@@ -279,48 +297,63 @@ body {
   z-index: 100;
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
 }
+
 .nav__checkbox {
   display: none;
 }
+
 .nav__icon {
   position: relative;
   margin-top: 2rem;
 }
-.nav__icon, .nav__icon::before, .nav__icon::after {
+
+.nav__icon,
+.nav__icon::before,
+.nav__icon::after {
   width: 2.5rem;
   height: 0.25rem;
   background-color: #EE8319;
   display: inline-block;
 }
-.nav__icon::before, .nav__icon::after {
+
+.nav__icon::before,
+.nav__icon::after {
   content: "";
   position: absolute;
   left: 0;
   transition: all 0.5s;
 }
+
 .nav__icon::before {
   top: -0.8rem;
 }
+
 .nav__icon::after {
   top: 0.8rem;
 }
+
 .nav__button:hover .nav__icon::before {
   top: -1rem;
 }
+
 .nav__button:hover .nav__icon::after {
   top: 1rem;
 }
-.nav__checkbox:checked + .nav__button .nav__icon {
+
+.nav__checkbox:checked+.nav__button .nav__icon {
   background-color: transparent;
 }
-.nav__checkbox:checked + .nav__button .nav__icon::before {
+
+.nav__checkbox:checked+.nav__button .nav__icon::before {
   top: 0;
   transform: rotate(135deg);
 }
-.nav__checkbox:checked + .nav__button .nav__icon::after {
+
+.nav__checkbox:checked+.nav__button .nav__icon::after {
   top: 0;
   transform: rotate(-135deg);
 }
+
 .nav__hambg {
   height: 100vh;
   position: fixed;
@@ -331,6 +364,7 @@ body {
   width: 0;
   transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
+
 .nav__list {
   position: absolute;
   top: 50%;
@@ -340,13 +374,16 @@ body {
   text-align: center;
   color: #4E2F14;
 }
-.nav__checkbox:checked ~ .nav__background {
+
+.nav__checkbox:checked~.nav__background {
   transform: scale(80);
 }
-.nav__checkbox:checked ~ .nav__hambg {
+
+.nav__checkbox:checked~.nav__hambg {
   opacity: 1;
   width: 100%;
 }
+
 .nav__tree {
   z-index: 1;
   position: absolute;
@@ -354,30 +391,39 @@ body {
   top: 0;
   width: 12%;
 }
+
 .nav__logo {
   line-height: 5rem;
 }
+
 .nav__wrap {
   justify-content: space-between;
 }
+
 .nav__menu {
   margin-right: 3rem;
 }
+
 .nav__menu a:any-link {
   color: #4E2F14;
 }
+
 .nav__item {
   position: relative;
 }
+
 .nav__item:not(:last-child) {
   margin-right: 2.5rem;
 }
+
 .nav__item:last-child {
   margin-right: 3rem;
 }
+
 .nav__item a {
   padding: 1.5rem 0;
 }
+
 .nav__item a::after {
   content: "";
   position: absolute;
@@ -389,33 +435,41 @@ body {
   background-color: #ea5704;
   transition: width 0.5s ease-in-out;
 }
+
 .nav__item:hover a::after {
   width: 110%;
 }
+
 .nav__item-login {
   width: 5rem;
   height: 3rem;
   background: #EE8319;
   line-height: 3rem;
 }
+
 .nav__item-login:hover {
   background-color: #ea5704;
 }
+
 @media (max-width: 992px) {
   .nav .nav__item:not(:last-child) {
     margin-right: 1rem;
   }
 }
+
 @media (max-width: 768px) {
   .nav .nav__ham {
     display: block;
   }
+
   .nav .nav__wrap {
     justify-content: center;
   }
+
   .nav .nav__menuWrap {
     display: none;
   }
+
   .nav .nav__tree {
     width: 18%;
   }
@@ -424,31 +478,38 @@ body {
 .header__banner {
   padding-top: 2.5rem;
 }
+
 .header__banner-img {
   margin: 0 -3rem;
   object-fit: contain;
 }
+
 @media (max-width: 1200px) {
   .header .header__banner-img {
     margin: 0;
   }
+
   .header .header__banner-title h2 {
     font-size: 3rem;
   }
 }
+
 @media (max-width: 992px) {
   .header .header__banner-title {
     margin-right: -2rem;
   }
+
   .header .header__banner-title h2 {
     font-size: 2.5rem;
   }
 }
+
 @media (max-width: 768px) {
   .header .header__banner {
     flex-direction: column-reverse;
     align-items: center;
   }
+
   .header .header__banner-title {
     text-align: center;
   }
@@ -458,18 +519,21 @@ body {
   height: 17rem;
   position: relative;
 }
+
 .contact__tree {
   width: 30%;
   position: absolute;
   bottom: 15rem;
   left: 2rem;
 }
+
 .contact__fruits {
   width: 30%;
   position: absolute;
   top: -5rem;
   right: 6rem;
 }
+
 .contact__menu span {
   font-size: 2rem;
 }
@@ -477,24 +541,30 @@ body {
 .hungryWarning {
   padding-top: 5rem;
 }
+
 .hungryWarning__info {
   margin-bottom: 5rem;
 }
+
 .hungryWarning__tree {
   z-index: 1;
   width: 12%;
 }
+
 .hungryWarning__card {
   padding: 5rem 2.5rem;
   border-radius: 1.125rem;
   position: relative;
 }
+
 .hungryWarning__card h3 {
   font-size: 2rem;
 }
+
 .hungryWarning__card:hover {
   box-shadow: 0 10px 20px rgba(236, 126, 16, 0.8078431373);
 }
+
 .hungryWarning__card::after {
   content: "";
   position: absolute;
@@ -506,26 +576,32 @@ body {
   border-radius: 1.125rem;
   background-color: #ff7730;
 }
+
 @media (max-width: 992px) {
   .hungryWarning .hungryWarning__card {
     padding: 4rem 2rem;
   }
+
   .hungryWarning .hungryWarning__card h3 {
     font-size: 1.2rem;
   }
+
   .hungryWarning .hungryWarning__tree {
     width: 18%;
   }
 }
+
 @media (max-width: 768px) {
   .hungryWarning .hungryWarning__info:last-child {
     align-items: center;
     flex-direction: column-reverse;
   }
+
   .hungryWarning .hungryWarning__card h3 {
     font-size: 1.5rem;
   }
 }
+
 @media (max-width: 576px) {
   .hungryWarning .hungryWarning__tree {
     width: 30%;
@@ -535,16 +611,20 @@ body {
 .food {
   margin-top: -3rem;
 }
+
 .food__tree {
   z-index: 1;
   width: 20%;
 }
+
 .food__wrap {
   padding-top: 30rem;
 }
+
 .food__topImg {
   position: relative;
 }
+
 .food__personStand {
   width: 50%;
   position: absolute;
@@ -552,6 +632,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .food__bg-ground-btm {
   padding-top: 5rem;
   padding-bottom: 20rem;
@@ -559,32 +640,40 @@ body {
   height: 100%;
   text-align: center;
 }
+
 .food__card-img {
   height: 15rem;
   object-fit: cover;
 }
+
 @media (max-width: 992px) {
   .food .food__tree {
     width: 25%;
   }
+
   .food .food__personStand {
     width: 70%;
   }
+
   .food .food__bg-ground-btm {
     padding-top: 10rem;
   }
 }
+
 @media (max-width: 768px) {
   .food .food__tree {
     width: 30%;
   }
+
   .food .food__personStand {
     width: 90%;
   }
+
   .food .food__bg-ground-btm {
     padding-top: 15rem;
   }
 }
+
 @media (max-width: 576px) {
   .food .food__wrap {
     padding-top: 25rem;
@@ -595,27 +684,32 @@ body {
 .register__wrap {
   position: relative;
 }
+
 .login__form,
 .register__form {
   min-height: calc(100vh - 8rem);
   width: 45%;
   background-color: rgba(253, 245, 201, 0.7);
 }
+
 .login__banner,
 .register__banner {
   width: 50%;
 }
+
 @media (max-width: 768px) {
+
   .login .register__form,
-.login .login__form,
-.register .register__form,
-.register .login__form {
+  .login .login__form,
+  .register .register__form,
+  .register .login__form {
     width: 85%;
   }
+
   .login .register__banner,
-.login .login__banner,
-.register .register__banner,
-.register .login__banner {
+  .login .login__banner,
+  .register .register__banner,
+  .register .login__banner {
     display: none;
   }
 }
@@ -629,10 +723,12 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 55vh, 0 80vh);
   height: calc(100vh - 8rem);
 }
+
 .foods__wrap h2 {
   font-size: 2.5rem;
   margin-bottom: -2.5rem;
 }
+
 .foods__form {
   background-color: rgba(253, 245, 201, 0.5);
 }
@@ -640,6 +736,7 @@ body {
 .card {
   border-radius: 0.5rem;
 }
+
 .card__imgWrap {
   width: 100%;
   height: 15rem;
@@ -648,6 +745,7 @@ body {
   overflow: hidden;
   border-radius: 0.5rem 0.5rem 0 0;
 }
+
 .card__img {
   height: 100%;
   object-fit: cover;
@@ -656,6 +754,7 @@ body {
   backface-visibility: hidden;
   transition: all 0.5s;
 }
+
 .card__caption {
   position: absolute;
   top: 50%;
@@ -668,16 +767,19 @@ body {
   transition: all 0.5s;
   backface-visibility: hidden;
 }
+
 .card:hover .card__caption {
   opacity: 1;
   transform: translate(-50%, -50%);
 }
+
 .card:hover .card__img {
   transform: translateX(0) scale(1);
   filter: blur(1px) brightness(80%);
 }
 
-.show__vitamin .progress-bar, .show__mineral .progress-bar {
+.show__vitamin .progress-bar,
+.show__mineral .progress-bar {
   width: 100%;
   max-width: 30rem;
   height: 2rem;
@@ -686,7 +788,9 @@ body {
   position: relative;
   color: #4E2F14;
 }
-.show__vitamin .progress-bar::after, .show__mineral .progress-bar::after {
+
+.show__vitamin .progress-bar::after,
+.show__mineral .progress-bar::after {
   content: attr(data-percent);
   display: flex;
   align-items: center;
@@ -702,15 +806,18 @@ body {
   min-width: 2rem;
   max-width: calc(100% - 1em);
 }
+
 .show__month {
   height: 4.5rem;
   position: relative;
   background-color: rgba(255, 185, 0, 0.7);
   border-radius: 0.5rem;
 }
+
 .show__month span {
   font-size: 2rem;
 }
+
 .show__month::after {
   content: attr(data-label);
   display: block;
