@@ -2,32 +2,28 @@
 
   &__vitamin,
   &__mineral {
-    .progress-bar {
-      width: 100%;
-      max-width: 30rem;
-      height: 2rem;
-      background-color: $color-primary;
+    .bar {
+      background-color: rgba($color-primary-light, 0.4);
       border-radius: 1.5rem;
       position: relative;
-      color: $color-dark;
+      height: 2rem;
+      padding: 0.25rem;
+      width: 400px;
+      max-width: 30rem; // 480px
     }
 
-    .progress-bar::after {
-      content: attr(data-percent);
-      // content: '';
+    .progressbar {
+      background: linear-gradient(to left, $color-primary-light, $color-secondary-100);
+      // box-shadow: 0 3px 3px -6px $color-primary, 0 3px 5px $color-secondary;
+      border-radius: 1.5rem;
+      color: #fff;
       display: flex;
       align-items: center;
-      position: absolute;
-      top: 0.5rem;
-      left: 0.5rem;
-      bottom: 0.5rem;
-      padding: 0 1rem;
-      background-color: $color-light-100;
-      border-radius: 3em;
-      /*  利用calc(var(--variable-width) + 20px)  */
-      width: calc(var(--width, 0) * 1%);
-      min-width: 2rem;
-      max-width: calc(100% - 1em);
+      justify-content: center;
+      height: 100%;
+      width: 0;
+      opacity: 0;
+      transition: ease 2.5s;
     }
   }
 
