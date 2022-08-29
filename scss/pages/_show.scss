@@ -8,13 +8,12 @@
       position: relative;
       height: 2rem;
       padding: 0.25rem;
-      width: 400px;
+      width: 100%;
       max-width: 30rem; // 480px
     }
 
     .progressbar {
       background: linear-gradient(to left, $color-primary-light, $color-secondary-100);
-      // box-shadow: 0 3px 3px -6px $color-primary, 0 3px 5px $color-secondary;
       border-radius: 1.5rem;
       color: #fff;
       display: flex;
@@ -33,6 +32,10 @@
     background-color: rgba($color-primary-light, 0.7);
     border-radius: 0.5rem;
 
+    &-noSeason {
+      background-color: $color-grey-light-1;
+    }
+
     span {
       font-size: 2rem;
     }
@@ -45,7 +48,7 @@
       left: 50%;
       transform: translate(-50%, -0.25rem);
       width: 75%;
-      background-color: $color-primary;
+      background-color: rgba($color-primary, 0.7);
       color: $color-dark;
       text-align: center;
     }
