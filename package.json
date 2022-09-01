@@ -24,7 +24,8 @@
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
     "path": "^0.12.7",
-    "sass": "^1.54.4"
+    "sass": "^1.54.4",
+    "swiper": "^8.3.2"
   },
   "devDependencies": {},
   "description": ""
