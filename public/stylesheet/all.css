@@ -349,7 +349,7 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  width: 20%;
+  width: 18%;
 }
 .nav__logo {
   line-height: 5rem;
@@ -460,7 +460,7 @@ body {
 }
 .hungryWarning__tree {
   z-index: 1;
-  width: 12%;
+  width: 30%;
 }
 .hungryWarning__card {
   padding: 5rem 2.5rem;
@@ -468,9 +468,10 @@ body {
   position: relative;
 }
 .hungryWarning__card h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .hungryWarning__card:hover {
+  transition: all 0.3s;
   box-shadow: 0 10px 20px rgba(236, 126, 16, 0.8078431373);
 }
 .hungryWarning__card::after {
@@ -484,22 +485,41 @@ body {
   border-radius: 1.125rem;
   background-color: #ff7730;
 }
+@media (min-width: 576px) {
+  .hungryWarning .hungryWarning__tree {
+    width: 22%;
+  }
+}
+@media (min-width: 992px) {
+  .hungryWarning .hungryWarning__card {
+    padding: 4rem 2rem;
+  }
+  .hungryWarning .hungryWarning__card h3 {
+    font-size: 2rem;
+  }
+  .hungryWarning .hungryWarning__card p {
+    font-size: 1.125rem;
+  }
+  .hungryWarning .hungryWarning__tree {
+    width: 15%;
+  }
+}
 
 .food {
   margin-top: -3rem;
 }
 .food__tree {
   z-index: 1;
-  width: 20%;
+  width: 30%;
 }
 .food__wrap {
-  padding-top: 30rem;
+  padding-top: 20rem;
 }
 .food__topImg {
   position: relative;
 }
 .food__personStand {
-  width: 50%;
+  width: 70%;
   position: absolute;
   top: -40%;
   left: 50%;
@@ -516,6 +536,33 @@ body {
   height: 15rem;
   object-fit: cover;
 }
+@media (min-width: 576px) {
+  .food .food__wrap {
+    padding-top: 28rem;
+  }
+}
+@media (min-width: 768px) {
+  .food .food__tree {
+    width: 25%;
+  }
+  .food .food__personStand {
+    width: 60%;
+  }
+}
+@media (min-width: 992px) {
+  .food .food__wrap {
+    padding-top: 35rem;
+  }
+  .food .food__tree {
+    width: 18%;
+  }
+  .food .food__personStand {
+    width: 50%;
+  }
+  .food .food__bg-ground-btm {
+    padding-top: 5rem;
+  }
+}
 
 .login__wrap,
 .register__wrap {
@@ -524,25 +571,26 @@ body {
 .login__form,
 .register__form {
   min-height: calc(100vh - 8rem);
-  width: 45%;
   background-color: rgba(253, 245, 201, 0.7);
+  width: 85%;
 }
 .login__banner,
 .register__banner {
-  width: 50%;
+  display: none;
 }
 @media (min-width: 768px) {
   .login .register__form,
 .login .login__form,
 .register .register__form,
 .register .login__form {
-    width: 85%;
+    width: 45%;
   }
   .login .register__banner,
 .login .login__banner,
 .register .register__banner,
 .register .login__banner {
-    display: none;
+    width: 55%;
+    display: block;
   }
 }
 

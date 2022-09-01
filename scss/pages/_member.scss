@@ -7,12 +7,12 @@
 
   &__form {
     min-height: calc(100vh - 8rem);
-    width: 45%;
     background-color: rgba($color-light-100, 0.7);
+    width: 85%;
   }
 
   &__banner {
-    width: 50%;
+    display: none;
   }
 
   @include ipad {
@@ -20,11 +20,12 @@
     .register,
     .login {
       &__form {
-        width: 85%;
+        width: 45%;
       }
 
       &__banner {
-        display: none;
+        width: 55%;
+        display: block;
       }
     }
   }

@@ -25,54 +25,54 @@
         </video>
       </div>
 
-      <div class="register__form rounded-3 my-8">
-        <form action="" method="POST" class="py-2 px-6">
-          <a href="/" class="mb-1">
-            <h3 class="text-primary text-center fs-4">
-              ForkSmart
-            </h3>
-          </a>
-          <h2 class="text-dark text-center border-bottom pb-2 display-6 fw-bold">Create Account</h2>
+      <div class="register__form rounded-3 my-8 mx-md-4"">
+        <form action="" method=" POST" class="py-2 px-6">
+        <a href="/" class="mb-1">
+          <h3 class="text-primary text-center fs-4">
+            ForkSmart
+          </h3>
+        </a>
+        <h2 class="text-dark text-center border-bottom pb-2 display-6 fw-bold">Create Account</h2>
 
-          {{#if errors}}
-          {{#each errors}}
-          <div class="alert alert-warning alert-dismissible fade show my-1" role="alert">
-            <strong>ERRORS</strong> {{this.msg}}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-          </div>
-          {{/each}}
-          {{/if}}
+        {{#if errors}}
+        {{#each errors}}
+        <div class="alert alert-warning alert-dismissible fade show my-1" role="alert">
+          <strong>ERRORS</strong> {{this.msg}}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {{/each}}
+        {{/if}}
 
-          <div class="my-2">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" name="name" placeholder="Peggy Liao" {{#if name}}
-              value="{{name}}" {{/if}}>
-          </div>
-          <div class="mb-2">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="fork_smart@example.com" {{#if
-              email}} value="{{email}}" {{/if}}>
-          </div>
-          <div class=" mb-2">
-            <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password" name="password" placeholder="請輸入密碼..." {{#if
-              password}} value="{{password}}" {{/if}}>
-          </div>
-          <div class="mb-2">
-            <label for="password2" class="form-label">Password Confirmed</label>
-            <input type="password" class="form-control" id="password2" name="password2" placeholder="再次輸入密碼確認..." {{#if
-              password2}} value="{{password2}}" {{/if}}>
-          </div>
-          <div class="border-top py-2">
-            <button class="btn btn__primary link-light d-block w-50 m-auto" type="submit">建立帳號</button>
-          </div>
-          <div class="border-top w-75 m-auto">
-            <a href="/user/login" class="link-secondary text-center pt-2">
-              <span class="material-symbols-outlined align-top">
-                person
-              </span>
-              登入ForkSmart</a>
-          </div>
+        <div class="my-2">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" name="name" placeholder="Peggy Liao" {{#if name}}
+            value="{{name}}" {{/if}}>
+        </div>
+        <div class="mb-2">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="fork_smart@example.com" {{#if
+            email}} value="{{email}}" {{/if}}>
+        </div>
+        <div class=" mb-2">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" name="password" placeholder="請輸入密碼..." {{#if
+            password}} value="{{password}}" {{/if}}>
+        </div>
+        <div class="mb-2">
+          <label for="password2" class="form-label">Password Confirmed</label>
+          <input type="password" class="form-control" id="password2" name="password2" placeholder="再次輸入密碼確認..." {{#if
+            password2}} value="{{password2}}" {{/if}}>
+        </div>
+        <div class="border-top py-2">
+          <button class="btn btn__primary link-light d-block w-50 m-auto text-nowrap" type="submit">建立帳號</button>
+        </div>
+        <div class="border-top w-75 m-auto">
+          <a href="/user/login" class="link-secondary text-center pt-2">
+            <span class="material-symbols-outlined align-top">
+              person
+            </span>
+            登入ForkSmart</a>
+        </div>
         </form>
       </div>
 
