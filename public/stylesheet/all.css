@@ -253,9 +253,6 @@ body {
 .nav {
   height: 5rem;
 }
-.nav__ham {
-  display: none;
-}
 .nav__button {
   background-color: #fdf5c9;
   height: 4rem;
@@ -352,19 +349,13 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  width: 12%;
+  width: 20%;
 }
 .nav__logo {
   line-height: 5rem;
 }
-.nav__wrap {
-  justify-content: space-between;
-}
-.nav__menu {
-  margin-right: 3rem;
-}
-.nav__menu a:any-link {
-  color: #4E2F14;
+.nav__menuWrap {
+  display: none;
 }
 .nav__item {
   position: relative;
@@ -401,34 +392,46 @@ body {
 .nav__item-login:hover {
   background-color: #ea5704;
 }
-@media (min-width: 768px) {
-  .nav .nav__item:not(:last-child) {
-    margin-right: 1rem;
-  }
-}
 @media (min-width: 992px) {
   .nav .nav__ham {
-    display: block;
-  }
-  .nav .nav__wrap {
-    justify-content: center;
-  }
-  .nav .nav__menuWrap {
     display: none;
   }
+  .nav .nav__logo {
+    display: block;
+  }
+  .nav .nav__menuWrap {
+    display: block;
+    margin-right: 3rem;
+  }
+  .nav .nav__menuWrap a:any-link {
+    color: #4E2F14;
+  }
   .nav .nav__tree {
-    width: 18%;
+    width: 12%;
   }
 }
 
-.header__banner {
-  padding-top: 2.5rem;
+.header__title {
+  font-size: 3rem;
 }
 .header__banner-img {
-  margin: 0 -3rem;
+  margin: 0 auto;
   object-fit: contain;
 }
 
+@media (min-width: 768px) {
+  .header__title {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .header__title {
+    font-size: 3.5rem;
+  }
+  .header__banner-img {
+    margin-left: -3rem;
+  }
+}
 .contact {
   height: 17rem;
   position: relative;

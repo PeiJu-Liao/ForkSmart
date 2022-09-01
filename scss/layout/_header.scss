@@ -1,53 +1,34 @@
 .header {
-  &__banner {
-    padding-top: 2.5rem;
+  &__title {
+    font-size: 3rem;
+  }
 
+  &__banner {
     &-img {
-      margin: 0 -3rem;
+      margin: 0 auto;
       object-fit: contain;
     }
   }
+}
 
-  // @include lg {
-  //   .header {
-  //     &__banner {
-  //       &-img {
-  //         margin: 0;
-  //       }
+@include ipad {
+  .header {
+    &__title {
+      font-size: 2.5rem;
+    }
+  }
+}
 
-  //       &-title {
-  //         h2 {
-  //           font-size: 3rem; //48px
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
+@include ipad-horizontal {
+  .header {
+    &__title {
+      font-size: 3.5rem;
+    }
 
-  // @include xl {
-  //   .header {
-  //     &__banner {
-  //       &-title {
-  //         margin-right: -2rem;
-
-  //         h2 {
-  //           font-size: 2.5rem;
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
-
-  // @include ipad {
-  //   .header {
-  //     &__banner {
-  //       flex-direction: column-reverse;
-  //       align-items: center;
-
-  //       &-title {
-  //         text-align: center;
-  //       }
-  //     }
-  //   }
-  // }
+    &__banner {
+      &-img {
+        margin-left: -3rem;
+      }
+    }
+  }
 }

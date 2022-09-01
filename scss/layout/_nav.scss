@@ -1,10 +1,6 @@
 .nav {
   height: 5rem;
 
-  &__ham {
-    display: none;
-  }
-
   // 左上角的漢堡排
   &__button {
     background-color: $color-light-100;
@@ -132,20 +128,15 @@
     position: absolute;
     right: 0;
     top: 0;
-    width: 12%;
+    width: 20%;
   }
 
   &__logo {
     line-height: 5rem;
   }
 
-  &__wrap {
-    justify-content: space-between;
-  }
-
-  &__menu {
-    @include linkColor($color-dark);
-    margin-right: 3rem;
+  &__menuWrap {
+    display: none;
   }
 
   &__item {
@@ -193,30 +184,24 @@
     }
   }
 
-  @include ipad {
-    .nav {
-      &__item:not(:last-child) {
-        margin-right: 1rem;
-      }
-    }
-  }
-
   @include ipad-horizontal {
     .nav {
       &__ham {
-        display: block;
-      }
-
-      &__wrap {
-        justify-content: center;
-      }
-
-      &__menuWrap {
         display: none;
       }
 
+      &__logo {
+        display: block;
+      }
+
+      &__menuWrap {
+        display: block;
+        @include linkColor($color-dark);
+        margin-right: 3rem;
+      }
+
       &__tree {
-        width: 18%;
+        width: 12%;
       }
     }
   }

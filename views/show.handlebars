@@ -9,7 +9,7 @@
         </div>
       </div>
       <div class="col-10 col-md-10 col-lg-6">
-        <div class="mt-5">
+        <div class="mt-8">
           <div class="text-dark">
             <h2 class="fs-4 py-1 border-bottom border-dark">{{forksmartFood.name}} <span
                 class="fs-5">{{forksmartFood.category}}</span></h2>
@@ -51,105 +51,107 @@
     {{!-- 下半部 --}}
     <div class="row pb-12 flex-column-reverse flex-lg-row align-items-center justify-content-center">
       <div class="col-10 col-md-10 col-lg-6">
-        <div class="text-dark">
-          <h2 class="fs-4 py-1 border-bottom border-dark">新鮮月份</h2>
-          <div class="row gx-3 flex-wrap my-2">
-            <div class="col-2 mt-2">
-              <div class="show__month show__month--1" data-label="Jan.">
-                <span class="material-symbols-outlined d-block text-center pt-1">
-                  calendar_month
-                </span>
+        <div class="mt-8">
+          <div class="text-dark">
+            <h2 class="fs-4 py-1 border-bottom border-dark">新鮮月份</h2>
+            <div class="row gx-3 flex-wrap my-2">
+              <div class="col-2 mt-2">
+                <div class="show__month show__month--1" data-label="Jan.">
+                  <span class="material-symbols-outlined d-block text-center pt-1">
+                    calendar_month
+                  </span>
+                </div>
               </div>
-            </div>
-            <div class="col-2 mt-2">
-              <div class="show__month show__month--2" data-label="Feb.">
-                <span class="material-symbols-outlined d-block text-center pt-1">
-                  calendar_month
-                </span>
+              <div class="col-2 mt-2">
+                <div class="show__month show__month--2" data-label="Feb.">
+                  <span class="material-symbols-outlined d-block text-center pt-1">
+                    calendar_month
+                  </span>
+                </div>
               </div>
-            </div>
-            <div class="col-2 mt-2">
-              <div class="show__month show__month--3" data-label="Mar.">
-                <span class="material-symbols-outlined d-block text-center pt-1">
-                  calendar_month
-                </span>
+              <div class="col-2 mt-2">
+                <div class="show__month show__month--3" data-label="Mar.">
+                  <span class="material-symbols-outlined d-block text-center pt-1">
+                    calendar_month
+                  </span>
+                </div>
               </div>
-            </div>
-            <div class="col-2 mt-2">
-              <div class="show__month show__month--4" data-label="Apr.">
-                <span class="material-symbols-outlined d-block text-center pt-1">
-                  calendar_month
-                </span>
+              <div class="col-2 mt-2">
+                <div class="show__month show__month--4" data-label="Apr.">
+                  <span class="material-symbols-outlined d-block text-center pt-1">
+                    calendar_month
+                  </span>
+                </div>
               </div>
-            </div>
-            <div class="col-2 mt-2">
-              <div class="show__month show__month--5" data-label="May.">
-                <span class="material-symbols-outlined d-block text-center pt-1">
-                  calendar_month
-                </span>
+              <div class="col-2 mt-2">
+                <div class="show__month show__month--5" data-label="May.">
+                  <span class="material-symbols-outlined d-block text-center pt-1">
+                    calendar_month
+                  </span>
+                </div>
               </div>
-            </div>
-            <div class="col-2 mt-2">
-              <div class="show__month show__month--6" data-label="Jun.">
-                <span class="material-symbols-outlined d-block text-center pt-1">
-                  calendar_month
-                </span>
+              <div class="col-2 mt-2">
+                <div class="show__month show__month--6" data-label="Jun.">
+                  <span class="material-symbols-outlined d-block text-center pt-1">
+                    calendar_month
+                  </span>
+                </div>
               </div>
-            </div>
-            <div class="col-2 mt-2">
-              <div class="show__month show__month--7" data-label="Jul.">
-                <span class="material-symbols-outlined d-block text-center pt-1">
-                  calendar_month
-                </span>
+              <div class="col-2 mt-2">
+                <div class="show__month show__month--7" data-label="Jul.">
+                  <span class="material-symbols-outlined d-block text-center pt-1">
+                    calendar_month
+                  </span>
+                </div>
               </div>
-            </div>
-            <div class="col-2 mt-2">
-              <div class="show__month show__month--8" data-label="Aug.">
-                <span class="material-symbols-outlined d-block text-center pt-1">
-                  calendar_month
-                </span>
+              <div class="col-2 mt-2">
+                <div class="show__month show__month--8" data-label="Aug.">
+                  <span class="material-symbols-outlined d-block text-center pt-1">
+                    calendar_month
+                  </span>
+                </div>
               </div>
-            </div>
-            <div class="col-2 mt-2">
-              <div class="show__month show__month-noSeason show__month--9" data-label="Sep.">
-                <span class="material-symbols-outlined d-block text-center pt-1">
-                  calendar_month
-                </span>
+              <div class="col-2 mt-2">
+                <div class="show__month show__month-noSeason show__month--9" data-label="Sep.">
+                  <span class="material-symbols-outlined d-block text-center pt-1">
+                    calendar_month
+                  </span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="show__mineral text-dark">
-          <h2 class="fs-4 py-1 border-bottom border-dark">Mineral礦物質</h2>
-          <div class="show__mineral-progress p-4 ">
-            <div class="d-md-flex align-items-center justify-content-center mt-md-3">
-              <p class="mt-2 mt-md-0 me-md-4 text-nowrap">鈣</p>
-              <div class="bar" data-label="calcium">
-                <div class="progressbar" data-done="{{forksmartFood.calcium}}">{{forksmartFood.calcium}}mg</div>
+          <div class="show__mineral text-dark">
+            <h2 class="fs-4 py-1 border-bottom border-dark">Mineral礦物質</h2>
+            <div class="show__mineral-progress p-4 ">
+              <div class="d-md-flex align-items-center justify-content-center mt-md-3">
+                <p class="mt-2 mt-md-0 me-md-4 text-nowrap">鈣</p>
+                <div class="bar" data-label="calcium">
+                  <div class="progressbar" data-done="{{forksmartFood.calcium}}">{{forksmartFood.calcium}}mg</div>
+                </div>
               </div>
-            </div>
-            <div class="d-md-flex align-items-center justify-content-center mt-md-3">
-              <p class="mt-2 mt-md-0 me-md-4 text-nowrap">鐵</p>
-              <div class="bar" data-label="iron">
-                <div class="progressbar" data-done="{{forksmartFood.iron}}">{{forksmartFood.iron}}mg</div>
+              <div class="d-md-flex align-items-center justify-content-center mt-md-3">
+                <p class="mt-2 mt-md-0 me-md-4 text-nowrap">鐵</p>
+                <div class="bar" data-label="iron">
+                  <div class="progressbar" data-done="{{forksmartFood.iron}}">{{forksmartFood.iron}}mg</div>
+                </div>
               </div>
-            </div>
-            <div class="d-md-flex align-items-center justify-content-center mt-md-3">
-              <p class="mt-2 mt-md-0 me-md-4 text-nowrap">鎂</p>
-              <div class="bar" data-label="magnesium">
-                <div class="progressbar" data-done="{{forksmartFood.magnesium}}">{{forksmartFood.magnesium}}mg</div>
+              <div class="d-md-flex align-items-center justify-content-center mt-md-3">
+                <p class="mt-2 mt-md-0 me-md-4 text-nowrap">鎂</p>
+                <div class="bar" data-label="magnesium">
+                  <div class="progressbar" data-done="{{forksmartFood.magnesium}}">{{forksmartFood.magnesium}}mg</div>
+                </div>
               </div>
-            </div>
-            <div class="d-md-flex align-items-center justify-content-center mt-md-3">
-              <p class="mt-2 mt-md-0 me-md-4 text-nowrap">鋅</p>
-              <div class="bar" data-label="zinc">
-                <div class="progressbar" data-done="{{forksmartFood.zinc}}">{{forksmartFood.zinc}}mg</div>
+              <div class="d-md-flex align-items-center justify-content-center mt-md-3">
+                <p class="mt-2 mt-md-0 me-md-4 text-nowrap">鋅</p>
+                <div class="bar" data-label="zinc">
+                  <div class="progressbar" data-done="{{forksmartFood.zinc}}">{{forksmartFood.zinc}}mg</div>
+                </div>
               </div>
-            </div>
-            <div class="d-md-flex align-items-center justify-content-center mt-md-3">
-              <p class="mt-2 mt-md-0 me-md-4 text-nowrap">碘</p>
-              <div class="bar" data-label="iodine">
-                <div class="progressbar" data-done="{{forksmartFood.iodine}}">{{forksmartFood.iodine}}mg</div>
+              <div class="d-md-flex align-items-center justify-content-center mt-md-3">
+                <p class="mt-2 mt-md-0 me-md-4 text-nowrap">碘</p>
+                <div class="bar" data-label="iodine">
+                  <div class="progressbar" data-done="{{forksmartFood.iodine}}">{{forksmartFood.iodine}}mg</div>
+                </div>
               </div>
             </div>
           </div>
