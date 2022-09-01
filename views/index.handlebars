@@ -13,7 +13,7 @@
         </div>
       </div>
       <div class="col-12 col-md-8 col-lg-7">
-        <img src="../images/bg_banner-02.png" alt="banner_pic" class="header__banner-img mt-6">
+        <img src="../images/bg_banner-02.png" alt="banner_pic" class="header__banner-img">
       </div>
     </div>
   </div>
@@ -26,12 +26,12 @@
 
     <div class="container">
       {{!-- #1 --}}
-      <div class="hungryWarning__info row justify-content-center align-items-start">
+      <div class="hungryWarning__info row justify-content-center align-items-center ">
         <div class="col-lg-6 col-md-5 col-8">
           <img src="/images/pic1.png" alt="hungry-warning" class="hungryWarning__img-pic1 mx-auto">
         </div>
         <div class="col-lg-6 col-md-6 col-10">
-          <div class="hungryWarning__card bg-white">
+          <div class="hungryWarning__card bg-white mt-4 mt-md-0">
             <h3 class="fw-bold text-primary text-nowrap">別再忽略這些小毛病！<br>
               這是「隱性飢餓」的警訊</h3>
             <p class="text-dark">你是否有前一天睡飽飽，但是隔天仍然頻繁打哈欠的情況呢? <br>
@@ -44,9 +44,9 @@
         class="hungryWarning__tree position-absolute top-50 end-0 translate-middle-y">
 
       {{!-- #2 --}}
-      <div class="hungryWarning__info row g-4 align-items-center flex-column-reverse flex-md-row">
+      <div class="hungryWarning__info row align-items-center justify-content-center flex-column-reverse flex-md-row">
         <div class="col-lg-6 col-md-6 col-10">
-          <div class="hungryWarning__card bg-white">
+          <div class="hungryWarning__card bg-white mt-4 mt-md-0">
             <h3 class="fw-bold text-primary text-nowrap">一起來搶救隱性飢餓吧<br>
               這是「隱性飢餓」的警訊</h3>
             <p class="text-dark mb-4">您是否覺得皮膚或嘴唇經常乾燥還伴隨著粗糙、脫皮呢？<br>
@@ -78,19 +78,32 @@
           <h3 class="fs-2 fw-bold mt-4 mb-12 text-dark">不需要節食，只需要改變飲食習慣，吃對食物</h3>
 
           <div class="food__cardWrap mb-16">
-            <div class="row justify-content-center g-4 fw-bold">
+            <div class="row justify-content-center">
               {{!-- #1 --}}
-              <div class="col-10 col-md-3 col-lg-4">
-                <div class="card food__card rounded-2 border-0">
-                  <img src="/images/lemon02-compressed.jpeg" alt="lemon"
-                    class="card-img-top img-fluid rounded-top food__card-img">
+              {{!-- {{#each }} --}}
 
-                  <div class="card-body rounded-bottom text-dark text-start bg-light p-4">
-                    <p class="mb-2">維生素C</p>
-                    <p class="fs-5">檸檬</p>
+              {{!-- <div class="col-10 col-md-3 col-lg-4">
+                <a href="/foods/{{this.id}}">
+                  <div class="card border-0 text-dark mt-4">
+                    <figure class=" card__imgWrap">
+                      <img src="{{this.image}}" class="card__img" alt="apple">
+                      <figcaption class="card__caption fw-bold">{{this.name_en}}</figcaption>
+                    </figure>
+                    <div class="card-body">
+                      <h5 class="card-title py-1 border-bottom border-primary fw-bold">{{this.name}}</h5>
+                      <p class="card-text">
+                        <span class="material-icons align-top">
+                          calendar_month
+                        </span>
+                        {{this.month}}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </div>
+                </a>
+              </div> --}}
+
+              {{!-- {{/each}} --}}
+
               {{!-- #2 --}}
               <div class="col-10 col-md-3 col-lg-4">
                 <div class="card food__card rounded-2 border-0">
@@ -114,6 +127,7 @@
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
           <a href="/user/login" class="btn btn__primary w-15 link-light">了解食材，聰明飲食</a>

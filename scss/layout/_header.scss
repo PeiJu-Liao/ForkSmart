@@ -5,7 +5,6 @@
 
   &__banner {
     &-img {
-      margin: 0 auto;
       object-fit: contain;
     }
   }
@@ -27,7 +26,8 @@
 
     &__banner {
       &-img {
-        margin-left: -3rem;
+        margin-top: -1rem;
+        margin-left: -2rem;
       }
     }
   }

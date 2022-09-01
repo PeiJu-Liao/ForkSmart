@@ -415,7 +415,6 @@ body {
   font-size: 3rem;
 }
 .header__banner-img {
-  margin: 0 auto;
   object-fit: contain;
 }
 
@@ -429,7 +428,8 @@ body {
     font-size: 3.5rem;
   }
   .header__banner-img {
-    margin-left: -3rem;
+    margin-top: -1rem;
+    margin-left: -2rem;
   }
 }
 .contact {
