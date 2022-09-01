@@ -37,44 +37,44 @@
     }
   }
 
-  @include ipad_horizontal {
-    .hungryWarning {
-      &__card {
-        padding: 4rem 2rem;
+  // @include ipad_horizontal {
+  //   .hungryWarning {
+  //     &__card {
+  //       padding: 4rem 2rem;
 
-        h3 {
-          font-size: 1.2rem;
-        }
-      }
+  //       h3 {
+  //         font-size: 1.2rem;
+  //       }
+  //     }
 
-      &__tree {
-        width: 18%;
-      }
-    }
-  }
+  //     &__tree {
+  //       width: 18%;
+  //     }
+  //   }
+  // }
 
-  @include ipad {
-    .hungryWarning {
-      &__info:last-child {
-        align-items: center;
-        flex-direction: column-reverse;
-      }
+  // @include ipad {
+  //   .hungryWarning {
+  //     &__info:last-child {
+  //       align-items: center;
+  //       flex-direction: column-reverse;
+  //     }
 
-      &__card {
-        h3 {
-          font-size: 1.5rem;
-        }
-      }
-    }
-  }
+  //     &__card {
+  //       h3 {
+  //         font-size: 1.5rem;
+  //       }
+  //     }
+  //   }
+  // }
 
-  @include phone {
-    .hungryWarning {
-      &__tree {
-        width: 30%;
-      }
-    }
-  }
+  // @include phone {
+  //   .hungryWarning {
+  //     &__tree {
+  //       width: 30%;
+  //     }
+  //   }
+  // }
 }
 
 .food {
@@ -116,43 +116,43 @@
     }
   }
 
-  @include ipad_horizontal {
-    .food {
-      &__tree {
-        width: 25%;
-      }
+  // @include ipad_horizontal {
+  //   .food {
+  //     &__tree {
+  //       width: 25%;
+  //     }
 
-      &__personStand {
-        width: 70%;
-      }
+  //     &__personStand {
+  //       width: 70%;
+  //     }
 
-      &__bg-ground-btm {
-        padding-top: 10rem;
-      }
-    }
-  }
+  //     &__bg-ground-btm {
+  //       padding-top: 10rem;
+  //     }
+  //   }
+  // }
 
-  @include ipad {
-    .food {
-      &__tree {
-        width: 30%;
-      }
+  // @include ipad {
+  //   .food {
+  //     &__tree {
+  //       width: 30%;
+  //     }
 
-      &__personStand {
-        width: 90%;
-      }
+  //     &__personStand {
+  //       width: 90%;
+  //     }
 
-      &__bg-ground-btm {
-        padding-top: 15rem;
-      }
-    }
-  }
+  //     &__bg-ground-btm {
+  //       padding-top: 15rem;
+  //     }
+  //   }
+  // }
 
-  @include phone {
-    .food {
-      &__wrap {
-        padding-top: 25rem;
-      }
-    }
-  }
+  // @include phone {
+  //   .food {
+  //     &__wrap {
+  //       padding-top: 25rem;
+  //     }
+  //   }
+  // }
 }

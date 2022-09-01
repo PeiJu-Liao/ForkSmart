@@ -5,28 +5,176 @@
       "name": "蘋果",
       "name_en": "Apple",
       "category": "水果類",
-      "image": "",
-      "vitaminA": 123,
-      "vitaminB": 123,
-      "vitaminC": 4,
-      "vitaminD": 123,
-      "vitaminE": 123,
-      "calcium": 123,
-      "iron": 123,
-      "magnesium": 123,
-      "zinc": 123,
-      "iodine": 123,
+      "image": "https://images.unsplash.com/photo-1569870499705-504209102861?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=415&q=80",
+      "show_image1": "https://images.unsplash.com/photo-1612800694220-35a0a24e7f98?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=386&q=80",
+      "show_image2": "https://images.unsplash.com/photo-1533893662125-43c54ffa3b41?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "vitaminA": 10,
+      "vitaminB": 10,
+      "vitaminC": 10,
+      "vitaminD": 15,
+      "vitaminE": 5,
+      "calcium": 5,
+      "iron": 10,
+      "magnesium": 10,
+      "zinc": 10,
+      "iodine": 10,
       "description": "自19世紀起威爾斯就有俗語說明蘋果和健康的關係：「一天一蘋果，醫生遠離我」（An apple a day keeps the doctor away）。初步的研究表示，蘋果可以降低罹患結腸癌、前列腺癌和肺癌的風險。蘋果皮含有熊果酸，在大鼠實驗中可以增加骨骼肌及褐色脂肪組織，減少白色脂肪組織，同時降低肥胖症、葡萄糖耐受不良以及脂肪肝疾病的風險。",
-      "month": "April-August"
+      "month": "September-February"
+    },
+    {
+      "id": 2,
+      "name": "酪梨",
+      "name_en": "Avacado",
+      "category": "油脂堅果類",
+      "image": "https://images.unsplash.com/photo-1612506266679-606568a33215?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "show_image1": "https://images.unsplash.com/photo-1597756900679-3aa58197371f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8YXZvY2Fkb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      "show_image2": "https://images.unsplash.com/photo-1580823673523-a1a474e4967c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "vitaminA": 10,
+      "vitaminB": 5,
+      "vitaminC": 3,
+      "vitaminD": 2,
+      "vitaminE": 8,
+      "calcium": 5,
+      "iron": 10,
+      "magnesium": 10,
+      "zinc": 10,
+      "iodine": 10,
+      "description": "酪梨被冠上金氏世界紀錄最營養的水果，含有維生素A、C、E及B 群，其中鉀離子和膳食纖維表現更為優異。 有別於其他水果，它的油脂含量相當豐富，也因此熱量和水果大不同！高纖高油脂的特性，讓它可以增加飽足感、抑制食欲，且酪梨將近一半是有益心血管的單元不飽和脂肪酸，能降低壞膽固醇（低密度膽固醇），改善發炎反應，比起動物性脂肪或烹調油是更健康的選擇。",
+      "month": "May-March"
+    },
+    {
+      "id": 3,
+      "name": "榛果",
+      "name_en": "Hazelnut",
+      "category": "油脂堅果類",
+      "image": "https://images.unsplash.com/photo-1573851552153-816785fecf4a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
+      "show_image1": "https://images.unsplash.com/photo-1635843130314-c0b5cc832b79?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "show_image2": "https://images.unsplash.com/photo-1635843108103-9af0ea224a19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "vitaminA": 10,
+      "vitaminB": 5,
+      "vitaminC": 3,
+      "vitaminD": 2,
+      "vitaminE": 8,
+      "calcium": 5,
+      "iron": 10,
+      "magnesium": 10,
+      "zinc": 10,
+      "iodine": 10,
+      "description": "榛果裡所含的營養素有蛋白質、脂肪、醣類、胡蘿蔔素、維生素 B群、鈣、磷、鐵。榛果中富含油脂，有利於其中脂肪性維生素在人體吸收。榛果有天然香氣，有開胃之功用且有補脾胃、益氣力、明目健行的功效。",
+      "month": "January-December"
+    },
+    {
+      "id": 4,
+      "name": "花生",
+      "name_en": "Peanut",
+      "category": "油脂堅果類",
+      "image": "https://images.unsplash.com/photo-1579282769505-39e687bd68c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fHBlYW51dHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      "show_image1": "https://images.unsplash.com/photo-1549978113-29eb25c8177f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "show_image2": "https://images.unsplash.com/photo-1575399872095-9363bf262e64?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "vitaminA": 10,
+      "vitaminB": 5,
+      "vitaminC": 3,
+      "vitaminD": 2,
+      "vitaminE": 8,
+      "calcium": 5,
+      "iron": 10,
+      "magnesium": 10,
+      "zinc": 10,
+      "iodine": 10,
+      "description": "花生是豆科植物落花生的種子，所以又稱「落花生」，而台灣人則習慣稱它為「土豆」。花生的食療效果能，預防心血管疾病，其不飽和脂肪酸、膽鹼等營養成分，可增加毛細血管的性，預防心臟病、高血壓、腦溢血的產生，防止膽固醇在血管沈澱、堆積而引起動脈硬化。花生還具有止血功效，其外皮含有可對抗纖維蛋白溶解的成分，可改善血小板的質量，加強毛細血管的收縮功能。",
+      "month": "January-December"
+    },
+    {
+      "id": 5,
+      "name": "葵花子",
+      "name_en": "Sunflower Seeds",
+      "category": "油脂堅果類",
+      "image": "https://images.unsplash.com/photo-1613500788522-89c4d55bdd0e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+      "show_image1": "https://cdn.pixabay.com/photo/2020/02/10/18/32/nuclear-4837331_960_720.jpg",
+      "show_image2": "https://cdn.pixabay.com/photo/2014/11/19/14/10/sunflower-seeds-537652_960_720.jpg",
+      "vitaminA": 10,
+      "vitaminB": 5,
+      "vitaminC": 3,
+      "vitaminD": 2,
+      "vitaminE": 8,
+      "calcium": 5,
+      "iron": 10,
+      "magnesium": 10,
+      "zinc": 10,
+      "iodine": 10,
+      "description": "葵花子含有豐富的不飽和脂肪酸、葉酸、植物固醇和複合亞油酸，具有抗炎、減少膽固醇的功效，可預防動脈硬化症；含有大量複合亞油酸，具有抗癌、降低膽固醇、預防心臟病和防止肥胖等作用，也具有抗氧化作用，可直接遏阻致癌物，保護組織，抑制癌細胞分裂，促進癌細胞死亡，因此可預防癌症和心血管疾病。",
+      "month": "January-December"
     }
   ],
-  "vitamins": [
+  "vitamin": [
     {
-      "vit_name": "維生素A",
-      "vit_en": "vitaminA",
-      "vit_effect": "幫助視網膜感光物質－視紫質生成，在黑暗中也能維持視力。促進上皮細胞生長，增進皮膚與黏膜健康",
-      "vit__tooMuch": "高劑量具有毒性，脂溶性的維生素A不易排出體外，會造成噁心、嘔吐、頭痛、肝臟異常、骨頭與皮膚異變。若懷孕期間攝取過多，會增加胎兒畸形與先天異常風險",
-      "vit__tooLess": "夜晚視力變差，出現夜盲症、乾眼症，嚴重時會產生結膜、角膜軟化潰瘍症，有失明之虞。皮膚粗糙乾燥，發生毛囊角化症。"
+      "vitaminA": {
+        "vit_name": "維生素A",
+        "vit_en": "vitaminA",
+        "vit_effect": "幫助視網膜感光物質－視紫質生成，在黑暗中也能維持視力。促進上皮細胞生長，增進皮膚與黏膜健康",
+        "vit__tooMuch": "高劑量具有毒性，脂溶性的維生素A不易排出體外，會造成噁心、嘔吐、頭痛、肝臟異常、骨頭與皮膚異變。若懷孕期間攝取過多，會增加胎兒畸形與先天異常風險。",
+        "vit__tooLess": "夜晚視力變差，出現夜盲症、乾眼症，嚴重時會產生結膜、角膜軟化潰瘍症，有失明之虞。皮膚粗糙乾燥，發生毛囊角化症。"
+      },
+      "vitaminB": {
+        "vit_name": "維生素B",
+        "vit_en": "vitaminB",
+        "vit_effect": "維生素B包括B1、B2、B6、B12、葉酸、泛酸、菸鹼酸等。功能包含代謝、造血、保護神經、解毒、提高免疫，可預防肝癌、肺癌、胃癌等。是天然的抗壓劑，幫助人體維護神經、內分泌系統並達到情緒的平衡。",
+        "vit__tooMuch": "維生素B群為水溶性，攝取過量只會排出體外，只必須補充每日建議攝取量即可。然而，過量B6可能造成神經失常，如失眠、清楚記憶夢中場景等，過多菸鹼素則會引起皮膚過敏。",
+        "vit__tooLess": "維生素B12、葉酸缺乏可能會造成紅血球細胞無法順利分裂，而導致巨球性貧血；維生素B6 參與血紅素的形成，缺乏會造成血球體積變小，導致小球型貧血。"
+      },
+      "vitaminD": {
+        "vit_name": "維生素D",
+        "vit_en": "vitaminD",
+        "vit_effect": "增進鈣的吸收，幫助骨骼和牙齒發育、維持血鈣平衡，讓肌肉和神經能正常運作。",
+        "vit__tooMuch": "大量服用維生素D、副甲狀腺機能亢進、甲狀腺中毒症、惡性腫瘤等，會引起高血鈣症，導致尿液濃縮機制喪失、造成腎臟、心臟等軟組織鈣化。",
+        "vit__tooLess": "骨頭彎曲，出現O/X型腿、骨頭疼痛、易骨折、齲齒；肌肉軟弱無力；免疫力低弱。"
+      },
+      "vitaminE": {
+        "vit_name": "維生素E",
+        "vit_en": "vitaminE",
+        "vit_effect": "減少不飽合脂肪酸氧化，降低自由基產生，維持細胞膜完整性，增進皮膚與血球健康。",
+        "vit__tooMuch": "可能會造成血脂過高，血液凝固障礙，血清甲狀腺素下降等凝血機制的異常。",
+        "vit__tooLess": "維生素 E 又叫做生育醇，有促進性荷爾蒙分泌之效，缺乏易導致不孕、流產。不足時紅血球細胞膜易氧化受損，血球破裂造成溶血性貧血。長期缺發可能有運動失調、周邊神經病變。"
+      }
+    }
+  ],
+  "mineral": [
+    {
+      "calcium": {
+        "min_name": "鈣",
+        "min_en": "calcium",
+        "min_effect": "維持骨骼與牙齒的正常發育及健康。鈣能調控細胞的通透性，助於肌肉與心臟的正常收縮及神經感應。",
+        "min__tooMuch": "噁心、體重減輕、多尿、心律不整、疲倦、軟組織鈣化。有高鈣血症、高鈣尿症、腎功能損傷、腎結石、乳鹼症、心血管疾病與攝護腺癌風險。",
+        "min__tooLess": "抽筋或影響神經傳導、手腳麻木、關節疼痛、失眠。長期鈣質攝取不足會導致骨鈣流失，齲齒、指甲易碎、骨質疏鬆。"
+      },
+      "magnesium": {
+        "min_name": "鎂",
+        "min_en": "magnesium",
+        "min_effect": "維持神經、肌肉、骨骼的正常功能。是人體 300 種酵素的輔因子，參與細胞內信號傳遞之過程、蛋白質合成、醣類及脂質代謝。",
+        "min__tooMuch": "尚無報告指出由一般食物攝取過量鎂有不良影響。而含鎂藥物或鎂補充劑攝取過量，則會引起腹瀉。",
+        "min__tooLess": "慢性疲勞、肌肉痠痛、肌肉痙攣、引起心血管疾病、糖尿病、骨質疏鬆、焦慮及憂鬱等疾病。"
+      },
+      "iron": {
+        "min_name": "鐵",
+        "min_en": "iron",
+        "min_effect": "構成血紅素與肌紅素，助於氧氣的輸送與利用，參與能量代謝和各式酵素反應，與免疫相關。",
+        "min__tooMuch": "噁心、嘔吐、胃痛、腹瀉或便秘。飲食中的天然鐵質多半不會引起消化道不適，通常是鐵劑過量補充所致。",
+        "min__tooLess": "食物攝取不足、用鐵需求增加、大量血液流失造成缺鐵，產生疲倦無力、貧血、臉色蒼白、免疫下降、匙狀甲、不寧腿症候群。"
+      },
+      "zinc": {
+        "min_name": "鋅",
+        "min_en": "zinc",
+        "min_effect": "促進生長、神經發育、維持正常的免疫及生殖系統，調節內分泌功能。參與核酸、蛋白質及脂肪代謝、荷爾蒙合成。",
+        "min__tooMuch": "會有噁心、嘔吐、腹部絞痛、免疫降低、高密度脂蛋白膽固醇降低、銅缺乏。通常大量攝取裝在鍍鋅容器的食物會造成鋅中毒。",
+        "min__tooLess": "生長遲緩、味覺遲鈍、食慾下降、掉髮、傷口癒合力差、免疫降低、認知變差、性腺機能下降。"
+      },
+      "iodine": {
+        "min_name": "碘",
+        "min_en": "iodine",
+        "min_effect": "合成甲狀腺激素的主要成分，有助於維持正常生長發育、基礎代謝、神經肌肉的功能，並調節細胞的氧化作用。",
+        "min__tooMuch": "急性碘中毒會造成腸道發炎、頭頸部水腫、溶血性貧血、代謝酸中毒、腎衰竭等。慢性危害包括甲狀腺炎、甲狀腺腫、干擾甲狀腺功能。",
+        "min__tooLess": "甲狀腺機能不足、甲狀腺腫大、心智障礙、思考遲緩、呆小症、生長與發育異常、代謝速率降低、畏寒、水腫。"
+      }
     }
   ]
 }

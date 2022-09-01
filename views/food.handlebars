@@ -2,8 +2,8 @@
   <div class="foods__wrap">
     <div class="container h-100">
 
-      <div class="h-100 pt-12">
-        <form action="" method="POST" class="foods__form py-4 px-4 px-lg-8 py-lg-8">
+      <div class="h-75 pt-16">
+        <form action="" method="POST" class="foods__form py-4 px-4 px-lg-8 py-lg-12">
           <div class="row justify-content-center">
             {{!-- 食物分類 --}}
             <div class="col-10 col-md-4">
@@ -59,56 +59,33 @@
 
   </div>
 
-  <div class="foods__cards py-5">
+  <div class="foods__cards">
     <div class="container">
-      <div class="row justify-content-center">
-        {{!-- {{#each }} --}}
+      <div class="row justify-content-center justify-content-md-between">
+        {{#each forksmartData}}
 
         <div class="col-10 col-md-6 col-lg-3">
-
-          <div class="card border-0 text-dark">
-            <figure class="card__imgWrap">
-              <img src="/images/apple-compressed.jpeg" class="card__img" alt="apple">
-              <figcaption class="card__caption fw-bold">蘋果</figcaption>
-            </figure>
-            <div class="card-body">
-              <h5 class="card-title py-1 border-bottom border-primary fw-bold">蘋果</h5>
-              <p class="card-text">
-                <span class="material-icons align-top">
-                  calendar_month
-                </span>
-                April-August
-              </p>
+          <a href="/foods/{{this.id}}">
+            <div class="card border-0 text-dark mt-4">
+              <figure class=" card__imgWrap">
+                <img src="{{this.image}}" class="card__img" alt="apple">
+                <figcaption class="card__caption fw-bold">{{this.name_en}}</figcaption>
+              </figure>
+              <div class="card-body">
+                <h5 class="card-title py-1 border-bottom border-primary fw-bold">{{this.name}}</h5>
+                <p class="card-text">
+                  <span class="material-icons align-top">
+                    calendar_month
+                  </span>
+                  {{this.month}}
+                </p>
+              </div>
             </div>
-          </div>
+          </a>
 
         </div>
-
-        {{!-- {{/each}} --}}
-        <div class="col-10 col-md-6 col-lg-3">
-
-          <div class="card border-0 text-dark">
-            <figure class="card__imgWrap">
-              <img src="/images/apple-compressed.jpeg" class="card__img" alt="apple">
-              <figcaption class="card__caption fw-bold">蘋果</figcaption>
-            </figure>
-            <div class="card-body">
-              <h5 class="card-title py-1 border-bottom border-primary fw-bold">蘋果</h5>
-              <p class="card-text">
-                <span class="material-icons align-top">
-                  calendar_month
-                </span>
-                April-August
-              </p>
-            </div>
-          </div>
-
-        </div>
+        {{/each}}
       </div>
     </div>
   </div>
-
-
-
-
 </article>

@@ -193,7 +193,7 @@
     }
   }
 
-  @include ipad_horizontal {
+  @include ipad {
     .nav {
       &__item:not(:last-child) {
         margin-right: 1rem;
@@ -201,7 +201,7 @@
     }
   }
 
-  @include ipad {
+  @include ipad-horizontal {
     .nav {
       &__ham {
         display: block;

@@ -6,27 +6,26 @@
   }
 }
 
-// RWD 
-@mixin XL-1200 {
-  @media(max-width:1200px) {
-    @content
-  }
-}
-
-@mixin ipad_horizontal {
-  @media (max-width:992px) {
+@mixin phone {
+  @media (min-width:576px) {
     @content
   }
 }
 
 @mixin ipad {
-  @media (max-width:768px) {
+  @media (min-width:768px) {
     @content
   }
 }
 
-@mixin phone {
-  @media (max-width:576px) {
+@mixin ipad-horizontal {
+  @media (min-width:992px) {
+    @content
+  }
+}
+
+@mixin xl {
+  @media(min-width:1200px) {
     @content
   }
 }

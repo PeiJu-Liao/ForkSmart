@@ -4,39 +4,43 @@
     <div class="row pt-6 mb-12 align-items-center justify-content-center">
 
       <div class="col-10 col-md-10 col-lg-6">
-        <img src="/images/apple-compressed.jpeg" alt="apple">
+        <div class="show__image">
+          <img src="{{forksmartFood.show_image1}}" alt="apple" class="rounded-3 w-100">
+        </div>
       </div>
       <div class="col-10 col-md-10 col-lg-6">
-        <div class="text-dark">
-          <h2 class="fs-4 py-1 border-bottom border-dark">蘋果 <span class="fs-5">水果類</span></h2>
-          <p class="p-4">自19世紀起威爾斯就有俗語說明蘋果和健康的關係：「一天一蘋果，醫生遠離我」（An apple a day keeps the doctor
-            away）。初步的研究表示，蘋果可以降低罹患結腸癌、前列腺癌和肺癌的風險。蘋果皮含有熊果酸，在大鼠實驗中可以增加骨骼肌及褐色脂肪組織，減少白色脂肪組織，同時降低肥胖症、葡萄糖耐受不良以及脂肪肝疾病的風險。</p>
-        </div>
-        <div class="show__vitamin text-dark">
-          <h2 class="fs-4 py-1 border-bottom border-dark">Vitamin維他命</h2>
-          <div class="show__vitamin-progress p-4 ">
-            <div class="d-md-flex align-items-center justify-content-center mt-md-3">
-              <p class="mt-2 mt-md-0 me-md-4 text-nowrap">維生素A</p>
-              <div class="bar" data-label="A">
-                <div class="progressbar" data-done="20">20%</div>
+        <div class="mt-5">
+          <div class="text-dark">
+            <h2 class="fs-4 py-1 border-bottom border-dark">{{forksmartFood.name}} <span
+                class="fs-5">{{forksmartFood.category}}</span></h2>
+            <p class="p-4">{{forksmartFood.description}}</p>
+          </div>
+          <div class="show__vitamin text-dark">
+            <h2 class="fs-4 py-1 border-bottom border-dark">Vitamin維他命</h2>
+            <div class="show__vitamin-progress p-4 ">
+              <div class="d-md-flex align-items-center justify-content-center mt-md-3">
+                <p class="mt-2 mt-md-0 me-md-4 text-nowrap">維生素A</p>
+                <div class="bar" data-label="A">
+                  <div class="progressbar" data-done="{{forksmartFood.vitaminA}}">{{forksmartFood.vitaminA}}mg</div>
+                </div>
               </div>
-            </div>
-            <div class="d-md-flex align-items-center justify-content-center mt-md-3">
-              <p class="mt-2 mt-md-0 me-md-4 text-nowrap">維生素B</p>
-              <div class="bar" data-label="B">
-                <div class="progressbar" data-done="40">40%</div>
+              <div class="d-md-flex align-items-center justify-content-center mt-md-3">
+                <p class="mt-2 mt-md-0 me-md-4 text-nowrap">維生素B</p>
+                <div class="bar" data-label="B">
+                  <div class="progressbar" data-done="{{forksmartFood.vitaminB}}">{{forksmartFood.vitaminB}}mg</div>
+                </div>
               </div>
-            </div>
-            <div class="d-md-flex align-items-center justify-content-center mt-md-3">
-              <p class="mt-2 mt-md-0 me-md-4 text-nowrap">維生素D</p>
-              <div class="bar" data-label="D">
-                <div class="progressbar" data-done="50">50%</div>
+              <div class="d-md-flex align-items-center justify-content-center mt-md-3">
+                <p class="mt-2 mt-md-0 me-md-4 text-nowrap">維生素D</p>
+                <div class="bar" data-label="D">
+                  <div class="progressbar" data-done="{{forksmartFood.vitaminD}}">{{forksmartFood.vitaminD}}mg</div>
+                </div>
               </div>
-            </div>
-            <div class="d-md-flex align-items-center justify-content-center mt-md-3">
-              <p class="mt-2 mt-md-0 me-md-4 text-nowrap">維生素E</p>
-              <div class="bar" data-label="E">
-                <div class="progressbar" data-done="5">5%</div>
+              <div class="d-md-flex align-items-center justify-content-center mt-md-3">
+                <p class="mt-2 mt-md-0 me-md-4 text-nowrap">維生素E</p>
+                <div class="bar" data-label="{{forksmartFood.vitaminE}}">
+                  <div class="progressbar" data-done="5">{{forksmartFood.vitaminE}}mg</div>
+                </div>
               </div>
             </div>
           </div>
@@ -121,31 +125,31 @@
             <div class="d-md-flex align-items-center justify-content-center mt-md-3">
               <p class="mt-2 mt-md-0 me-md-4 text-nowrap">鈣</p>
               <div class="bar" data-label="calcium">
-                <div class="progressbar" data-done="5">5%</div>
+                <div class="progressbar" data-done="{{forksmartFood.calcium}}">{{forksmartFood.calcium}}mg</div>
               </div>
             </div>
             <div class="d-md-flex align-items-center justify-content-center mt-md-3">
               <p class="mt-2 mt-md-0 me-md-4 text-nowrap">鐵</p>
               <div class="bar" data-label="iron">
-                <div class="progressbar" data-done="5">5%</div>
+                <div class="progressbar" data-done="{{forksmartFood.iron}}">{{forksmartFood.iron}}mg</div>
               </div>
             </div>
             <div class="d-md-flex align-items-center justify-content-center mt-md-3">
               <p class="mt-2 mt-md-0 me-md-4 text-nowrap">鎂</p>
               <div class="bar" data-label="magnesium">
-                <div class="progressbar" data-done="10">10%</div>
+                <div class="progressbar" data-done="{{forksmartFood.magnesium}}">{{forksmartFood.magnesium}}mg</div>
               </div>
             </div>
             <div class="d-md-flex align-items-center justify-content-center mt-md-3">
               <p class="mt-2 mt-md-0 me-md-4 text-nowrap">鋅</p>
               <div class="bar" data-label="zinc">
-                <div class="progressbar" data-done="20">20%</div>
+                <div class="progressbar" data-done="{{forksmartFood.zinc}}">{{forksmartFood.zinc}}mg</div>
               </div>
             </div>
             <div class="d-md-flex align-items-center justify-content-center mt-md-3">
               <p class="mt-2 mt-md-0 me-md-4 text-nowrap">碘</p>
               <div class="bar" data-label="iodine">
-                <div class="progressbar" data-done="30">30%</div>
+                <div class="progressbar" data-done="{{forksmartFood.iodine}}">{{forksmartFood.iodine}}mg</div>
               </div>
             </div>
           </div>
@@ -153,7 +157,9 @@
       </div>
 
       <div class="col-10 col-md-10 col-lg-6">
-        <img src="/images/apple-compressed.jpeg" alt="apple">
+        <div class="show__image">
+          <img src="{{forksmartFood.show_image2}}" class="w-100 rounded-3" alt="apple">
+        </div>
       </div>
     </div>
   </div>
