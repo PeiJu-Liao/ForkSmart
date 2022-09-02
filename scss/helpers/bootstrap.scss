@@ -14,10 +14,11 @@ $list-group-border-color: transparent;
 $form-select-border-radius: 0.5rem;
 $form-select-color: #4E2F14;
 $btn-close-color: #ea5704;
-
 $input-border-radius: 0.5rem;
-// $input-height: 2.5rem;
-// $input-line-height: 2.5rem;
+
+$nav-tabs-border-radius: 0.5rem;
+$nav-tabs-border-color: #ea5704;
+$nav-tabs-link-active-color: #EE8319;
 
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";

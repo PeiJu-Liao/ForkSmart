@@ -659,7 +659,7 @@ body {
 }
 .show__image:hover img {
   filter: contrast(1.3);
-  transition: all 0.3s;
+  transition: all ease-in-out 0.3s;
 }
 .show__image::after {
   content: "";
@@ -683,7 +683,7 @@ body {
   position: relative;
   height: 2rem;
   padding: 0.25rem;
-  width: 100%;
+  width: 80%;
   max-width: 30rem;
 }
 .show__vitamin .progressbar, .show__mineral .progressbar {
@@ -697,6 +697,18 @@ body {
   width: 0;
   opacity: 0;
   transition: ease 2.5s;
+}
+.show__vitamin-name:any-link, .show__mineral-name:any-link {
+  color: #4E2F14;
+}
+.show__vitamin-name:hover, .show__mineral-name:hover {
+  padding: 0.25rem;
+  background-color: rgba(234, 87, 4, 0.8);
+  transform: scale(1.1) rotate(-10deg);
+  border-radius: 0.25rem;
+}
+.show__vitamin-name:hover:any-link, .show__mineral-name:hover:any-link {
+  color: #fff;
 }
 .show__month {
   height: 4.5rem;

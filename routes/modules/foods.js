@@ -14,7 +14,10 @@ router.get('/:id', (req, res) => {
   const forksmartFood = forksmartData.results.find(item => {
     return item.id.toString() === req.params.id
   })
-  res.render('show', { forksmartFood })
+  res.render('show', {
+    forksmartFood,
+    vitamin: forksmartData.vitamin
+  })
 })
 
 module.exports = router
