@@ -20,6 +20,10 @@ $nav-tabs-border-radius: 0.5rem;
 $nav-tabs-border-color: #ea5704;
 $nav-tabs-link-active-color: #EE8319;
 
+// 檢測表單
+$table-hover-bg: #f7993ca2;
+$table-striped-bg: #f79a3c75;
+
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
 // @import './variables';

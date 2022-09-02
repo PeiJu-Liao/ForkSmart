@@ -1,0 +1,81 @@
+<article class="bodytest bg-light-100">
+  <div class="bodytest__banner">
+    <img src="/images/001.avif" alt="banner" class="img-fluid">
+  </div>
+  <div class="container">
+    <div class="text-dark pt-10">
+      <h1 class="fw-bold text-center bodytest__title">健康檢測BMI</h1>
+
+      <div class="d-flex flex-column flex-md-row jutsify-content-center align-items-center">
+        <form action="" method="POST" class="border border-danger mt-5 me-md-4">
+          <div class="row justify-content-center">
+            <div class="col-5 my-2">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="male" id="male">
+                <label class="form-check-label" for="male">
+                  男
+                </label>
+              </div>
+            </div>
+            <div class="col-5 my-2">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="female" id="female" checked>
+                <label class="form-check-label" for="female">
+                  女
+                </label>
+              </div>
+            </div>
+            <div class="col-10 mt-2">
+              <label for="height" class="form-label text-dark">身高/cm</label>
+              <input type="number" class="form-control" id="height" step="1" name="height" placeholder="請輸入您的身高/公分...">
+            </div>
+            <div class="col-10 mt-2">
+              <label for="weight" class="form-label text-dark" step="1">體重/kg</label>
+              <input type="number" class="form-control" id="weight" name="weight" placeholder="請輸入您的體重/公斤...">
+            </div>
+            <div class="col-10 mt-2">
+              <label for="age" class="form-label text-dark" step="1" min="1" max="100">年齡</label>
+              <input type="number" class="form-control" id="age" name="age" placeholder="請輸入您的年齡...">
+            </div>
+          </div>
+        </form>
+        <table class="bodytest__table table table-hover table-striped mt-5">
+          <thead class="text-center text-dark">
+            <tr>
+              <th scope="col">BMI</th>
+              <th scope="col">成年人肥胖定義</th>
+            </tr>
+          </thead>
+          <tbody class="text-center table-group-divider text-dark">
+            <tr>
+              <th scope="row">BMI < 18.5</th>
+              <th scope="row">過輕</th>
+            </tr>
+            <tr>
+              <th scope="row">18.5 <= BMI < 24</th>
+              <th scope="row">正常</th>
+            </tr>
+            <tr>
+              <th scope="row">24 <= BMI < 27</th>
+              <th scope="row">過重</th>
+            </tr>
+            <tr>
+              <th scope="row">27 <= BMI < 30</th>
+              <th scope="row">輕度肥胖</th>
+            </tr>
+            <tr>
+              <th scope="row">30 <= BMI < 35</th>
+              <th scope="row">中度肥胖</th>
+            </tr>
+            <tr>
+              <th scope="row"> BMI >= 35</th>
+              <th scope="row">重度肥胖</th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</article>
+
+<script src="/javascript/bodytest.js"></script>

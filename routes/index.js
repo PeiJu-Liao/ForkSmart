@@ -3,6 +3,7 @@ const router = express.Router()
 const home = require('./modules/home')
 const user = require('./modules/user')
 const foods = require('./modules/foods')
+const bodytest = require('./modules/bodytest')
 
 // TODO: 首頁
 router.use('/', home)
@@ -10,5 +11,7 @@ router.use('/', home)
 router.use('/user', user)
 // TODO: 食物瀏覽頁 / 食物營養介紹
 router.use('/foods', foods)
+// TODO: 健康體態檢測頁面
+router.use('/bodytest', bodytest)
 
 module.exports = router
