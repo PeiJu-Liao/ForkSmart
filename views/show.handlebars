@@ -20,28 +20,28 @@
             <div class="show__vitamin-progress p-4 ">
               <div class="d-flex align-items-center justify-content-center mt-3">
                 <a href="#" role="button" class="mt-2 mt-md-0 me-4 show__vitamin-name text-nowrap"
-                  data-bs-toggle="modal" data-bs-target="#nutritionModal">維生素A</a>
+                  data-bs-toggle="modal" data-bs-target="#vitaminModal" data-name="#vitaminA-tab">維生素A</a>
                 <div class="bar" data-label="A">
                   <div class="progressbar" data-done="{{forksmartFood.vitaminA}}">{{forksmartFood.vitaminA}}mg</div>
                 </div>
               </div>
               <div class="d-flex align-items-center justify-content-center mt-3">
-                <a href="#" role="button" class="mt-2 mt-md-0 me-4 show__vitamin-name text-nowrap">維生素B</a>
-                {{!-- <p class="mt-2 mt-md-0 me-4">維生素B</p> --}}
+                <a href="#" role="button" class="mt-2 mt-md-0 me-4 show__vitamin-name text-nowrap"
+                  data-bs-toggle="modal" data-bs-target="#vitaminModal" data-name="#vitaminB-tab">維生素B</a>
                 <div class="bar" data-label="B">
                   <div class="progressbar" data-done="{{forksmartFood.vitaminB}}">{{forksmartFood.vitaminB}}mg</div>
                 </div>
               </div>
               <div class="d-flex align-items-center justify-content-center mt-3">
-                <a href="#" role="button" class="mt-2 mt-md-0 me-4 show__vitamin-name text-nowrap">維生素D</a>
-                {{!-- <p class="mt-2 mt-md-0 me-4">維生素D</p> --}}
+                <a href="#" role="button" class="mt-2 mt-md-0 me-4 show__vitamin-name text-nowrap"
+                  data-bs-toggle="modal" data-bs-target="#vitaminModal" data-name="#vitaminD-tab">維生素D</a>
                 <div class="bar" data-label="D">
                   <div class="progressbar" data-done="{{forksmartFood.vitaminD}}">{{forksmartFood.vitaminD}}mg</div>
                 </div>
               </div>
               <div class="d-flex align-items-center justify-content-center mt-3">
-                <a href="#" role="button" class="mt-2 mt-md-0 me-4 show__vitamin-name text-nowrap">維生素E</a>
-                {{!-- <p class="mt-2 mt-md-0 me-4">維生素E</p> --}}
+                <a href="#" role="button" class="mt-2 mt-md-0 me-4 show__vitamin-name text-nowrap"
+                  data-bs-toggle="modal" data-bs-target="#vitaminModal" data-name="#vitaminE-tab">維生素E</a>
                 <div class="bar" data-label="{{forksmartFood.vitaminE}}">
                   <div class="progressbar" data-done="5">{{forksmartFood.vitaminE}}mg</div>
                 </div>
@@ -173,60 +173,103 @@
   </div>
 
   {{!-- Nutrition Modal --}}
-  <div class="modal" tabindex="-1" id="nutritionModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+  <div class="modal" tabindex="-1" id="vitaminModal" tabindex="-1" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content p-2">
         <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
         <div class="modal-body">
-          <ul class="nav nav-tabs" id="myTab" role="tablist">
+
+          <ul class="nav nav-tabs" id="myTab" role="tablist" style="height:auto">
             <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="vitaminA_tab" data-bs-toggle="tab" data-bs-target="#vitaminA_tab"
-                type="button" role="tab" aria-controls="vitaminA_tab"
-                aria-selected="true">{{vitamin.vitaminA.vit_name}}</button>
+              <button class="nav-link" id="vitaminA" data-bs-toggle="tab" data-bs-target="#vitaminA-tab" type="button"
+                role="tab" aria-controls="vitaminA-tab" aria-selected="false">{{vitamin.vitaminA.vit_name}}</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="vitaminB_tab" data-bs-toggle="tab" data-bs-target="#vitaminB_tab"
-                type="button" role="tab" aria-controls="vitaminB_tab"
-                aria-selected="false">{{vitamin.vitaminB.vit_name}}</button>
+              <button class="nav-link" id="vitaminB" data-bs-toggle="tab" data-bs-target="#vitaminB-tab" type="button"
+                role="tab" aria-controls="vitaminB-tab" aria-selected="true">{{vitamin.vitaminB.vit_name}}</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane"
-                type="button" role="tab" aria-controls="contact-tab-pane"
-                aria-selected="false">{{vitamin.vitaminD.vit_name}}</button>
+              <button class="nav-link" id="vitaminD" data-bs-toggle="tab" data-bs-target="#vitaminD-tab" type="button"
+                role="tab" aria-controls="vitaminD-tab" aria-selected="false">{{vitamin.vitaminD.vit_name}}</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane"
-                type="button" role="tab" aria-controls="contact-tab-pane"
-                aria-selected="false">{{vitamin.vitaminE.vit_name}}</button>
+              <button class="nav-link" id="vitaminE" data-bs-toggle="tab" data-bs-target="#vitaminE-tab" type="button"
+                role="tab" aria-controls="vitaminE-tab" aria-selected="false">{{vitamin.vitaminE.vit_name}}</button>
             </li>
           </ul>
           <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="vitaminA_tab" role="tabpanel" aria-labelledby="home-tab"
-              tabindex="0">
-              <div class="d-md-flex text-dark">
-                <div class="border-right py-2">
-                  <p class="fw-bold">功效:</p>
+            <div class="tab-pane fade " id="vitaminA-tab" role="tabpanel" aria-labelledby="vitaminA" tabindex="0">
+              <div class="row justify-content-center text-dark">
+                <div class="col-md-5 col-11 p-md-4">
+                  <p class="fw-bold text-nowrap mt-2 mt-md-0">功效:</p>
                   <p>{{vitamin.vitaminA.vit_effect}}</p>
                 </div>
-                <div class="p-md-2">
-                  <div class="py-2 border-md-bottom">
-                    <p class="fw-bold">攝取過多時:</p>
-                    <p>高劑量具有毒性，脂溶性的維生素A不易排出體外，會造成噁心、嘔吐、頭痛、肝臟異常、骨頭與皮膚異變。若懷孕期間攝取過多，會增加胎兒畸形與先天異常風險。</p>
+                <div class="col-md-7 col-11 p-md-4">
+                  <div class="py-2 py-md-0 mb-md-2">
+                    <p class="fw-bold text-nowrap">攝取過多時:</p>
+                    <p>{{vitamin.vitaminA.vit__tooMuch}}</p>
                   </div>
-                  <div class="py-2">
-                    <p class="fw-bold">攝取過少時:</p>
-                    <p>夜晚視力變差，出現夜盲症、乾眼症，嚴重時會產生結膜、角膜軟化潰瘍症，有失明之虞。皮膚粗糙乾燥，發生毛囊角化症。</p>
+                  <div class="py-2 py-md-0">
+                    <p class="fw-bold text-nowrap">攝取過少時:</p>
+                    <p>{{vitamin.vitaminA.vit__tooLess}}</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="tab-pane fade" id="vitaminB_tab" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-              ...</div>
-            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
-              ...</div>
-            <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab"
-              tabindex="0">...
+            <div class="tab-pane fade" id="vitaminB-tab" role="tabpanel" aria-labelledby="vitaminB" tabindex="0">
+              <div class="row justify-content-center text-dark">
+                <div class="col-md-5 col-11 p-md-4">
+                  <p class="fw-bold text-nowrap mt-2 mt-md-0">功效:</p>
+                  <p>{{vitamin.vitaminB.vit_effect}}</p>
+                </div>
+                <div class="col-md-7 col-11 p-md-4">
+                  <div class="py-2 py-md-0 mb-md-2">
+                    <p class="fw-bold text-nowrap">攝取過多時:</p>
+                    <p>{{vitamin.vitaminB.vit__tooMuch}}</p>
+                  </div>
+                  <div class="py-2 py-md-0">
+                    <p class="fw-bold text-nowrap">攝取過少時:</p>
+                    <p>{{vitamin.vitaminB.vit__tooLess}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="vitaminD-tab" role="tabpanel" aria-labelledby="vitaminD" tabindex="0">
+              <div class="row justify-content-center text-dark">
+                <div class="col-md-5 col-11 p-md-4">
+                  <p class="fw-bold text-nowrap mt-2 mt-md-0">功效:</p>
+                  <p>{{vitamin.vitaminD.vit_effect}}</p>
+                </div>
+                <div class="col-md-7 col-11 p-md-4">
+                  <div class="py-2 py-md-0 mb-md-2">
+                    <p class="fw-bold text-nowrap">攝取過多時:</p>
+                    <p>{{vitamin.vitaminD.vit__tooMuch}}</p>
+                  </div>
+                  <div class="py-2 py-md-0">
+                    <p class="fw-bold text-nowrap">攝取過少時:</p>
+                    <p>{{vitamin.vitaminD.vit__tooLess}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="vitaminE-tab" role="tabpanel" aria-labelledby="vitaminE" tabindex="0">
+              <div class="row justify-content-center text-dark">
+                <div class="col-md-5 col-11 p-md-4">
+                  <p class="fw-bold text-nowrap mt-2 mt-md-0">功效:</p>
+                  <p>{{vitamin.vitaminE.vit_effect}}</p>
+                </div>
+                <div class="col-md-7 col-11 p-md-4">
+                  <div class="py-2 py-md-0 mb-md-2">
+                    <p class="fw-bold text-nowrap">攝取過多時:</p>
+                    <p>{{vitamin.vitaminE.vit__tooMuch}}</p>
+                  </div>
+                  <div class="py-2 py-md-0">
+                    <p class="fw-bold text-nowrap">攝取過少時:</p>
+                    <p>{{vitamin.vitaminE.vit__tooLess}}</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
