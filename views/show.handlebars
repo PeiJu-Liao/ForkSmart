@@ -128,31 +128,36 @@
             <h2 class="fs-4 py-1 border-bottom border-dark">Mineral礦物質</h2>
             <div class="show__mineral-progress p-4 ">
               <div class="d-md-flex align-items-center justify-content-center mt-md-3">
-                <p class="mt-2 mt-md-0 me-md-4 text-nowrap">鈣</p>
+                <a href="#" class="mt-2 mt-md-0 me-4 show__mineral-name text-nowrap" data-bs-toggle="modal"
+                  data-bs-target="#mineralModal" data-name="#mineral-calcium">鈣</a>
                 <div class="bar" data-label="calcium">
                   <div class="progressbar" data-done="{{forksmartFood.calcium}}">{{forksmartFood.calcium}}mg</div>
                 </div>
               </div>
               <div class="d-md-flex align-items-center justify-content-center mt-md-3">
-                <p class="mt-2 mt-md-0 me-md-4 text-nowrap">鐵</p>
+                <a href="#" class="mt-2 mt-md-0 me-4 show__mineral-name text-nowrap" data-bs-toggle="modal"
+                  data-bs-target="#mineralModal" data-name="#mineral-iron">鐵</a>
                 <div class="bar" data-label="iron">
                   <div class="progressbar" data-done="{{forksmartFood.iron}}">{{forksmartFood.iron}}mg</div>
                 </div>
               </div>
               <div class="d-md-flex align-items-center justify-content-center mt-md-3">
-                <p class="mt-2 mt-md-0 me-md-4 text-nowrap">鎂</p>
+                <a href="#" class="mt-2 mt-md-0 me-4 show__mineral-name text-nowrap" data-bs-toggle="modal"
+                  data-bs-target="#mineralModal" data-name="#mineral-magnesium">鎂</a>
                 <div class="bar" data-label="magnesium">
                   <div class="progressbar" data-done="{{forksmartFood.magnesium}}">{{forksmartFood.magnesium}}mg</div>
                 </div>
               </div>
               <div class="d-md-flex align-items-center justify-content-center mt-md-3">
-                <p class="mt-2 mt-md-0 me-md-4 text-nowrap">鋅</p>
+                <a href="#" class="mt-2 mt-md-0 me-4 show__mineral-name text-nowrap" data-bs-toggle="modal"
+                  data-bs-target="#mineralModal" data-name="#mineral-zinc">鋅</a>
                 <div class="bar" data-label="zinc">
                   <div class="progressbar" data-done="{{forksmartFood.zinc}}">{{forksmartFood.zinc}}mg</div>
                 </div>
               </div>
               <div class="d-md-flex align-items-center justify-content-center mt-md-3">
-                <p class="mt-2 mt-md-0 me-md-4 text-nowrap">碘</p>
+                <a href="#" class="mt-2 mt-md-0 me-4 show__mineral-name text-nowrap" data-bs-toggle="modal"
+                  data-bs-target="#mineralModal" data-name="#mineral-iodine">碘</a>
                 <div class="bar" data-label="iodine">
                   <div class="progressbar" data-done="{{forksmartFood.iodine}}">{{forksmartFood.iodine}}mg</div>
                 </div>
@@ -172,9 +177,8 @@
   </div>
   </div>
 
-  {{!-- Nutrition Modal --}}
-  <div class="modal" tabindex="-1" id="vitaminModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
+  {{!-- Vitamin Modal --}}
+  <div class="modal" tabindex="-1" id="vitaminModal" tabindex="-1" aria-labelledby="vitaminModal" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content p-2">
         <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -267,6 +271,134 @@
                   <div class="py-2 py-md-0">
                     <p class="fw-bold text-nowrap">攝取過少時:</p>
                     <p>{{vitamin.vitaminE.vit__tooLess}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{!-- Mineral Modal --}}
+  <div class="modal" tabindex="-1" id="mineralModal" tabindex="-1" aria-labelledby="mineralModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content p-2">
+        <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-body">
+
+          <ul class="nav nav-tabs" id="myMineral" role="tablist" style="height:auto">
+
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="calcium" data-bs-toggle="tab" data-bs-target="#mineral-calcium" type="button"
+                role="tab" aria-controls="mineral-calcium" aria-selected="false">{{mineral.calcium.min_name}}</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="iron" data-bs-toggle="tab" data-bs-target="#mineral-iron" type="button"
+                role="tab" aria-controls="mineral-iron" aria-selected="false">{{mineral.iron.min_name}}</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="magnesium" data-bs-toggle="tab" data-bs-target="#mineral-magnesium"
+                type="button" role="tab" aria-controls="mineral-magnesium"
+                aria-selected="false">{{mineral.magnesium.min_name}}</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="zinc" data-bs-toggle="tab" data-bs-target="#mineral-zinc" type="button"
+                role="tab" aria-controls="mineral-zinc" aria-selected="false">{{mineral.zinc.min_name}}</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="iodine" data-bs-toggle="tab" data-bs-target="#mineral-iodine" type="button"
+                role="tab" aria-controls="mineral-iodine" aria-selected="false">{{mineral.iodine.min_name}}</button>
+            </li>
+          </ul>
+          <div class="tab-content" id="myMineralContent">
+            <div class="tab-pane fade" id="mineral-calcium" role="tabpanel" aria-labelledby="calcium" tabindex="0">
+              <div class="row justify-content-center text-dark">
+                <div class="col-md-5 col-11 p-md-4">
+                  <p class="fw-bold text-nowrap mt-2 mt-md-0">功效:</p>
+                  <p>{{mineral.calcium.min_effect}}</p>
+                </div>
+                <div class="col-md-7 col-11 p-md-4">
+                  <div class="py-2 py-md-0 mb-md-2">
+                    <p class="fw-bold text-nowrap">攝取過多時:</p>
+                    <p>{{mineral.calcium.min__tooMuch}}</p>
+                  </div>
+                  <div class="py-2 py-md-0">
+                    <p class="fw-bold text-nowrap">攝取過少時:</p>
+                    <p>{{mineral.calcium.min__tooLess}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="mineral-iron" role="tabpanel" aria-labelledby="iron" tabindex="0">
+              <div class="row justify-content-center text-dark">
+                <div class="col-md-5 col-11 p-md-4">
+                  <p class="fw-bold text-nowrap mt-2 mt-md-0">功效:</p>
+                  <p>{{mineral.iron.min_effect}}</p>
+                </div>
+                <div class="col-md-7 col-11 p-md-4">
+                  <div class="py-2 py-md-0 mb-md-2">
+                    <p class="fw-bold text-nowrap">攝取過多時:</p>
+                    <p>{{mineral.iron.min__tooMuch}}</p>
+                  </div>
+                  <div class="py-2 py-md-0">
+                    <p class="fw-bold text-nowrap">攝取過少時:</p>
+                    <p>{{mineral.iron.min__tooLess}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="mineral-magnesium" role="tabpanel" aria-labelledby="magnesium" tabindex="0">
+              <div class="row justify-content-center text-dark">
+                <div class="col-md-5 col-11 p-md-4">
+                  <p class="fw-bold text-nowrap mt-2 mt-md-0">功效:</p>
+                  <p>{{mineral.magnesium.min_effect}}</p>
+                </div>
+                <div class="col-md-7 col-11 p-md-4">
+                  <div class="py-2 py-md-0 mb-md-2">
+                    <p class="fw-bold text-nowrap">攝取過多時:</p>
+                    <p>{{mineral.magnesium.min__tooMuch}}</p>
+                  </div>
+                  <div class="py-2 py-md-0">
+                    <p class="fw-bold text-nowrap">攝取過少時:</p>
+                    <p>{{mineral.magnesium.min__tooLess}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="mineral-zinc" role="tabpanel" aria-labelledby="zinc" tabindex="0">
+              <div class="row justify-content-center text-dark">
+                <div class="col-md-5 col-11 p-md-4">
+                  <p class="fw-bold text-nowrap mt-2 mt-md-0">功效:</p>
+                  <p>{{mineral.zinc.min_effect}}</p>
+                </div>
+                <div class="col-md-7 col-11 p-md-4">
+                  <div class="py-2 py-md-0 mb-md-2">
+                    <p class="fw-bold text-nowrap">攝取過多時:</p>
+                    <p>{{mineral.zinc.min__tooMuch}}</p>
+                  </div>
+                  <div class="py-2 py-md-0">
+                    <p class="fw-bold text-nowrap">攝取過少時:</p>
+                    <p>{{mineral.zinc.min__tooLess}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="mineral-iodine" role="tabpanel" aria-labelledby="iodine" tabindex="0">
+              <div class="row justify-content-center text-dark">
+                <div class="col-md-5 col-11 p-md-4">
+                  <p class="fw-bold text-nowrap mt-2 mt-md-0">功效:</p>
+                  <p>{{mineral.iodine.min_effect}}</p>
+                </div>
+                <div class="col-md-7 col-11 p-md-4">
+                  <div class="py-2 py-md-0 mb-md-2">
+                    <p class="fw-bold text-nowrap">攝取過多時:</p>
+                    <p>{{mineral.iodine.min__tooMuch}}</p>
+                  </div>
+                  <div class="py-2 py-md-0">
+                    <p class="fw-bold text-nowrap">攝取過少時:</p>
+                    <p>{{mineral.iodine.min__tooLess}}</p>
                   </div>
                 </div>
               </div>

@@ -16,7 +16,8 @@ router.get('/:id', (req, res) => {
   })
   res.render('show', {
     forksmartFood,
-    vitamin: forksmartData.vitamin
+    vitamin: forksmartData.vitamin,
+    mineral: forksmartData.mineral
   })
 })
 
