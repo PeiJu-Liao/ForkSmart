@@ -1,25 +1,48 @@
 .bodytest {
-  height: calc(100vh - 5rem);
+  min-height: calc(100vh - 5rem);
+  height: 100%;
   position: relative;
+  z-index: 0;
 
-  &__banner {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    &::after {
-      content: '';
-      width: 100%;
-      height: 100%;
-      background-color: rgba($color-primary-light, 0.7);
-    }
-
-    img {
-      object-fit: cover;
-    }
+  form {
+    background-color: rgba($color-primary, 0.5)
   }
 
   &__title {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    position: relative;
+
+    &-pic {
+      width: 65%;
+    }
+  }
+
+  &__tree {
+    width: 25%;
+    z-index: -1;
+  }
+}
+
+@include ipad {
+  .bodytest {
+    &__title {
+      font-size: 2.5rem;
+
+      &-pic {
+        width: 50%;
+      }
+    }
+
+    &__tree {
+      width: 20%;
+    }
+  }
+}
+
+@include ipad_horizontal {
+  .bodytest {
+    &__tree {
+      width: 15%;
+    }
   }
 }

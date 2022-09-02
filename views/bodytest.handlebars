@@ -1,25 +1,30 @@
-<article class="bodytest bg-light-100">
-  <div class="bodytest__banner">
-    <img src="/images/001.avif" alt="banner" class="img-fluid">
-  </div>
-  <div class="container">
-    <div class="text-dark pt-10">
-      <h1 class="fw-bold text-center bodytest__title">健康檢測BMI</h1>
+<article class="bg-light-100">
+  <div class="bodytest">
+    <div class="container">
 
-      <div class="d-flex flex-column flex-md-row jutsify-content-center align-items-center">
-        <form action="" method="POST" class="border border-danger mt-5 me-md-4">
+      <h1 class="fw-bold text-center text-dark pt-4 bodytest__title border-bottom border-3 border-secondary w-50 mx-auto
+      position-relative">健康體態BMI
+        <img src="../images/footer_fruits.png" alt="fruits"
+          class="bodytest__title-pic position-absolute top-100 start-0 translate-middle">
+        <img src="../images/footer_fruits.png" alt="fruits"
+          class="bodytest__title-pic position-absolute top-100 start-100 translate-middle">
+      </h1>
+
+      {{!-- BMI Part --}}
+      <div class="part d-flex flex-column flex-md-row jutsify-content-center align-items-center py-4 pt-md-15 border">
+        <form action="" method="POST" class="mt-5 mt-md-0 me-md-4 p-4">
           <div class="row justify-content-center">
-            <div class="col-5 my-2">
+            <div class="col-5 mb-2">
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="male" id="male">
+                <input class="form-check-input" type="radio" name="gender" id="male">
                 <label class="form-check-label" for="male">
                   男
                 </label>
               </div>
             </div>
-            <div class="col-5 my-2">
+            <div class="col-5 mb-2">
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="female" id="female" checked>
+                <input class="form-check-input" type="radio" name="gender" id="female">
                 <label class="form-check-label" for="female">
                   女
                 </label>
@@ -39,9 +44,9 @@
             </div>
           </div>
         </form>
-        <table class="bodytest__table table table-hover table-striped mt-5">
+        <table class="bodytest__table table table-hover table-striped mt-5 mt-md-0">
           <thead class="text-center text-dark">
-            <tr>
+            <tr class="fw-bold">
               <th scope="col">BMI</th>
               <th scope="col">成年人肥胖定義</th>
             </tr>
@@ -74,7 +79,54 @@
           </tbody>
         </table>
       </div>
+
+      {{!-- HungryExamine Part --}}
+      <div class="hungryExamine py-4 border border-dark">
+        <div class="part row justify-content-center">
+          <div class="col-6 col-md-3">
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="checkbox" value="" id="hh1">
+              <label class="form-check-label" for="hh1">
+                眼睛乾澀
+              </label>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+              <label class="form-check-label" for="flexCheckChecked">
+                頭髮乾燥分岔
+              </label>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+              <label class="form-check-label" for="flexCheckChecked">
+                免疫力低下
+              </label>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+              <label class="form-check-label" for="flexCheckChecked">
+                心律不整
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="btnControl d-flex justify-content-end align-items-center mt-4">
+        <a href="#" class="btn btn__primary py-2 link-light me-4 disabled" aria-disabled="true" role="buttton">上一步</a>
+        <a href="#" class="btn btn__primary py-2 link-light me-4" role="buttton">下一步</a>
+      </div>
+
     </div>
+
+    {{!-- <img src="../images/illust-branch@2x.png" alt="tree"
+      class="bodytest__tree position-absolute bottom-0 start-0"> --}}
   </div>
 </article>
 

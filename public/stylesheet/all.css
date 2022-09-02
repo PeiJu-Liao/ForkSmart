@@ -188,7 +188,7 @@ body {
 }
 .btn, .btn:link {
   display: inline-block;
-  padding: 1rem;
+  padding: 0.75rem;
   padding-right: 2.5rem;
   padding-left: 2.5rem;
   text-align: center;
@@ -741,25 +741,41 @@ body {
   }
 }
 .bodytest {
-  height: calc(100vh - 5rem);
-  position: relative;
-}
-.bodytest__banner {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.bodytest__banner::after {
-  content: "";
-  width: 100%;
+  min-height: calc(100vh - 5rem);
   height: 100%;
-  background-color: rgba(255, 185, 0, 0.7);
+  position: relative;
+  z-index: 0;
 }
-.bodytest__banner img {
-  object-fit: cover;
+.bodytest form {
+  background-color: rgba(238, 131, 25, 0.5);
 }
 .bodytest__title {
-  font-size: 2.5rem;
+  font-size: 2rem;
+  position: relative;
+}
+.bodytest__title-pic {
+  width: 65%;
+}
+.bodytest__tree {
+  width: 25%;
+  z-index: -1;
+}
+
+@media (min-width: 768px) {
+  .bodytest__title {
+    font-size: 2.5rem;
+  }
+  .bodytest__title-pic {
+    width: 50%;
+  }
+  .bodytest__tree {
+    width: 20%;
+  }
+}
+@media (min-width: 992px) {
+  .bodytest__tree {
+    width: 15%;
+  }
 }
 
 /*# sourceMappingURL=all.css.map */
