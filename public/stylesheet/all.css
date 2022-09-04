@@ -762,6 +762,26 @@ body {
   background-color: rgba(238, 131, 25, 0.5);
 }
 
+.hiddenhungry__img {
+  width: 90%;
+  background-image: linear-gradient(to right bottom, rgba(253, 245, 201, 0.2), rgba(234, 87, 4, 0)), url("../images/pic007.avif");
+  background-size: cover;
+  background-position: bottom;
+  height: 15rem;
+  border-radius: 0.5rem;
+}
+.hiddenhungry__wrap {
+  border-top: 1px solid #4E2F14;
+}
+.hiddenhungry__banner {
+  width: 40%;
+  border-radius: 0.5rem;
+  background-color: rgba(253, 245, 201, 0.7);
+}
+.hiddenhungry__banner p {
+  font-size: 0.875rem;
+}
+
 .moodDiary__img {
   background-image: linear-gradient(to right bottom, rgba(253, 245, 201, 0.3), rgba(234, 87, 4, 0.4)), url("../images/smile.avif");
   background-size: cover;
@@ -773,6 +793,7 @@ body {
 }
 .moodDiary__mood .form-check-input:checked ~ .form-check-label {
   color: #ea5704;
+  font-weight: 700;
 }
 .moodDiary__mood span {
   font-size: 3rem;
@@ -787,6 +808,9 @@ body {
   }
   .bodytest__tree {
     width: 20%;
+  }
+  .hiddenhungry__img {
+    height: 18rem;
   }
   .moodDiary__img {
     background-image: linear-gradient(to right bottom, rgba(253, 245, 201, 0.2), rgba(234, 87, 4, 0.3)), url("../images/pic004.avif");

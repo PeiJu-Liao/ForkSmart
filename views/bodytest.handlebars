@@ -82,8 +82,14 @@
       </div>
 
       {{!-- hiddenhungry Part --}}
-      <div class="hiddenhungry part py-6 border border-dark">
-        <div class="part hiddenhungry__wrap row">
+      <div class="hiddenhungry part py-4 d-none">
+        <div class="hiddenhungry__img d-flex flex-column justify-content-center mx-auto">
+          <div class="hiddenhungry__banner text-dark ms-4 p-2">
+            <h2 class="mb-2 fs-5 fw-bold">什麼是隱性飢餓</h2>
+            <p>「隱性飢餓」是指營養素攝取不平衡或是維生素礦物質攝取不足以維持人體所必需，這些營 養素的缺乏不會產生飢餓感，而是以隱蔽性的飢餓症狀呈現。</p>
+          </div>
+        </div>
+        <div class="part hiddenhungry__wrap row my-4 py-2">
 
           {{!-- <div class="col-6 col-sm-4 col-md-3 col-lg-2">
             <div class="form-check mb-2">
@@ -96,13 +102,12 @@
 
         </div>
         <div class="d-flex justify-content-end align-items-center">
-          <a class="hiddenhungry__resetbtn btn btn__primary py-2 link-light me-4 mt-4" role="button"
-            type="button">症狀重置</a>
+          <a class="hiddenhungry__resetbtn btn btn__primary link-light me-4 mt-2" role="button" type="button">症狀重置</a>
         </div>
       </div>
 
       {{!-- Mood Diary --}}
-      <div class="moodDiary part py-6 border">
+      <div class="moodDiary part py-6 border d-none">
         <div class="row align-items-center flex-column flex-md-row">
           <div class="col-12 col-md-5 col-lg-4">
             <div class="moodDiary__img mb-4 mb-md-0"></div>
