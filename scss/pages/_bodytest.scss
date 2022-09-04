@@ -4,10 +4,6 @@
   position: relative;
   z-index: 0;
 
-  form {
-    background-color: rgba($color-primary, 0.5)
-  }
-
   &__title {
     font-size: 2rem;
     position: relative;
@@ -20,6 +16,36 @@
   &__tree {
     width: 25%;
     z-index: -1;
+  }
+}
+
+.bmi {
+  form {
+    background-color: rgba($color-primary, 0.5)
+  }
+}
+
+.moodDiary {
+  &__img {
+    background-image: linear-gradient(to right bottom, rgba($color-light-100, 0.3),
+        rgba($color-secondary, 0.4)), url('../images/smile.avif');
+    background-size: cover;
+    background-position: center;
+    height: 18rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  &__mood {
+    .form-check-input:checked~.form-check-label {
+      color: $color-secondary;
+    }
+
+    span {
+      font-size: 3rem;
+    }
   }
 }
 
@@ -37,12 +63,30 @@
       width: 20%;
     }
   }
+
+  .moodDiary {
+    &__img {
+      background-image: linear-gradient(to right bottom, rgba($color-light-100, 0.2),
+          rgba($color-secondary, 0.3)), url('../images/pic004.avif');
+      height: 25rem;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+    }
+  }
 }
 
 @include ipad_horizontal {
   .bodytest {
     &__tree {
       width: 15%;
+    }
+  }
+
+  .moodDiary {
+    h2 {
+      font-size: 1.75rem;
     }
   }
 }

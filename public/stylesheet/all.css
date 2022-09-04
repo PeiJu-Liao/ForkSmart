@@ -746,9 +746,6 @@ body {
   position: relative;
   z-index: 0;
 }
-.bodytest form {
-  background-color: rgba(238, 131, 25, 0.5);
-}
 .bodytest__title {
   font-size: 2rem;
   position: relative;
@@ -761,6 +758,26 @@ body {
   z-index: -1;
 }
 
+.bmi form {
+  background-color: rgba(238, 131, 25, 0.5);
+}
+
+.moodDiary__img {
+  background-image: linear-gradient(to right bottom, rgba(253, 245, 201, 0.3), rgba(234, 87, 4, 0.4)), url("../images/smile.avif");
+  background-size: cover;
+  background-position: center;
+  height: 18rem;
+}
+.moodDiary h2 {
+  font-size: 1.5rem;
+}
+.moodDiary__mood .form-check-input:checked ~ .form-check-label {
+  color: #ea5704;
+}
+.moodDiary__mood span {
+  font-size: 3rem;
+}
+
 @media (min-width: 768px) {
   .bodytest__title {
     font-size: 2.5rem;
@@ -771,10 +788,20 @@ body {
   .bodytest__tree {
     width: 20%;
   }
+  .moodDiary__img {
+    background-image: linear-gradient(to right bottom, rgba(253, 245, 201, 0.2), rgba(234, 87, 4, 0.3)), url("../images/pic004.avif");
+    height: 25rem;
+  }
+  .moodDiary h2 {
+    font-size: 1.75rem;
+  }
 }
 @media (min-width: 992px) {
   .bodytest__tree {
     width: 15%;
+  }
+  .moodDiary h2 {
+    font-size: 1.75rem;
   }
 }
 
