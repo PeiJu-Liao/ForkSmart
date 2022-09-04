@@ -2,13 +2,16 @@
   <div class="bodytest">
     <div class="container">
 
-      <h1 class="fw-bold text-center text-dark pt-4 bodytest__title border-bottom border-3 border-secondary w-50 mx-auto
-      position-relative">健康體態BMI
+      <div class="position-relative w-50 mx-auto">
+        <h1
+          class="fw-bold text-center text-dark pt-4 bodytest__title border-bottom border-3 border-secondary w-100 mx-auto">
+          健康體態BMI
+        </h1>
         <img src="../images/footer_fruits.png" alt="fruits"
           class="bodytest__title-pic position-absolute top-100 start-0 translate-middle">
         <img src="../images/footer_fruits.png" alt="fruits"
           class="bodytest__title-pic position-absolute top-100 start-100 translate-middle">
-      </h1>
+      </div>
 
       {{!-- BMI Part --}}
       <div
@@ -82,14 +85,14 @@
       </div>
 
       {{!-- hiddenhungry Part --}}
-      <div class="hiddenhungry part py-4 d-none">
+      <div class="hiddenhungry part py-4 mt-4 d-none">
         <div class="hiddenhungry__img d-flex flex-column justify-content-center mx-auto">
           <div class="hiddenhungry__banner text-dark ms-4 p-2">
             <h2 class="mb-2 fs-5 fw-bold">什麼是隱性飢餓</h2>
             <p>「隱性飢餓」是指營養素攝取不平衡或是維生素礦物質攝取不足以維持人體所必需，這些營 養素的缺乏不會產生飢餓感，而是以隱蔽性的飢餓症狀呈現。</p>
           </div>
         </div>
-        <div class="part hiddenhungry__wrap row my-4 py-2">
+        <div class="hiddenhungry__wrap row my-4 py-2">
 
           {{!-- <div class="col-6 col-sm-4 col-md-3 col-lg-2">
             <div class="form-check mb-2">
@@ -180,12 +183,12 @@
       </div>
 
       <div class="btnControl d-flex justify-content-end align-items-center mt-4">
-        <a href="#" class="btn btn__primary py-2 link-light me-4 disabled" aria-disabled="true" role="button">上一步</a>
-        <a href="#" class="btn btn__primary py-2 link-light me-4" role="button">下一步</a>
+        <a href="#" class="btn btn__primary btn_prev py-2 link-light me-4 disabled" aria-disabled="true"
+          role="button">上一步</a>
+        <a href="#" class="btn btn__primary btn_next py-2 link-light me-4" role="button">下一步</a>
       </div>
 
-      {{!-- <img src="../images/illust-branch@2x.png" alt="tree"
-        class="bodytest__tree position-absolute bottom-0 start-0"> --}}
+      <img src="../images/illust-branch@2x.png" alt="tree" class="bodytest__tree position-absolute bottom-0 start-0">
     </div>
 </article>
 

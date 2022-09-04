@@ -130,6 +130,11 @@ const hungrySympton = [
 ]
 const hiddenHungryWrap = document.querySelector('.hiddenhungry__wrap')
 const symptonResetBtn = document.querySelector('.hiddenhungry__resetbtn')
+const bodytest = document.querySelector('.bodytest__title')
+const pages = document.querySelectorAll('.part')
+const btnControl = document.querySelector('.btnControl')
+const nextBtn = document.querySelector('.btn_next')
+const prevBtn = document.querySelector('.btn_prev')
 
 hungrySympton.forEach(item => {
   hiddenHungryWrap.innerHTML += `
@@ -151,5 +156,44 @@ symptonResetBtn.addEventListener('click', (e) => {
   })
 })
 
+let page = 0
+console.log(pages);
+
+function handleBtnControl(e) {
+  e.preventDefault() //終止瀏覽預設行為
+  const nowPage = pages[page]
+  if (e.target.matches('.btn__primary') && e.target.innerHTML === '下一步') {
+    console.log(pages[page])
+    const nextPage = pages[page + 1]
+    pages[page].classList.toggle('d-none')
+    pages[page + 1].classList.toggle('d-none')
+    page += 1
+  } else {
+    if (e.target.matches('.btn_prev')) {
+      pages[page].classList.toggle('d-none')
+      pages[page - 1].classList.toggle('d-none')
+      page -= 1
+    }
+  }
+  setBtnDisabled()
+}
+
+function setBtnDisabled() {
+  if (page === 0) {
+    prevBtn.classList.add('disabled')
+    bodytest.innerHTML = '健康體檢BMI'
+  } else {
+    prevBtn.classList.remove('disabled')
+    bodytest.innerHTML = '隱性飢餓檢測'
+  }
+
+  if (page === 2) {
+    nextBtn.innerHTML = '體態檢驗Go'
+    bodytest.innerHTML = '心情日記'
+  } else {
+    nextBtn.innerHTML = '下一步'
+  }
+}
 
 
+btnControl.addEventListener('click', handleBtnControl)
