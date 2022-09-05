@@ -1,7 +1,6 @@
 .bodytest {
   min-height: calc(100vh - 5rem);
   height: 100%;
-  position: relative;
   z-index: 0;
 
   &__title {
@@ -27,7 +26,7 @@
 
 .hiddenhungry {
   &__img {
-    width: 90%;
+    width: 95%;
     background-image: linear-gradient(to right bottom, rgba($color-light-100, 0.2),
         rgba($color-secondary, 0)), url('../images/pic007.avif');
     background-size: cover;
@@ -41,7 +40,7 @@
   }
 
   &__banner {
-    width: 40%;
+    max-width: 12rem;
     border-radius: 0.5rem;
     background-color: rgba($color-light-100, 0.7);
 

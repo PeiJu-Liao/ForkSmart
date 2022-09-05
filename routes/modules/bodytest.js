@@ -5,8 +5,11 @@ router.get('/', (req, res) => {
   res.render('bodytest')
 })
 
-router.get('/result', (req, res) => {
-  res.send(`This is body test result page.`)
-})
+// 新增一筆bodytest紀錄 
+// router.post('/tests', (req, res) => {
+//   const body = req.body
+//   return Bodytest.create(body)
+
+// })
 
 module.exports = router
