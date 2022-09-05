@@ -224,14 +224,20 @@ body {
 }
 .btn__outline-primary {
   border: 1px solid #EE8319;
+  color: #ea5704;
 }
 .btn__outline-primary:any-link {
   color: #ea5704;
 }
 .btn__outline-primary:hover {
-  background-color: #4E2F14;
-  transform: translateY(-0.5rem);
+  background-color: #EE8319;
+  color: #fff;
+  border: 1px solid transparent;
+  transform: translateY(-0.25rem);
   box-shadow: 0 10px 20px rgba(236, 126, 16, 0.8078431373);
+}
+.btn__outline-primary:hover::after {
+  background-color: #ff7730;
 }
 
 .bg-video {
@@ -826,6 +832,26 @@ body {
   .moodDiary h2 {
     font-size: 1.75rem;
   }
+}
+.diary {
+  min-height: calc(100vh - 5rem);
+}
+.diary img {
+  object-fit: cover;
+}
+.diary .img {
+  height: 5rem;
+  width: 5rem;
+}
+.diary .img_edit {
+  background: url("../images/andychen.jpeg") center/cover;
+  height: 12rem;
+  width: 12rem;
+  z-index: 0;
+}
+.diary .img_editbtn {
+  width: 6rem;
+  margin-top: -1rem;
 }
 
 /*# sourceMappingURL=all.css.map */

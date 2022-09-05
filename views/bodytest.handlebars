@@ -15,7 +15,7 @@
 
       {{!-- BMI Part --}}
       <div class="bmi part d-flex flex-column flex-md-row jutsify-content-center align-items-center py-4 pt-md-15">
-        <form action="" method="POST" class="mt-5 mt-md-0 me-md-4 p-4">
+        <form action="/botytest/tests" method="POST" class="mt-5 mt-md-0 me-md-4 p-4">
           <div class="row justify-content-center">
             <div class="col-5 mb-2">
               <div class="form-check">
@@ -35,16 +35,18 @@
             </div>
             <div class="col-10 mt-2">
               <label for="height" class="form-label text-dark">身高/cm</label>
-              <input type="number" class="form-control" id="height" step="1" name="height" placeholder="請輸入您的身高/公分...">
+              <input type="number" class="height form-control" id="height" step="1" name="height" min="1" max="200"
+                placeholder="請輸入您的身高/公分...">
             </div>
             <div class="col-10 mt-2">
               <label for="weight" class="form-label text-dark" step="1">體重/kg</label>
-              <input type="number" class="form-control" id="weight" name="weight" placeholder="請輸入您的體重/公斤...">
+              <input type="number" class="weight form-control" id="weight" name="weight" placeholder="請輸入您的體重/公斤...">
             </div>
             <div class="col-10 mt-2">
-              <label for="age" class="form-label text-dark" step="1" min="1" max="100">年齡</label>
-              <input type="number" class="form-control" id="age" name="age" placeholder="請輸入您的年齡...">
+              <label for="age" class="form-label text-dark" step="1">年齡</label>
+              <input type="number" class="form-control" id="age" name="age" min="1" max="100" placeholder="請輸入您的年齡...">
             </div>
+            <button class="btn btn__outline-primary btn__bmi w-50 mt-4" type="submit">BMI檢測</button>
           </div>
         </form>
         <table class="bodytest__table table table-hover table-striped mt-5 mt-md-0">
@@ -104,7 +106,7 @@
 
         </div>
         <div class="d-flex justify-content-end align-items-center">
-          <a class="hiddenhungry__resetbtn btn btn__primary link-light me-4 mt-2" role="button" type="button">症狀重置</a>
+          <a class="hiddenhungry__resetbtn btn btn__outline-primary py-2">症狀重置</a>
         </div>
       </div>
 
@@ -182,9 +184,8 @@
       </div>
 
       <div class="btnControl d-flex justify-content-end align-items-center mt-4">
-        <a href="#" class="btn btn__primary btn_prev py-2 link-light me-4 disabled" aria-disabled="true"
-          role="button">上一步</a>
-        <a href="#" class="btn btn__primary btn_next py-2 link-light me-4" role="button">下一步</a>
+        <a href="#" class="btn btn__outline-primary btn_prev disabled py-2 me-4" role="button">上一步</a>
+        <a href="#" class="btn btn__primary btn_next py-2 me-4 link-light" role="button">下一步</a>
       </div>
 
       <img src="../images/illust-branch@2x.png" alt="tree" class="bodytest__tree position-absolute bottom-0 start-0">

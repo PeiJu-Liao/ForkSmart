@@ -2511,7 +2511,7 @@ progress {
 }
 .form-label {
   margin-bottom: 0;
-  color: #ea5704;
+  color: rgba(218, 87, 12, 0.9333333333);
 }
 
 .col-form-label {
@@ -2520,7 +2520,7 @@ progress {
   margin-bottom: 0;
   font-size: inherit;
   line-height: 1.5;
-  color: #ea5704;
+  color: rgba(218, 87, 12, 0.9333333333);
 }
 
 .col-form-label-lg {
@@ -5417,7 +5417,7 @@ textarea.form-control-lg {
 
 .list-group {
   --bs-list-group-color: #212529;
-  --bs-list-group-bg: #fff;
+  --bs-list-group-bg: #fdf5c9;
   --bs-list-group-border-color: transparent;
   --bs-list-group-border-width: 1px;
   --bs-list-group-border-radius: 0.25rem;
@@ -5429,7 +5429,7 @@ textarea.form-control-lg {
   --bs-list-group-action-active-color: #212529;
   --bs-list-group-action-active-bg: #e9ecef;
   --bs-list-group-disabled-color: #6c757d;
-  --bs-list-group-disabled-bg: #fff;
+  --bs-list-group-disabled-bg: #fdf5c9;
   --bs-list-group-active-color: #fff;
   --bs-list-group-active-bg: #EE8319;
   --bs-list-group-active-border-color: #EE8319;

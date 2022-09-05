@@ -1,0 +1,12 @@
+{
+  "bodytest": [
+    {
+      "id": 1,
+      "height": 167,
+      "weight": 60,
+      "bmi": 23.4,
+      "bmi_result": "正常範圍",
+      "date": "2022-09-05"
+    }
+  ]
+}

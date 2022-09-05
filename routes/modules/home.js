@@ -10,4 +10,8 @@ router.get('/', (req, res) => {
   });
 })
 
+router.get('/diary', (req, res) => {
+  res.render('diary')
+})
+
 module.exports = router

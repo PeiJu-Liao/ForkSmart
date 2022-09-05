@@ -6,10 +6,14 @@ router.get('/', (req, res) => {
 })
 
 // 新增一筆bodytest紀錄 
-// router.post('/tests', (req, res) => {
-//   const body = req.body
-//   return Bodytest.create(body)
-
-// })
+router.post('/tests', (req, res) => {
+  const body = req.body
+  console.log(body)
+  return Bodytest.create(body)
+    .then(() => {
+      res.redirect('/diary')
+    })
+    .catch(error => console.log(error))
+})
 
 module.exports = router
