@@ -1,4 +1,4 @@
-<article class="diary bg-light-100">
+<article class="diary bg-light-100 position-relative">
   <div class="container">
     <div class="row">
 
@@ -6,16 +6,14 @@
         <div class="d-flex align-items-center border-bottom border-dark p-4">
           <img src="../images/andychen.jpeg" alt="avartar" class="rounded-circle img">
           <div class="ms-4 text-dark">
-            <p class="fw-bold fs-5">Peggy Liao</p>
+            <p class="fw-bold fs-5">Austin Hsu</p>
             <p>Your personal account</p>
           </div>
         </div>
-        <div class="list-group list-group-flush" id="list-tab" role="tablist">
-
-          <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list"
+        <div class="list-group-flush list-group flex-row flex-md-column" id="list-tab" role="tablist">
+          <a class="d-block list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list"
             href="#list-member" role="tab" aria-controls="list-member">個人基本資料</a>
-
-          <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"
+          <a class="d-block list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"
             href="#list-diary" role="tab" aria-controls="list-diary">健康日誌</a>
         </div>
       </div>
@@ -28,12 +26,13 @@
             aria-labelledby="list-home-list">
             <p class="mb-4 border-bottom border-dark fs-5">會員資料</p>
 
-            <form action="" method="POST" class="row">
-              <div class="col-8">
-                <p class="mb-2 border-bottom border-primary">使用者姓名修改</p>
+            <form action="" method="POST"
+              class="row flex-column flex-column-reverse align-items-center flex-md-row align-items-md-start">
+              <div class="col-10 col-md-8">
+                <p class="mb-2 border-bottom border-primary mt-4 mt-md-0">使用者姓名修改</p>
                 <div class="mb-4">
                   <label for="name" class="form-label">使用者姓名</label>
-                  <input type="text" class="form-control" id="name" value="Peggy Liao">
+                  <input type="text" class="form-control" id="name" value="Austin Hsu">
                 </div>
                 <p class="mb-2 border-bottom border-primary">使用者密碼修改</p>
                 <div class="mb-3">
@@ -51,7 +50,7 @@
                 <p class="mb-2 border-bottom border-primary">使用者信箱修改</p>
                 <div class="mb-4">
                   <label for="email" class="form-label">使用者信箱</label>
-                  <input type="email" class="form-control" id="email" value="peiju.liaooo@gmail.com">
+                  <input type="email" class="form-control" id="email" value="autin.hsu@gmail.com">
                 </div>
                 <p class="mb-2 border-bottom border-primary">使用者生日</p>
                 <div class="mb-4">
@@ -60,13 +59,14 @@
                 </div>
                 <button type="submit" class="btn btn__primary link-light">變更儲存</button>
               </div>
-              <div class="col-4">
-                <div class="mx-auto rounded-circle img_edit"></div>
-                <div class="img_editbtn p-2 border border-dark bg-light rounded-3 text-center">
-                  編輯頭照</div>
+              <div class="col-10 col-md-4">
+                <div class="mx-auto rounded-circle img_edit position-relative">
+                  <input type="file"
+                    class="form-control img_editbtn p-2 rounded-3 text-center position-absolute bottom-0 start-0"
+                    id="avatar" name="avatar" placeholder="編輯頭照">
+                </div>
               </div>
             </form>
-
 
           </div>
           {{!-- 健康日誌 --}}
@@ -103,13 +103,11 @@
           </div>
         </div>
 
-
       </div>
 
-
     </div>
-
   </div>
+  <img src="../images/illust-branch@2x.png" alt="tree" class="diary__tree position-absolute bottom-0 start-0">
 </article>
 
 <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker-full.min.js"></script>

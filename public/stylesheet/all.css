@@ -835,6 +835,7 @@ body {
 }
 .diary {
   min-height: calc(100vh - 5rem);
+  z-index: 0;
 }
 .diary img {
   object-fit: cover;
@@ -850,8 +851,17 @@ body {
   z-index: 0;
 }
 .diary .img_editbtn {
-  width: 6rem;
-  margin-top: -1rem;
+  width: 5rem;
+}
+.diary__tree {
+  width: 25%;
+  z-index: -1;
+}
+
+@media (min-width: 768px) {
+  .diary__tree {
+    width: 20%;
+  }
 }
 
 /*# sourceMappingURL=all.css.map */
