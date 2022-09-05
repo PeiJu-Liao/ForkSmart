@@ -366,14 +366,9 @@ body {
 .nav__item {
   position: relative;
 }
-.nav__item:not(:last-child) {
-  margin-right: 2.5rem;
-}
-.nav__item:last-child {
-  margin-right: 3rem;
-}
 .nav__item a {
-  padding: 1.5rem 0;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 .nav__item a::after {
   content: "";
@@ -384,10 +379,15 @@ body {
   width: 0%;
   height: 0.25rem;
   background-color: #ea5704;
-  transition: width 0.5s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+.nav__item:hover a {
+  font-weight: 700;
+  transform: scale(1.2) rotate(-10deg);
+  backface-visibility: hidden;
 }
 .nav__item:hover a::after {
-  width: 110%;
+  width: 100%;
 }
 .nav__item-login {
   width: 5rem;
@@ -763,8 +763,8 @@ body {
   z-index: -1;
 }
 
-.bmi form {
-  background-color: rgba(238, 131, 25, 0.5);
+.bmi__calc {
+  background-color: rgba(238, 131, 25, 0.6);
 }
 
 .hiddenhungry__img {

@@ -140,18 +140,11 @@
   }
 
   &__item {
-    &:not(:last-child) {
-      margin-right: 2.5rem;
-    }
-
-    &:last-child {
-      margin-right: 3rem;
-    }
-
     position: relative;
 
     a {
-      padding: 1.5rem 0;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
     }
 
     & a::after {
@@ -163,12 +156,18 @@
       width: 0%;
       height: 0.25rem;
       background-color: $color-secondary;
-      transition: width 0.5s ease-in-out;
+      transition: width 0.3s ease-in-out;
     }
 
     &:hover {
-      & a::after {
-        width: 110%;
+      a {
+        font-weight: 700;
+        transform: scale(1.2) rotate(-10deg);
+        backface-visibility: hidden;
+
+        &::after {
+          width: 100%;
+        }
       }
     }
 

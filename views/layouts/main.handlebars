@@ -10,6 +10,8 @@
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="/stylesheet/helpers/bootstrap.css">
+  {{!-- Datapicker --}}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker-bs5.min.css">
   <link rel="stylesheet" href="/stylesheet/all.css">
   <title>{{title}}</title>
 </head>
@@ -68,21 +70,18 @@
 
         <div class="nav__menuWrap">
           <ul class="nav__menu d-flex align-items-center">
-            <li class="nav__item">
+            <li class="nav__item me-6">
               <a href="/bodytest">健康體態</a>
             </li>
-            {{!-- <li class="nav__item mr-4" data-bs-toggle="modal" data-bs-target="#MemberRemind">
+            {{!-- <li class="nav__item me-6" data-bs-toggle="modal" data-bs-target="#MemberRemind">
               <a href="#">健康日誌</a>
             </li> --}}
-            <li class="nav__item mr-4">
+            <li class="nav__item me-6">
               <a href="/diary">健康日誌</a>
             </li>
-            <li class="nav__item mr-4">
+            <li class="nav__item me-6">
               <a href="/foods">聰明飲食</a>
             </li>
-            {{!-- <li class="nav__item mr-4">
-              <a href="#contact">聯絡我們</a>
-            </li> --}}
             <li class="nav__item-login text-center rounded-3">
               <a href="/user/login" class="link-light">登入</a>
             </li>

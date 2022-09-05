@@ -13,175 +13,186 @@
           class="bodytest__title-pic position-absolute top-100 start-100 translate-middle">
       </div>
 
-      {{!-- BMI Part --}}
-      <div class="bmi part d-flex flex-column flex-md-row jutsify-content-center align-items-center py-4 pt-md-15">
-        <form action="/botytest/tests" method="POST" class="mt-5 mt-md-0 me-md-4 p-4">
+
+      <form action="/diary" method="POST" class="mt-5 mt-md-0 me-md-4 p-4">
+
+        {{!-- BMI Part --}}
+        <div class="bmi part py-4 pt-md-12">
           <div class="row justify-content-center">
-            <div class="col-5 mb-2">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="gender" id="male">
-                <label class="form-check-label" for="male">
-                  男
+            <div class="col-12 col-md-5 p-4 bmi__calc rounded-3">
+              <div class="row g-3 justify-content-center">
+
+                <div class="col-5 mb-2">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="male">
+                    <label class="form-check-label" for="male">
+                      男
+                    </label>
+                  </div>
+                </div>
+                <div class="col-5 mb-2">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="female">
+                    <label class="form-check-label" for="female">
+                      女
+                    </label>
+                  </div>
+                </div>
+                <div class="col-10 mt-2">
+                  <label for="height" class="form-label text-dark">身高/cm</label>
+                  <input type="number" class="height form-control" id="height" step="1" name="height" min="1" max="200"
+                    placeholder="請輸入您的身高/公分...">
+                </div>
+                <div class="col-10 mt-2">
+                  <label for="weight" class="form-label text-dark" step="1">體重/kg</label>
+                  <input type="number" class="weight form-control" id="weight" name="weight"
+                    placeholder="請輸入您的體重/公斤...">
+                </div>
+                <div class="col-10 mt-2">
+                  <label for="age" class="form-label text-dark" step="1">年齡</label>
+                  <input type="number" class="form-control" id="age" name="age" min="1" max="100"
+                    placeholder="請輸入您的年齡...">
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-7">
+              <table class="bmi__table table table-hover table-striped mt-5 mt-md-0">
+                <thead class="text-center text-dark">
+                  <tr class="fw-bold">
+                    <th scope="col">BMI</th>
+                    <th scope="col">成年人肥胖定義</th>
+                  </tr>
+                </thead>
+                <tbody class="text-center table-group-divider text-dark">
+                  <tr>
+                    <th scope="row">BMI < 18.5</th>
+                    <th scope="row">過輕</th>
+                  </tr>
+                  <tr>
+                    <th scope="row">18.5 <= BMI < 24</th>
+                    <th scope="row">正常</th>
+                  </tr>
+                  <tr>
+                    <th scope="row">24 <= BMI < 27</th>
+                    <th scope="row">過重</th>
+                  </tr>
+                  <tr>
+                    <th scope="row">27 <= BMI < 30</th>
+                    <th scope="row">輕度肥胖</th>
+                  </tr>
+                  <tr>
+                    <th scope="row">30 <= BMI < 35</th>
+                    <th scope="row">中度肥胖</th>
+                  </tr>
+                  <tr>
+                    <th scope="row"> BMI >= 35</th>
+                    <th scope="row">重度肥胖</th>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        {{!-- hiddenhungry Part --}}
+        <div class="hiddenhungry part py-4 mt-4 d-none">
+          <div class="hiddenhungry__img d-flex flex-column justify-content-center mx-auto">
+            <div class="hiddenhungry__banner text-dark ms-4 p-2">
+              <h2 class="mb-2 fs-5 fw-bold">什麼是隱性飢餓</h2>
+              <p>「隱性飢餓」是指營養素攝取不平衡或是維生素礦物質攝取不足以維持人體所必需，這些營養素的缺乏不會產生飢餓感，而是以隱蔽性的飢餓症狀呈現。</p>
+            </div>
+          </div>
+          <div class="hiddenhungry__wrap row my-4 py-2">
+
+            {{!-- <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" value="" id="hh1">
+                <label class="form-check-label" for="hh1">
+                  眼睛乾澀
                 </label>
               </div>
+            </div> --}}
+
+          </div>
+          <div class="d-flex justify-content-end align-items-center">
+            <a class="hiddenhungry__resetbtn btn btn__outline-primary py-2">症狀重置</a>
+          </div>
+        </div>
+
+        {{!-- Mood Diary --}}
+        <div class="moodDiary part py-6 d-none">
+          <div class="row align-items-center flex-column flex-md-row">
+            <div class="col-12 col-md-5 col-lg-4">
+              <div class="moodDiary__img mb-4 mb-md-0"></div>
             </div>
-            <div class="col-5 mb-2">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="gender" id="female">
-                <label class="form-check-label" for="female">
-                  女
-                </label>
+            <div class="col-12 col-md-7 col-lg-8">
+              <div class="text-dark fw-bold">
+                <h2 class="mb-2">開心也是一天，不開心也是一天<br>
+                  但不論是哪一種可能，都比起無感來的好一些...
+                </h2>
               </div>
-            </div>
-            <div class="col-10 mt-2">
-              <label for="height" class="form-label text-dark">身高/cm</label>
-              <input type="number" class="height form-control" id="height" step="1" name="height" min="1" max="200"
-                placeholder="請輸入您的身高/公分...">
-            </div>
-            <div class="col-10 mt-2">
-              <label for="weight" class="form-label text-dark" step="1">體重/kg</label>
-              <input type="number" class="weight form-control" id="weight" name="weight" placeholder="請輸入您的體重/公斤...">
-            </div>
-            <div class="col-10 mt-2">
-              <label for="age" class="form-label text-dark" step="1">年齡</label>
-              <input type="number" class="form-control" id="age" name="age" min="1" max="100" placeholder="請輸入您的年齡...">
-            </div>
-            <button class="btn btn__outline-primary btn__bmi w-50 mt-4" type="submit">BMI檢測</button>
-          </div>
-        </form>
-        <table class="bodytest__table table table-hover table-striped mt-5 mt-md-0">
-          <thead class="text-center text-dark">
-            <tr class="fw-bold">
-              <th scope="col">BMI</th>
-              <th scope="col">成年人肥胖定義</th>
-            </tr>
-          </thead>
-          <tbody class="text-center table-group-divider text-dark">
-            <tr>
-              <th scope="row">BMI < 18.5</th>
-              <th scope="row">過輕</th>
-            </tr>
-            <tr>
-              <th scope="row">18.5 <= BMI < 24</th>
-              <th scope="row">正常</th>
-            </tr>
-            <tr>
-              <th scope="row">24 <= BMI < 27</th>
-              <th scope="row">過重</th>
-            </tr>
-            <tr>
-              <th scope="row">27 <= BMI < 30</th>
-              <th scope="row">輕度肥胖</th>
-            </tr>
-            <tr>
-              <th scope="row">30 <= BMI < 35</th>
-              <th scope="row">中度肥胖</th>
-            </tr>
-            <tr>
-              <th scope="row"> BMI >= 35</th>
-              <th scope="row">重度肥胖</th>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+              <h3 class="border-bottom border-dark py-1 text-dark fs-5">嗨!你今天過得好嗎?</h3>
 
-      {{!-- hiddenhungry Part --}}
-      <div class="hiddenhungry part py-4 mt-4 d-none">
-        <div class="hiddenhungry__img d-flex flex-column justify-content-center mx-auto">
-          <div class="hiddenhungry__banner text-dark ms-4 p-2">
-            <h2 class="mb-2 fs-5 fw-bold">什麼是隱性飢餓</h2>
-            <p>「隱性飢餓」是指營養素攝取不平衡或是維生素礦物質攝取不足以維持人體所必需，這些營養素的缺乏不會產生飢餓感，而是以隱蔽性的飢餓症狀呈現。</p>
-          </div>
-        </div>
-        <div class="hiddenhungry__wrap row my-4 py-2">
+              <div class="my-3">
+                <label for="mood" class="form-label">
+                  把這樣的當作是一日結束的自我察覺。<br>
+                  或許日復一日，你就會慢慢知道自己喜歡的是什麼，討厭的是什麼?</label>
+                <textarea class="form-control" id="mood" rows="4" placeholder="簡單的紀錄今天的心情吧..."></textarea>
+                <h3 class="border-bottom border-dark py-1 text-dark fs-5">心情溫度計</h3>
 
-          {{!-- <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-            <div class="form-check mb-2">
-              <input class="form-check-input" type="checkbox" value="" id="hh1">
-              <label class="form-check-label" for="hh1">
-                眼睛乾澀
-              </label>
-            </div>
-          </div> --}}
-
-        </div>
-        <div class="d-flex justify-content-end align-items-center">
-          <a class="hiddenhungry__resetbtn btn btn__outline-primary py-2">症狀重置</a>
-        </div>
-      </div>
-
-      {{!-- Mood Diary --}}
-      <div class="moodDiary part py-6 d-none">
-        <div class="row align-items-center flex-column flex-md-row">
-          <div class="col-12 col-md-5 col-lg-4">
-            <div class="moodDiary__img mb-4 mb-md-0"></div>
-          </div>
-          <div class="col-12 col-md-7 col-lg-8">
-            <div class="text-dark fw-bold">
-              <h2 class="mb-2">開心也是一天，不開心也是一天<br>
-                但不論是哪一種可能，都比起無感來的好一些...
-              </h2>
-            </div>
-            <h3 class="border-bottom border-dark py-1 text-dark fs-5">嗨!你今天過得好嗎?</h3>
-
-            <form class="my-3" action="" method="POST">
-              <label for="mood" class="form-label">
-                把這樣的當作是一日結束的自我察覺。<br>
-                或許日復一日，你就會慢慢知道自己喜歡的是什麼，討厭的是什麼?</label>
-              <textarea class="form-control" id="mood" rows="4" placeholder="簡單的紀錄今天的心情吧..."></textarea>
-              <h3 class="border-bottom border-dark py-1 text-dark fs-5">心情溫度計</h3>
-
-              <div class="d-flex justify-content-between moodDiary__mood">
-                <div class="d-flex flex-column align-items-center justify-content-center me-2">
-                  <input class="form-check-input d-none" type="radio" id="mood1" name="mood">
-                  <label class="form-check-label mt-2" for="mood1">
-                    <span class="material-symbols-outlined d-block text-center">
-                      sentiment_very_satisfied
-                    </span>
-                    <p>超開心</p>
-                  </label>
-                </div>
-                <div class="d-flex flex-column align-items-center justify-content-center me-2">
-                  <input class="form-check-input d-none" type="radio" id="mood2" name="mood">
-                  <label class="form-check-label mt-2" for="mood2">
-                    <span class="material-symbols-outlined d-block text-center">
-                      mood
-                    </span>
-                    <p>還不錯</p>
-                  </label>
-                </div>
-                <div class="d-flex flex-column align-items-center justify-content-center me-2">
-                  <input class="form-check-input d-none" type="radio" id="mood3" name="mood">
-                  <label class="form-check-label mt-2" for="mood3">
-                    <span class="material-symbols-outlined d-block text-center">
-                      sentiment_satisfied
-                    </span>
-                    <p>心平氣和</p>
-                  </label>
-                </div>
-                <div class="d-flex flex-column align-items-center justify-content-center me-2">
-                  <input class="form-check-input d-none" type="radio" id="mood4" name="mood">
-                  <label class="form-check-label mt-2" for="mood4">
-                    <span class="material-symbols-outlined d-block text-center">
-                      sentiment_neutral
-                    </span>
-                    <p>不太開心</p>
-                  </label>
-                </div>
-                <div class="d-flex flex-column align-items-center justify-content-center me-2">
-                  <input class="form-check-input d-none" type="radio" id="mood5" name="mood">
-                  <label class="form-check-label mt-2" for="mood5">
-                    <span class="material-symbols-outlined d-block text-center">
-                      sentiment_dissatisfied
-                    </span>
-                    <p>不順心</p>
-                  </label>
+                <div class="d-flex justify-content-between moodDiary__mood">
+                  <div class="d-flex flex-column align-items-center justify-content-center me-2">
+                    <input class="form-check-input d-none" type="radio" id="mood1" name="mood">
+                    <label class="form-check-label mt-2" for="mood1">
+                      <span class="material-symbols-outlined d-block text-center">
+                        sentiment_very_satisfied
+                      </span>
+                      <p>超開心</p>
+                    </label>
+                  </div>
+                  <div class="d-flex flex-column align-items-center justify-content-center me-2">
+                    <input class="form-check-input d-none" type="radio" id="mood2" name="mood">
+                    <label class="form-check-label mt-2" for="mood2">
+                      <span class="material-symbols-outlined d-block text-center">
+                        mood
+                      </span>
+                      <p>還不錯</p>
+                    </label>
+                  </div>
+                  <div class="d-flex flex-column align-items-center justify-content-center me-2">
+                    <input class="form-check-input d-none" type="radio" id="mood3" name="mood">
+                    <label class="form-check-label mt-2" for="mood3">
+                      <span class="material-symbols-outlined d-block text-center">
+                        sentiment_satisfied
+                      </span>
+                      <p>心平氣和</p>
+                    </label>
+                  </div>
+                  <div class="d-flex flex-column align-items-center justify-content-center me-2">
+                    <input class="form-check-input d-none" type="radio" id="mood4" name="mood">
+                    <label class="form-check-label mt-2" for="mood4">
+                      <span class="material-symbols-outlined d-block text-center">
+                        sentiment_neutral
+                      </span>
+                      <p>不太開心</p>
+                    </label>
+                  </div>
+                  <div class="d-flex flex-column align-items-center justify-content-center me-2">
+                    <input class="form-check-input d-none" type="radio" id="mood5" name="mood">
+                    <label class="form-check-label mt-2" for="mood5">
+                      <span class="material-symbols-outlined d-block text-center">
+                        sentiment_dissatisfied
+                      </span>
+                      <p>不順心</p>
+                    </label>
+                  </div>
                 </div>
               </div>
-            </form>
+
+            </div>
           </div>
         </div>
-      </div>
+      </form>
 
       <div class="btnControl d-flex justify-content-end align-items-center mt-4">
         <a href="#" class="btn btn__outline-primary btn_prev disabled py-2 me-4" role="button">上一步</a>
