@@ -1,8 +1,8 @@
 <article class="foods bg-light-100">
   <div class="foods__wrap">
-    <div class="container h-100">
-
-      <div class="h-75 pt-16">
+    <div class="container">
+      {{!-- phone rwd --}}
+      <div class="h-50 pt-12 d-md-none">
         <form action="" method="POST" class="foods__form py-4 px-4 px-lg-8 py-lg-12">
           <div class="row justify-content-center">
             {{!-- 食物分類 --}}
@@ -55,16 +55,94 @@
         </form>
       </div>
     </div>
-
-
   </div>
 
   <div class="foods__cards">
-    <div class="container">
-      <div class="row justify-content-center justify-content-md-between">
+    <div class="container d-flex">
+      {{!-- md rwd --}}
+      <div class="foods__form me-4 d-none d-md-block border">
+        <form action="" method="POST">
+          <div class="foods__category mx-auto my-2 mb-md-4">
+            <p class="py-2 fw-bold border-bottom border-dark text-dark">六大食物分類</p>
+            <select class="form-select form-select mt-4" name="category" aria-label=".form-select example">
+              <option> 六大食物全部 </option>
+              <option value="1">全穀雜糧類</option>
+              <option value="2">蛋豆魚肉類</option>
+              <option value="3">乳品類</option>
+              <option value="3">蔬菜類</option>
+              <option value="3">水果類</option>
+              <option value="3">油脂與堅果種子類</option>
+            </select>
+            <p class="py-2 mb-4 fw-bold border-bottom border-dark text-dark">營養素分類</p>
+            {{!-- 維生素 --}}
+            <div class="d-md-flex flex-column">
+              <div class="form-check ms-4">
+                <input class="form-check-input" type="checkbox" name="vitamin" id="vitaminA">
+                <label class="form-check-label" for="vitaminA">
+                  維生素A
+                </label>
+              </div>
+              <div class="form-check ms-4">
+                <input class="form-check-input" type="checkbox" name="vitamin" id="vitaminC">
+                <label class="form-check-label" for="vitaminC">
+                  維生素C
+                </label>
+              </div>
+              <div class="form-check ms-4">
+                <input class="form-check-input" type="checkbox" name="vitamin" id="vitaminD">
+                <label class="form-check-label" for="vitaminD">
+                  維生素D
+              </div>
+              <div class="form-check ms-4">
+                <input class="form-check-input" type="checkbox" name="vitamin" id="vitaminE">
+                <label class="form-check-label" for="vitaminE">
+                  維生素E
+                </label>
+              </div>
+
+            </div>
+            {{!-- 礦物質 --}}
+            <div class="d-md-flex flex-column">
+              <div class="form-check ms-4">
+                <input class="form-check-input" type="checkbox" name="mineral" id="calcium">
+                <label class="form-check-label" for="calcium">
+                  鈣Calcium
+                </label>
+              </div>
+              <div class="form-check ms-4">
+                <input class="form-check-input" type="checkbox" name="mineral" id="iron">
+                <label class="form-check-label" for="iron">
+                  鐵Iron
+                </label>
+              </div>
+              <div class="form-check ms-4">
+                <input class="form-check-input" type="checkbox" name="mineral" id="magnesium">
+                <label class="form-check-label" for="magnesium">
+                  鎂Magnesium
+                </label>
+              </div>
+              <div class="form-check ms-4">
+                <input class="form-check-input" type="checkbox" name="mineral" id="zinc">
+                <label class="form-check-label" for="zinc">
+                  鋅Zinc
+                </label>
+              </div>
+              <div class="form-check ms-4">
+                <input class="form-check-input" type="checkbox" name="mineral" id="iodine">
+                <label class="form-check-label" for="iodine">
+                  碘Iodine
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn__outline-primary rounded-3 ms-4">搜尋</button>
+        </form>
+      </div>
+      <div class="row g-2 justify-content-center">
         {{#each forksmartData}}
 
-        <div class="col-10 col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-3">
           <a href="/foods/{{this.id}}">
             <div class="card border-0 text-dark mt-4">
               <figure class=" card__imgWrap">
@@ -82,7 +160,6 @@
               </div>
             </div>
           </a>
-
         </div>
         {{/each}}
       </div>

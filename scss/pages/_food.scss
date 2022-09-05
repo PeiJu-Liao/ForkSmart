@@ -3,11 +3,11 @@
     background-image: linear-gradient(to bottom, rgba($color-light-100, 1),
         rgba($color-secondary, 0.7)), url('../images/orange-bf.jpg');
     background-size: cover;
-    background-position: top;
+    background-position: bottom;
     /* 多邊形clip-path新語法 */
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 55vh, 0 75vh);
     clip-path: polygon(0 0, 100% 0, 100% 55vh, 0 75vh);
-    height: calc(100vh - 8rem);
+    height: calc(100vh - 10rem);
 
     h2 {
       font-size: 2.5rem;
@@ -18,7 +18,21 @@
   &__form {
     background-color: rgba($color-light-100, 0.5);
   }
+}
 
+@include ipad {
+  .foods {
+    &__wrap {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 25vh, 0 15vh);
+      clip-path: polygon(0 0, 100% 0, 100% 25vh, 0 15vh);
+      background-position: top;
+      height: 25vh;
+    }
+
+    &__form {
+      flex: 0 0 15rem; //240px
+    }
+  }
 }
 
 .card {

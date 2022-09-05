@@ -603,11 +603,11 @@ body {
 .foods__wrap {
   background-image: linear-gradient(to bottom, #fdf5c9, rgba(234, 87, 4, 0.7)), url("../images/orange-bf.jpg");
   background-size: cover;
-  background-position: top;
+  background-position: bottom;
   /* 多邊形clip-path新語法 */
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 55vh, 0 75vh);
   clip-path: polygon(0 0, 100% 0, 100% 55vh, 0 75vh);
-  height: calc(100vh - 8rem);
+  height: calc(100vh - 10rem);
 }
 .foods__wrap h2 {
   font-size: 2.5rem;
@@ -617,6 +617,17 @@ body {
   background-color: rgba(253, 245, 201, 0.5);
 }
 
+@media (min-width: 768px) {
+  .foods__wrap {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 25vh, 0 15vh);
+    clip-path: polygon(0 0, 100% 0, 100% 25vh, 0 15vh);
+    background-position: top;
+    height: 25vh;
+  }
+  .foods__form {
+    flex: 0 0 15rem;
+  }
+}
 .card {
   border-radius: 0.5rem;
 }
