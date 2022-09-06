@@ -15,7 +15,7 @@ router.get('/search', (req, res) => {
   const keyword = req.query.keyword.trim()
   console.log(`req.query:`, req.query)
   const researchResults = forksmartData.results.filter(item => {
-    return item.name_en.toLowerCase().includes(keyword.toLowerCase())
+    return item.name_en.toLowerCase().includes(keyword.toLowerCase()) || item.name.trim().includes(keyword) || item.category.trim().includes(keyword)
   })
   res.render('food', {
     forksmartData: researchResults,
