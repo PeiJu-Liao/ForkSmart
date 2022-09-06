@@ -3,7 +3,7 @@
     <div class="container">
       {{!-- phone rwd --}}
       <div class="h-50 pt-12 d-md-none">
-        <form action="" method="POST" class="foods__form py-4 px-4 px-lg-8 py-lg-12">
+        <form action="/foods/search" class="foods__form py-4 px-4 px-lg-8 py-lg-12">
           <div class="row justify-content-center">
             {{!-- 食物分類 --}}
             <div class="col-10 col-md-4">
@@ -47,7 +47,7 @@
               <div class="input-group my-2">
                 <input type="text" class="form-control" placeholder="輸入食物名稱、類別" aria-label="food search"
                   aria-describedby="search-button">
-                <button type="submit" class="btn btn-warning btn__search text-white">搜尋</button>
+                <button type="submit" name="category" class="btn btn-warning btn__search text-white">搜尋</button>
               </div>
             </div>
           </div>
@@ -60,7 +60,7 @@
     <div class="container d-flex">
       {{!-- md rwd --}}
       <div class="foods__form me-4 pe-4 d-none d-md-block">
-        <form action="" method="POST">
+        <form>
           <div class="foods__category mx-auto my-2 mb-md-4">
             <p class="py-2 fw-bold border-bottom border-dark text-dark">六大食物分類</p>
             <select class="form-select form-select mt-4" name="category" aria-label=".form-select example">
@@ -138,49 +138,68 @@
           <button type="submit" class="btn btn__outline-primary rounded-3 ms-4">搜尋</button>
         </form>
       </div>
-
-      <div class="row g-2 justify-content-center">
-        {{!-- 搜尋功能 --}}
-        <form action="/search" class="foods__search d-none d-md-block">
+      <div class="d-md-flex flex-md-column flex-grow-1">
+        <form action="/foods/search" class="foods__search d-none d-md-block">
           <h4 class="mb-2 text-dark bw-fold fs-5">食物名稱搜尋：</h4>
           <div class="input-group">
             <input type="text" name="keyword" class="form-control" placeholder="輸入食物名稱、食物類別" value="{{keyword}}"
-              aria-label="food search" value="" aria-describedby="search-button">
+              aria-label="food_search" aria-describedby="search-button">
             <button class="btn btn-warning btn__search text-light" type="submit" id="search-button">搜尋</button>
           </div>
-          {{!-- {{#unless isResultExist}}
+          {{#unless isResultExist}}
           <div class="searchResults">
             <p class="my-2 text-center text-danger fw-bold">找毋關鍵字"{{keyword}}"的搜尋結果，請再試一次，謝謝。
             </p>
           </div>
-          {{/unless }} --}}
+          {{/unless}}
         </form>
+        <div class="row g-2 justify-content-center">
+          {{!-- 搜尋功能 --}}
+          {{#each forksmartData}}
 
-
-
-        {{#each forksmartData}}
-
-        <div class="col-md-6 col-lg-3">
-          <a href="/foods/{{this.id}}">
-            <div class="card border-0 text-dark mt-4">
-              <figure class=" card__imgWrap">
-                <img src="{{this.image}}" class="card__img" alt="apple">
-                <figcaption class="card__caption fw-bold">{{this.name_en}}</figcaption>
-              </figure>
-              <div class="card-body">
-                <h5 class="card-title py-1 border-bottom border-primary fw-bold">{{this.name}}</h5>
-                <p class="card-text">
-                  <span class="material-icons align-top">
-                    calendar_month
-                  </span>
-                  {{this.month}}
-                </p>
+          <div class="col-md-6 col-lg-3">
+            <a href="/foods/{{this.id}}">
+              <div class="card border-0 text-dark mt-4">
+                <figure class=" card__imgWrap">
+                  <img src="{{this.image}}" class="card__img" alt="apple">
+                  <figcaption class="card__caption fw-bold">{{this.name_en}}</figcaption>
+                </figure>
+                <div class="card-body">
+                  <h5 class="card-title py-1 border-bottom border-primary fw-bold">{{this.name}}</h5>
+                  <p class="card-text">
+                    <span class="material-icons align-top">
+                      calendar_month
+                    </span>
+                    {{this.month}}
+                  </p>
+                </div>
               </div>
-            </div>
-          </a>
+            </a>
+          </div>
+          {{/each}}
+
+          {{!-- Pagnation --}}
+          <nav aria-label="Page navigation d-flex ">
+            <ul class="pagination justify-content-center my-6">
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
         </div>
-        {{/each}}
       </div>
     </div>
   </div>
 </article>
+
+<script src="/javascript/food.js"></script>
