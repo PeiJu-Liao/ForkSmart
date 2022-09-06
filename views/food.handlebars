@@ -3,19 +3,19 @@
     <div class="container">
       {{!-- phone rwd --}}
       <div class="h-50 pt-12 d-md-none">
-        <form action="/foods/search" class="foods__form py-4 px-4 px-lg-8 py-lg-12">
+        <form action="/foods/search2" class="foods__form py-4 px-4 px-lg-8 py-lg-12">
           <div class="row justify-content-center">
             {{!-- 食物分類 --}}
             <div class="col-10 col-md-4">
               <div class="foods__category my-2">
                 <select class="form-select form-select" name="category" aria-label=".form-select example">
                   <option> 六大食物全部 </option>
-                  <option value="1">全穀雜糧類</option>
-                  <option value="2">蛋豆魚肉類</option>
-                  <option value="3">乳品類</option>
-                  <option value="3">蔬菜類</option>
-                  <option value="3">水果類</option>
-                  <option value="3">油脂與堅果種子類</option>
+                  <option value="雜糧類">全穀雜糧類</option>
+                  <option value="蛋豆魚肉類">蛋豆魚肉類</option>
+                  <option value="乳品類">乳品類</option>
+                  <option value="蔬菜類">蔬菜類</option>
+                  <option value="水果類">水果類</option>
+                  <option value="油脂堅果類">油脂與堅果種子類</option>
                 </select>
               </div>
             </div>
@@ -45,9 +45,9 @@
             </div>
             <div class="col-10">
               <div class="input-group my-2">
-                <input type="text" class="form-control" placeholder="輸入食物名稱、類別" aria-label="food search"
-                  aria-describedby="search-button">
-                <button type="submit" name="category" class="btn btn-warning btn__search text-white">搜尋</button>
+                <input type="text" class="form-control" placeholder="輸入食物名稱、類別" aria-label="food search" name="keyword"
+                  aria-describedby="search-button" value="{{keyword}}">
+                <button type="submit" class="btn btn-warning btn__search text-white">搜尋</button>
               </div>
             </div>
           </div>
@@ -60,17 +60,17 @@
     <div class="container d-flex">
       {{!-- md rwd --}}
       <div class="foods__form me-4 pe-4 d-none d-md-block">
-        <form>
+        <form action="/foods/search1">
           <div class="foods__category mx-auto my-2 mb-md-4">
             <p class="py-2 fw-bold border-bottom border-dark text-dark">六大食物分類</p>
             <select class="form-select form-select mt-4" name="category" aria-label=".form-select example">
-              <option> 六大食物全部 </option>
-              <option value="1">全穀雜糧類</option>
-              <option value="2">蛋豆魚肉類</option>
-              <option value="3">乳品類</option>
-              <option value="3">蔬菜類</option>
-              <option value="3">水果類</option>
-              <option value="3">油脂與堅果種子類</option>
+              <option value="">六大食物分類</option>
+              <option value="雜糧類">全穀雜糧類</option>
+              <option value="蛋豆魚肉類">蛋豆魚肉類</option>
+              <option value="乳品類">乳品類</option>
+              <option value="蔬菜類">蔬菜類</option>
+              <option value="水果類">水果類</option>
+              <option value="油脂堅果類">油脂與堅果種子類</option>
             </select>
             <p class="py-2 mb-4 fw-bold border-bottom border-dark text-dark">營養素分類</p>
             {{!-- 維生素 --}}
@@ -134,7 +134,6 @@
               </div>
             </div>
           </div>
-
           <button type="submit" class="btn btn__outline-primary rounded-3 ms-4">搜尋</button>
         </form>
       </div>
@@ -157,7 +156,7 @@
           {{!-- 搜尋功能 --}}
           {{#each forksmartData}}
 
-          <div class="col-md-6 col-lg-3">
+          <div class="col-10 col-md-6 col-lg-3">
             <a href="/foods/{{this.id}}">
               <div class="card border-0 text-dark mt-4">
                 <figure class=" card__imgWrap">
@@ -181,18 +180,13 @@
           {{!-- Pagnation --}}
           <nav aria-label="Page navigation d-flex ">
             <ul class="pagination justify-content-center my-6">
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Previous">
-                  <span aria-hidden="true">&laquo;</span>
-                </a>
+              {{!-- {{#if}}
+              <li class="page-item"><a class="page-link" href="" data-page="{{page}}">{{page}}</a>
               </li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
-                  <span aria-hidden="true">&raquo;</span>
-                </a>
-              </li>
+              {{/if}} --}}
+              <li class="page-item"><a class="page-link" href="/foods?page=1&limit=8">1</a></li>
+              <li class="page-item"><a class="page-link" href="/foods?page=2&limit=8">2</a></li>
+              <li class="page-item"><a class="page-link" href="/foods?page=3&limit=8">3</a></li>
             </ul>
           </nav>
 
