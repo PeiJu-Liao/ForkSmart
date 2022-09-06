@@ -18,6 +18,12 @@
   &__form {
     background-color: rgba($color-light-100, 0.5);
   }
+
+  .btn {
+    &__search {
+      border-radius: 0.5rem;
+    }
+  }
 }
 
 @include ipad {
@@ -30,6 +36,7 @@
     }
 
     &__form {
+      border-right: 1px solid $color-dark;
       flex: 0 0 15rem; //240px
     }
   }

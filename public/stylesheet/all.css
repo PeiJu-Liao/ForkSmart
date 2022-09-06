@@ -616,6 +616,9 @@ body {
 .foods__form {
   background-color: rgba(253, 245, 201, 0.5);
 }
+.foods .btn__search {
+  border-radius: 0.5rem;
+}
 
 @media (min-width: 768px) {
   .foods__wrap {
@@ -625,6 +628,7 @@ body {
     height: 25vh;
   }
   .foods__form {
+    border-right: 1px solid #4E2F14;
     flex: 0 0 15rem;
   }
 }

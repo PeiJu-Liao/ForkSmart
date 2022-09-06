@@ -7,7 +7,7 @@
           <div class="row justify-content-center">
             {{!-- 食物分類 --}}
             <div class="col-10 col-md-4">
-              <div class="foods__category mx-auto my-2 mb-md-4">
+              <div class="foods__category my-2">
                 <select class="form-select form-select" name="category" aria-label=".form-select example">
                   <option> 六大食物全部 </option>
                   <option value="1">全穀雜糧類</option>
@@ -21,7 +21,7 @@
             </div>
             {{!-- 維生素分類 --}}
             <div class="col-10 col-md-4">
-              <div class="foods__vitamin mx-auto my-2 mb-md-4">
+              <div class="foods__vitamin mx-auto my-2">
                 <select class="form-select form-select" name="vitamin" aria-label=".form-select example">
                   <option> 維生素 </option>
                   <option value="vitaminA">維生素A</option>
@@ -32,7 +32,7 @@
               </div>
             </div>
             <div class="col-10 col-md-4">
-              <div class="foods__vitamin mx-auto my-2 mb-md-4">
+              <div class="foods__vitamin my-2">
                 <select class="form-select form-select" name="mineral" aria-label=".form-select example">
                   <option> 礦物質 </option>
                   <option value="calcium">鈣</option>
@@ -43,12 +43,11 @@
                 </select>
               </div>
             </div>
-
             <div class="col-10">
-              <div class="input-group mb-3 mx-auto w-100">
-                <input type="text" class="form-control" placeholder="請輸入欲尋找的食物名稱或透過上述條件篩選..." aria-label="food_name"
-                  aria-describedby="button-addon2">
-                <button type="submit" class="btn btn-dark text-white">Search</button>
+              <div class="input-group my-2">
+                <input type="text" class="form-control" placeholder="輸入食物名稱、類別" aria-label="food search"
+                  aria-describedby="search-button">
+                <button type="submit" class="btn btn-warning btn__search text-white">搜尋</button>
               </div>
             </div>
           </div>
@@ -60,7 +59,7 @@
   <div class="foods__cards">
     <div class="container d-flex">
       {{!-- md rwd --}}
-      <div class="foods__form me-4 d-none d-md-block border">
+      <div class="foods__form me-4 pe-4 d-none d-md-block">
         <form action="" method="POST">
           <div class="foods__category mx-auto my-2 mb-md-4">
             <p class="py-2 fw-bold border-bottom border-dark text-dark">六大食物分類</p>
@@ -139,7 +138,26 @@
           <button type="submit" class="btn btn__outline-primary rounded-3 ms-4">搜尋</button>
         </form>
       </div>
+
       <div class="row g-2 justify-content-center">
+        {{!-- 搜尋功能 --}}
+        <form action="/search" class="foods__search d-none d-md-block">
+          <h4 class="mb-2 text-dark bw-fold fs-5">食物名稱搜尋：</h4>
+          <div class="input-group">
+            <input type="text" name="keyword" class="form-control" placeholder="輸入食物名稱、食物類別" value="{{keyword}}"
+              aria-label="food search" value="" aria-describedby="search-button">
+            <button class="btn btn-warning btn__search text-light" type="submit" id="search-button">搜尋</button>
+          </div>
+          {{!-- {{#unless isResultExist}}
+          <div class="searchResults">
+            <p class="my-2 text-center text-danger fw-bold">找毋關鍵字"{{keyword}}"的搜尋結果，請再試一次，謝謝。
+            </p>
+          </div>
+          {{/unless }} --}}
+        </form>
+
+
+
         {{#each forksmartData}}
 
         <div class="col-md-6 col-lg-3">
