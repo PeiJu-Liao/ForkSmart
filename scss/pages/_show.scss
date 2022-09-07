@@ -58,18 +58,11 @@
 
     &-name {
       &:any-link {
-        color: $color-dark
+        color: $color-secondary-100;
       }
 
       &:hover {
-        padding: 0.25rem;
-        background-color: rgba($color-secondary, 0.8);
-        transform: scale(1.1) rotate(-10deg);
-        border-radius: 0.25rem;
-
-        &:any-link {
-          color: $color-white;
-        }
+        transform: scale(1.2);
       }
     }
   }
