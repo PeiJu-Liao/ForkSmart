@@ -77,12 +77,12 @@
 
           <h3 class="fs-2 fw-bold mt-4 mb-12 text-dark">不需要節食，只需要改變飲食習慣，吃對食物</h3>
 
-          <div class="food__cardWrap mb-16">
-            <div class="row justify-content-center">
-              {{!-- #1 --}}
-              {{!-- {{#each }} --}}
+          <div class="food__cardWrap mb-16 swiper foodswiper">
 
-              {{!-- <div class="col-10 col-md-3 col-lg-4">
+            <div class="swiper-wrapper">
+              {{!-- #1 --}}
+              {{#each forksmartData}}
+              <div class="swiper-slide">
                 <a href="/foods/{{this.id}}">
                   <div class="card border-0 text-dark mt-4">
                     <figure class=" card__imgWrap">
@@ -100,33 +100,8 @@
                     </div>
                   </div>
                 </a>
-              </div> --}}
-
-              {{!-- {{/each}} --}}
-
-              {{!-- #2 --}}
-              <div class="col-10 col-md-3 col-lg-4">
-                <div class="card food__card rounded-2 border-0">
-                  <img src="/images/apple-compressed.jpeg" alt="apple" class="card-img-top rounded-top food__card-img">
-
-                  <div class="card-body rounded-bottom text-start text-dark bg-light p-4">
-                    <p class="mb-2">維生素C</p>
-                    <p class="fs-5">蘋果</p>
-                  </div>
-                </div>
               </div>
-              {{!-- #3 --}}
-              <div class="col-10 col-md-3 col-lg-4">
-                <div class="card food__card rounded-2 border-0">
-                  <img src="/images/brocoli-compressed.jpeg" alt="apple"
-                    class="card-img-top rounded-top food__card-img">
-
-                  <div class="card-body rounded-bottom text-start text-dark bg-light p-4">
-                    <p class="mb-2">維生素C</p>
-                    <p class="fs-5">花椰菜</p>
-                  </div>
-                </div>
-              </div>
+              {{/each}}
 
             </div>
           </div>
