@@ -439,25 +439,63 @@ body {
   }
 }
 .contact {
-  height: 17rem;
   position: relative;
+  z-index: 0;
 }
 .contact__tree {
-  width: 30%;
+  width: 35%;
   position: absolute;
-  bottom: 15rem;
-  left: 2rem;
+  bottom: 100%;
+  left: 20%;
+  transform: translate(-50%, 10%);
+  z-index: -1;
 }
 .contact__fruits {
-  width: 30%;
+  width: 35%;
   position: absolute;
-  top: -5rem;
-  right: 6rem;
+  top: -1.5rem;
+  left: 50%;
+  transform: translate(25%, 0);
 }
-.contact__menu span {
+.contact__item a:any-link {
+  color: #fdf5c9;
+}
+.contact__item:hover {
+  padding: 0.25rem;
+  background-color: rgba(234, 87, 4, 0.8);
+  transform: scale(1.1) rotate(-10deg);
+  border-radius: 0.25rem;
+  transition: all 0.3s;
+}
+.contact__icons img {
+  height: 2.5rem;
+}
+.contact__info span {
   font-size: 2rem;
 }
+.contact__right {
+  font-size: 0.875rem;
+}
 
+@media (min-width: 576px) {
+  .contact__fruits {
+    top: -2.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .contact__fruits {
+    top: -3rem;
+  }
+}
+@media (min-width: 992px) {
+  .contact__tree {
+    width: 33%;
+  }
+  .contact__fruits {
+    width: 33%;
+    top: -4.5rem;
+  }
+}
 .hungryWarning {
   padding-top: 5rem;
 }
@@ -533,7 +571,7 @@ body {
 }
 .food__bg-ground-btm {
   padding-top: 5rem;
-  padding-bottom: 20rem;
+  padding-bottom: 15rem;
   background: url("../images/bg-ground-btm.jpeg") top/contain;
   height: 100%;
   text-align: center;
