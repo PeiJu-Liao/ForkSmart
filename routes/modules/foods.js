@@ -49,6 +49,11 @@ router.get('/search2', (req, res) => {
   const researchResults = forksmartData.results.filter(item => {
     return item.name_en.toLowerCase().includes(keyword.toLowerCase()) || item.name.trim().includes(keyword) || item.category.trim().includes(keyword)
   })
+
+  if (keyword === "") {
+    res.redirect('/foods?page=1&limit=8')
+  }
+
   res.render('food', {
     forksmartData: researchResults,
     isResultExist: researchResults.length,
