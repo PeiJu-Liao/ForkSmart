@@ -29,6 +29,14 @@
 
   &__table {
     min-width: 32rem;
+
+    thead {
+      background-color: $color-light-100;
+      position: sticky;
+      top: 0;
+      left: 0;
+      z-index: 999;
+    }
   }
 
   .table-wrapper {

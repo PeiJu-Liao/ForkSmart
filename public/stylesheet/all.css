@@ -4487,6 +4487,16 @@ body {
   text-align: center;
   color: #4E2F14;
 }
+.nav__list-item a:any-link {
+  color: #fdf5c9;
+}
+.nav__list-item:hover a {
+  transform: rotate(-5deg);
+  font-weight: 700;
+}
+.nav__list-item:hover a:any-link {
+  color: #4E2F14;
+}
 .nav__checkbox:checked ~ .nav__background {
   transform: scale(80);
 }
@@ -5050,6 +5060,13 @@ body {
 }
 .diary__table {
   min-width: 32rem;
+}
+.diary__table thead {
+  background-color: #fdf5c9;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
 }
 .diary .table-wrapper {
   width: 100%;

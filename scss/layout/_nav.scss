@@ -111,6 +111,23 @@
     width: 100%;
     text-align: center;
     color: $color-dark;
+
+    &-item {
+      a:any-link {
+        color: $color-light-100;
+      }
+
+      &:hover {
+        a {
+          transform: rotate(-5deg);
+          font-weight: 700;
+
+          &:any-link {
+            color: $color-dark;
+          }
+        }
+      }
+    }
   }
 
   //FUNCTIONALITY
