@@ -1,20 +1,25 @@
 const express = require('express')
 const router = express.Router()
 const Bodytest = require('../../models/Test')
+const hungrySympton = require('../../bodytest.json')
 
 router.get('/', (req, res) => {
-  res.render('bodytest')
+
+  res.render('bodytest', {
+    title: 'ForkSmart',
+    hungrySympton: hungrySympton.sympton
+  })
 })
 
-// 新增一筆bodytest紀錄 
 router.post('/tests', (req, res) => {
-  const body = req.body
-  console.log(body)
-  return Bodytest.create(body)
-    .then(() => {
-      res.redirect('/diary')
-    })
+  const { gender, weight, height, age, moodrecord, mood, sympton } = req.body
+  console.log(req.body)
+  return Bodytest.create({
+    gender, weight, height, age, moodrecord, mood, sympton
+  })
+    .then(() => { res.redirect('/diary') })
     .catch(error => console.log(error))
 })
+
 
 module.exports = router

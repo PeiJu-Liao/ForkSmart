@@ -4482,7 +4482,7 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  width: 18%;
+  width: 15%;
 }
 .nav__logo {
   line-height: 5rem;
@@ -5030,6 +5030,35 @@ body {
 .diary__tree {
   width: 25%;
   z-index: -1;
+}
+.diary .mood {
+  position: relative;
+}
+.diary .mood .moodToggle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.diary .mood .moodToggle[type=checkbox] {
+  -webkit-appearance: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 10;
+}
+.diary .mood__record {
+  z-index: 999;
+  position: absolute;
+  top: 100%;
+  right: 50%;
+  width: 250%;
+  max-width: 25rem;
+  height: auto;
+  border: 1px solid #EE8319;
+  border-radius: 0.75rem;
+  border-top-right-radius: 0;
+  background-color: #fdf5c9;
 }
 
 @media (min-width: 768px) {

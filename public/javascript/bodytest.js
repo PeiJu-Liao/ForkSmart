@@ -192,26 +192,13 @@ const hungrySympton = [
     nutrition_en: ["iodine"]
   }
 ]
-const hiddenHungryWrap = document.querySelector('.hiddenhungry__wrap')
+
 const symptonResetBtn = document.querySelector('.hiddenhungry__resetbtn')
 const bodytest = document.querySelector('.bodytest__title')
 const pages = document.querySelectorAll('.part')
 const btnControl = document.querySelector('.btnControl')
 const nextBtn = document.querySelector('.btn_next')
 const prevBtn = document.querySelector('.btn_prev')
-
-hungrySympton.forEach(item => {
-  hiddenHungryWrap.innerHTML += `
-      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="form-check mb-2">
-          <input class="form-check-input" type="checkbox" value="" id="hh${item.id}" name="sympton">
-          <label class="form-check-label" for="hh${item.id}">
-                ${item.sympton}
-          </label>
-          </div>
-      </div>
-  `
-})
 
 const symptomInputCheck = document.querySelectorAll('.form-check-input')
 symptonResetBtn.addEventListener('click', (e) => {
@@ -220,48 +207,52 @@ symptonResetBtn.addEventListener('click', (e) => {
   })
 })
 
-let page = 0
+// let page = 0
 
-function handleBtnControl(e) {
-  e.preventDefault() //終止瀏覽預設行為
-  const nowPage = pages[page]
-  if (e.target.matches('.btn__primary') && e.target.innerHTML === '下一步') {
-    console.log(pages[page])
-    const nextPage = pages[page + 1]
-    pages[page].classList.toggle('d-none')
-    pages[page + 1].classList.toggle('d-none')
-    page += 1
-  } else {
-    if (e.target.matches('.btn_prev')) {
-      pages[page].classList.toggle('d-none')
-      pages[page - 1].classList.toggle('d-none')
-      page -= 1
-    }
-  }
-  setBtnDisabled()
-}
+// function handleBtnControl(e) {
+//   const nowPage = pages[page]
+//   if (e.target.matches('.btn__primary') && e.target.innerHTML === '下一步') {
+//     console.log(pages[page])
+//     const nextPage = pages[page + 1]
+//     pages[page].classList.toggle('transform-hidden')
+//     pages[page].classList.add('position-absolute')
+//     pages[page + 1].classList.toggle('transform-hidden')
+//     pages[page + 1].classList.remove('position-absolute')
+//     page += 1
+//   } else {
+//     if (e.target.matches('.btn_prev')) {
+//       pages[page].classList.toggle('transform-hidden')
+//       pages[page].classList.add('position-absolute')
+//       pages[page - 1].classList.toggle('transform-hidden')
+//       pages[page - 1].classList.remove('position-absolute')
+//       page -= 1
+//     }
+//   }
+//   setBtnDisabled()
+// }
 
-function setBtnDisabled() {
-  if (page === 0) {
-    prevBtn.classList.add('disabled')
-    bodytest.innerHTML = '健康體檢BMI'
-  } else {
-    prevBtn.classList.remove('disabled')
-    bodytest.innerHTML = '隱性飢餓檢測'
-  }
+// function setBtnDisabled() {
+//   if (page === 0) {
+//     prevBtn.classList.add('disabled')
+//     bodytest.innerHTML = '健康體檢BMI'
+//   } else {
+//     prevBtn.classList.remove('disabled')
+//     // bodytest.innerHTML = '隱性飢餓檢測'
+//   }
 
-  if (page === 2) {
-    nextBtn.innerHTML = '體態檢驗Go'
-    bodytest.innerHTML = '心情日記'
-  } else {
-    nextBtn.innerHTML = '下一步'
-  }
-}
+//   if (page === 1) {
+//     nextBtn.innerHTML = '體態檢驗Go'
+//     // nextBtn.getAttribute('type') = 'submit'
+//     nextBtn.setAttribute('type', 'submit')
+//     bodytest.innerHTML = '心情日記'
+//   } else {
+//     nextBtn.innerHTML = '下一步'
+//     nextBtn.removeAttribute('type')
+//   }
+// }
 
-btnControl.addEventListener('click', handleBtnControl)
-const testList = {
+// btnControl.addEventListener('click', handleBtnControl)
 
-}
 // BMI Calculator
 function bmiCalc() {
   let height = document.querySelector('.height').value / 100

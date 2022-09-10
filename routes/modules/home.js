@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router()
+const moment = require('moment')
 const forksmartData = require('../../forksmart.json')
 const Bodytest = require('../../models/Test')
 
@@ -17,8 +18,23 @@ router.get('/diary', (req, res) => {
     //lean()把Mongoose的Model物件轉換成乾淨的JS資料陣列
     .lean()
     .then(test => {
+      // const date = moment(test.date).format('YYYY-MM-DD')
       res.render('diary', {
-        test
+        test,
+        title: "ForkSmart",
+      })
+    })
+    .catch(error => console.log(error))
+})
+
+router.get('/diary/:id', (req, res) => {
+  const id = req.params.id
+  return Bodytest.findById(id)
+    .lean()
+    .then((bodytest) => {
+      res.render('diary', {
+        bodytest,
+        title: "ForkSmart",
       })
     })
     .catch(error => console.log(error))

@@ -11,19 +11,68 @@
           </div>
         </div>
         <div class="list-group-flush list-group flex-row flex-md-column" id="list-tab" role="tablist">
-          <a class="d-block list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list"
-            href="#list-member" role="tab" aria-controls="list-member">個人基本資料</a>
-          <a class="d-block list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"
+          <a class="d-block list-group-item list-group-item-action active" id="list-profile-list" data-bs-toggle="list"
             href="#list-diary" role="tab" aria-controls="list-diary">健康日誌</a>
+          <a class="d-block list-group-item list-group-item-action" id="list-home-list" data-bs-toggle="list"
+            href="#list-member" role="tab" aria-controls="list-member">個人基本資料</a>
         </div>
       </div>
       <div class="col-md-8 ">
 
 
         <div class="tab-content" id="nav-tabContent">
+          {{!-- 健康日誌 --}}
+          <div class="tab-pane py-6 fade show active" id="list-diary" role="tabpanel"
+            aria-labelledby="list-profile-list">
+            <p class="mb-4 border-bottom border-dark fs-5">健康紀錄</p>
+            <div class="px-4">
+              <table class="bodytest__table table table-hover table-striped mt-5">
+                <thead class="text-center text-dark">
+                  <tr class="fw-bold">
+                    <th scope="col">身高(CM)</th>
+                    <th scope="col">體重(KG)</th>
+                    <th scope="col">年齡</th>
+                    <th scope="col">BMI</th>
+                    <th scope="col">Body&Mind</th>
+                  </tr>
+                </thead>
+                <tbody class="text-center table-group-divider text-dark">
+                  {{#each test}}
+                  <tr>
+
+                    {{!-- <th scope="row">{{this.date}}</th> --}}
+                    <th scope="row">{{this.height}}</th>
+                    <th scope="row">{{this.weight}}</th>
+                    <th scope="row">{{this.age}}</th>
+                    <th scope="row" class="bmi">X</th>
+                    <th scope="row" class="mood">
+                      <span class="material-symbols-outlined align-middle mood__icon">
+                        sentiment_very_satisfied
+                      </span>
+
+                      <input type="checkbox" class="moodToggle">
+
+                      <div class="mood__record p-4 d-flex flex-column text-dark d-none">
+                        <div class="py2 text-start">
+                          <p class="mb-1 border-bottom border-primary fw-bold">隱性飢餓症狀:</p>
+                          <p class="px-2">{{this.sympton}}</p>
+                        </div>
+                        <div class="py-2 text-start">
+                          <p class="mb-1 border-bottom border-primary fw-bold">心情:</p>
+                          <p class="px-2">{{this.moodrecord}}</p>
+                        </div>
+                      </div>
+                    </th>
+
+                  </tr>
+
+                  {{/each}}
+                </tbody>
+              </table>
+            </div>
+          </div>
           {{!-- 會員資料 --}}
-          <div class="tab-pane text-dark py-6 fade show active" id="list-member" role="tabpanel"
-            aria-labelledby="list-home-list">
+          <div class=" tab-pane text-dark py-6 fade" id="list-member" role="tabpanel" aria-labelledby="list-home-list">
             <p class="mb-4 border-bottom border-dark fs-5">會員資料</p>
 
             <form action="" method="POST"
@@ -68,38 +117,6 @@
               </div>
             </form>
 
-          </div>
-          {{!-- 健康日誌 --}}
-          <div class="tab-pane py-6 fade" id="list-diary" role="tabpanel" aria-labelledby="list-profile-list">
-            <p class="mb-4 border-bottom border-dark fs-5">健康紀錄</p>
-            <div class="px-4">
-              <table class="bodytest__table table table-hover table-striped mt-5">
-                <thead class="text-center text-dark">
-                  <tr class="fw-bold">
-                    <th scope="col">日期</th>
-                    <th scope="col">身高(CM)</th>
-                    <th scope="col">體重(KG)</th>
-                    <th scope="col">BMI</th>
-                    <th scope="col">Body&Mind</th>
-                  </tr>
-                </thead>
-                <tbody class="text-center table-group-divider text-dark">
-                  <tr>
-                    <th scope="row">2022/07/02</th>
-                    <th scope="row">167</th>
-                    <th scope="row">60</th>
-                    <th scope="row">23.5</th>
-                    <th scope="row">
-                      <a href="">
-                        <span class="material-symbols-outlined align-middle">
-                          sentiment_very_satisfied
-                        </span>
-                      </a>
-                    </th>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
           </div>
         </div>
 

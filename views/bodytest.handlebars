@@ -13,8 +13,8 @@
           class="bodytest__title-pic position-absolute top-100 start-100 translate-middle">
       </div>
 
-
-      <form action="/diary" method="POST" class="mt-5 mt-md-0 me-md-4 p-4">
+      {{!-- TODO: bodytest表單輸出 --}}
+      <form action="/bodytest/tests" method="POST" class="mt-5 mt-md-0 me-md-4 p-4">
 
         {{!-- BMI Part --}}
         <div class="bmi part py-4 pt-md-12">
@@ -24,7 +24,7 @@
 
                 <div class="col-5 mb-2">
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gender" id="male">
+                    <input class="form-check-input" type="radio" name="gender" id="male" value="male" required>
                     <label class="form-check-label" for="male">
                       男
                     </label>
@@ -32,26 +32,26 @@
                 </div>
                 <div class="col-5 mb-2">
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gender" id="female">
+                    <input class="form-check-input" type="radio" name="gender" id="female" value="female" required>
                     <label class="form-check-label" for="female">
                       女
                     </label>
                   </div>
                 </div>
                 <div class="col-10 mt-2">
-                  <label for="height" class="form-label text-dark">身高/cm</label>
+                  <label for="height" class="form-label text-dark">身高/cm*</label>
                   <input type="number" class="height form-control" id="height" step="1" name="height" min="1" max="200"
-                    placeholder="請輸入您的身高/公分...">
+                    placeholder="請輸入您的身高/公分..." required>
                 </div>
                 <div class="col-10 mt-2">
-                  <label for="weight" class="form-label text-dark" step="1">體重/kg</label>
-                  <input type="number" class="weight form-control" id="weight" name="weight"
-                    placeholder="請輸入您的體重/公斤...">
+                  <label for="weight" class="form-label text-dark" step="1">體重/kg*</label>
+                  <input type="number" class="weight form-control" id="weight" name="weight" placeholder="請輸入您的體重/公斤..."
+                    required>
                 </div>
                 <div class="col-10 mt-2">
-                  <label for="age" class="form-label text-dark" step="1">年齡</label>
+                  <label for="age" class="form-label text-dark" step="1">年齡*</label>
                   <input type="number" class="form-control" id="age" name="age" min="1" max="100"
-                    placeholder="請輸入您的年齡...">
+                    placeholder="請輸入您的年齡..." required>
                 </div>
               </div>
             </div>
@@ -95,23 +95,27 @@
         </div>
 
         {{!-- hiddenhungry Part --}}
-        <div class="hiddenhungry part py-4 mt-4 d-none">
+        <div class="hiddenhungry part py-4 mt-4">
           <div class="hiddenhungry__img d-flex flex-column justify-content-center mx-auto">
             <div class="hiddenhungry__banner text-dark ms-4 p-2">
               <h2 class="mb-2 fs-5 fw-bold">什麼是隱性飢餓</h2>
               <p>「隱性飢餓」是指營養素攝取不平衡或是維生素礦物質攝取不足以維持人體所必需，這些營養素的缺乏不會產生飢餓感，而是以隱蔽性的飢餓症狀呈現。</p>
             </div>
           </div>
-          <div class="hiddenhungry__wrap row my-4 py-2">
+          <div class="hiddenhungry__wrap row mt-4 py-2">
+            {{#each hungrySympton}}
 
-            {{!-- <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
               <div class="form-check mb-2">
-                <input class="form-check-input" type="checkbox" value="" id="hh1">
+                <input class="form-check-input" type="checkbox" id="hh{{this.id}}" name="sympton"
+                  value="{{this.sympton}}">
                 <label class="form-check-label" for="hh1">
-                  眼睛乾澀
+                  {{this.sympton}}
                 </label>
               </div>
-            </div> --}}
+            </div>
+
+            {{/each}}
 
           </div>
           <div class="d-flex justify-content-end align-items-center">
@@ -120,7 +124,7 @@
         </div>
 
         {{!-- Mood Diary --}}
-        <div class="moodDiary part py-6 d-none">
+        <div class="moodDiary part py-6">
           <div class="row align-items-center flex-column flex-md-row">
             <div class="col-12 col-md-5 col-lg-4">
               <div class="moodDiary__img mb-4 mb-md-0"></div>
@@ -134,15 +138,16 @@
               <h3 class="border-bottom border-dark py-1 text-dark fs-5">嗨!你今天過得好嗎?</h3>
 
               <div class="my-3">
-                <label for="mood" class="form-label">
+                <label for="moodrecord" class="form-label">
                   把這樣的當作是一日結束的自我察覺。<br>
                   或許日復一日，你就會慢慢知道自己喜歡的是什麼，討厭的是什麼?</label>
-                <textarea class="form-control" id="mood" rows="4" placeholder="簡單的紀錄今天的心情吧..."></textarea>
+                <textarea type="text" class="form-control" id="moodrecord" rows="4" placeholder="簡單的紀錄今天的心情吧..."
+                  name="moodrecord" required></textarea>
                 <h3 class="border-bottom border-dark py-1 text-dark fs-5">心情溫度計</h3>
 
                 <div class="d-flex justify-content-between moodDiary__mood">
                   <div class="d-flex flex-column align-items-center justify-content-center me-2">
-                    <input class="form-check-input d-none" type="radio" id="mood1" name="mood">
+                    <input class="form-check-input d-none" type="radio" id="mood1" name="mood" value="超開心">
                     <label class="form-check-label mt-2" for="mood1">
                       <span class="material-symbols-outlined d-block text-center">
                         sentiment_very_satisfied
@@ -151,7 +156,7 @@
                     </label>
                   </div>
                   <div class="d-flex flex-column align-items-center justify-content-center me-2">
-                    <input class="form-check-input d-none" type="radio" id="mood2" name="mood">
+                    <input class="form-check-input d-none" type="radio" id="mood2" name="mood" value="還不錯">
                     <label class="form-check-label mt-2" for="mood2">
                       <span class="material-symbols-outlined d-block text-center">
                         mood
@@ -160,7 +165,7 @@
                     </label>
                   </div>
                   <div class="d-flex flex-column align-items-center justify-content-center me-2">
-                    <input class="form-check-input d-none" type="radio" id="mood3" name="mood">
+                    <input class="form-check-input d-none" type="radio" id="mood3" name="mood" value="心平氣和">
                     <label class="form-check-label mt-2" for="mood3">
                       <span class="material-symbols-outlined d-block text-center">
                         sentiment_satisfied
@@ -169,7 +174,7 @@
                     </label>
                   </div>
                   <div class="d-flex flex-column align-items-center justify-content-center me-2">
-                    <input class="form-check-input d-none" type="radio" id="mood4" name="mood">
+                    <input class="form-check-input d-none" type="radio" id="mood4" name="mood" value="不太開心">
                     <label class="form-check-label mt-2" for="mood4">
                       <span class="material-symbols-outlined d-block text-center">
                         sentiment_neutral
@@ -178,7 +183,7 @@
                     </label>
                   </div>
                   <div class="d-flex flex-column align-items-center justify-content-center me-2">
-                    <input class="form-check-input d-none" type="radio" id="mood5" name="mood">
+                    <input class="form-check-input d-none" type="radio" id="mood5" name="mood" value="不順心">
                     <label class="form-check-label mt-2" for="mood5">
                       <span class="material-symbols-outlined d-block text-center">
                         sentiment_dissatisfied
@@ -192,12 +197,15 @@
             </div>
           </div>
         </div>
-      </form>
 
-      <div class="btnControl d-flex justify-content-end align-items-center my-4">
-        <a href="#" class="btn btn__outline-primary btn_prev disabled py-2 me-4" role="button">上一步</a>
-        <a href="#" class="btn btn__primary btn_next py-2 me-4 link-light" role="button">下一步</a>
-      </div>
+        {{!-- Btn Control --}}
+        <div class="btnControl d-flex justify-content-end align-items-center my-4">
+          <a href="#" class="btn btn__outline-primary btn_prev disabled py-2 me-4" role="button">上一步</a>
+
+          <button type="submit" class="btn btn__primary btn_next py-2 me-4 link-light">送出</button>
+        </div>
+
+      </form>
 
       <img src="../images/illust-branch@2x.png" alt="tree" class="bodytest__tree position-absolute bottom-0 start-0">
     </div>

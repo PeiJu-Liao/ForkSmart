@@ -26,6 +26,40 @@
     width: 25%;
     z-index: -1;
   }
+
+  .mood {
+    position: relative;
+
+    .moodToggle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .moodToggle[type="checkbox"] {
+      -webkit-appearance: none;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    &__record {
+      z-index: 999;
+      position: absolute;
+      top: 100%;
+      right: 50%;
+      width: 250%;
+      max-width: 25rem;
+      height: auto;
+      border: 1px solid $color-primary;
+      border-radius: 0.75rem;
+      border-top-right-radius: 0;
+      background-color: $color-light-100;
+    }
+  }
+
 }
 
 @include ipad {

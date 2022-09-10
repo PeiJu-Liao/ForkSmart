@@ -1,6 +1,7 @@
 // TODO: 建立bodytest的資料庫綱要
 const mongoose = require('mongoose')
 const { Schema } = mongoose
+const moment = require('moment')
 
 const bodyTestSchema = new Schema({
   gender: {
@@ -19,17 +20,26 @@ const bodyTestSchema = new Schema({
     type: Number,
     required: true,
   },
-  result: {
+  sympton: {
+    type: [String],
+    required: true,
+  },
+  moodrecord: {
+    type: String,
+    required: true,
+  },
+  mood: {
     type: String,
     required: true,
   },
   bmi: {
     type: Number,
-    required: true,
+    required: false,
   },
   date: {
     type: Date,
-    default: Date.now
+    default: Date.now,
+    // default: moment(Date.now).format('YYYY-MM-DD'),
   }
 })
 
