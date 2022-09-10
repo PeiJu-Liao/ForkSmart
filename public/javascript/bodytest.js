@@ -252,12 +252,3 @@ symptonResetBtn.addEventListener('click', (e) => {
 // }
 
 // btnControl.addEventListener('click', handleBtnControl)
-
-// BMI Calculator
-function bmiCalc() {
-  let height = document.querySelector('.height').value / 100
-  let weight = document.querySelector('weight').value
-  // bmi = 體重(kg) / 身高*身高(m)
-  let bmi = (weight / Math.pow(height, 2)).toFixed(2)
-  console.log(bmi)
-}

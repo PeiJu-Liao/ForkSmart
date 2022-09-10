@@ -19,32 +19,38 @@
       </div>
       <div class="col-md-8 ">
 
-
-        <div class="tab-content" id="nav-tabContent">
+        <div class="tab-content vh-100" id="nav-tabContent">
           {{!-- 健康日誌 --}}
-          <div class="tab-pane py-6 fade show active" id="list-diary" role="tabpanel"
+          <div class="tab-pane py-6 h-100 fade show active" id="list-diary" role="tabpanel"
             aria-labelledby="list-profile-list">
-            <p class="mb-4 border-bottom border-dark fs-5">健康紀錄</p>
-            <div class="px-4">
-              <table class="bodytest__table table table-hover table-striped mt-5">
+
+            <p class="mb-6 border-bottom border-dark fs-5">健康紀錄</p>
+
+            <div class="px-4 table-wrapper scrollbar">
+              <table class="diary__table table table-hover table-striped mt-5">
                 <thead class="text-center text-dark">
                   <tr class="fw-bold">
-                    <th scope="col">身高(CM)</th>
-                    <th scope="col">體重(KG)</th>
+                    <th scope="col">性別</th>
                     <th scope="col">年齡</th>
+                    <th scope="col">身高</th>
+                    <th scope="col">體重</th>
                     <th scope="col">BMI</th>
+                    <th scope="col">肥胖定義</th>
+                    <th scope="col">體脂率</th>
                     <th scope="col">Body&Mind</th>
                   </tr>
                 </thead>
                 <tbody class="text-center table-group-divider text-dark">
                   {{#each test}}
                   <tr>
-
                     {{!-- <th scope="row">{{this.date}}</th> --}}
-                    <th scope="row">{{this.height}}</th>
-                    <th scope="row">{{this.weight}}</th>
+                    <th scope="row">{{this.gender}}</th>
                     <th scope="row">{{this.age}}</th>
+                    <th scope="row" class="height">{{this.height}}</th>
+                    <th scope="row" class="weight">{{this.weight}}</th>
                     <th scope="row" class="bmi">X</th>
+                    <th scope="row" class="fatty">X</th>
+                    <th scope="row" class="bodyfat">X</th>
                     <th scope="row" class="mood">
                       <span class="material-symbols-outlined align-middle mood__icon">
                         sentiment_very_satisfied

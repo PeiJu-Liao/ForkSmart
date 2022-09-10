@@ -13,3 +13,24 @@
 .bdrs-24 {
   border-radius: 1.5rem; //24px
 }
+
+/* 初始化瀏覽器預設scrollbar */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.scrollbar {
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 0.5rem;
+    background-color: $color-primary;
+
+    &:hover {
+      background-color: $color-secondary ;
+    }
+  }
+}
