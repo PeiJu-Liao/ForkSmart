@@ -1,5 +1,7 @@
 # ForkSmart
 受到全球疫情影響，國民"健康"意識逐漸抬頭，但卻缺乏健康飲食的知識作為網站發想。
+![forksmart](https://user-images.githubusercontent.com/101789715/189497620-7fc88116-9fa3-47ee-8cd8-debc7714fa7e.png)
+
 
 ## 專案安裝流程-Installation
 1. 開啟終端機terminal，將專案複製到本機
