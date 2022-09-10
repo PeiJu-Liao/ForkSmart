@@ -7,6 +7,7 @@ const pagination = {}
 router.get('/', paginationControl(forksmartData.results), (req, res) => {
 
   res.render('food', {
+    title: 'ForkSmart',
     forksmartData: pagination.results,
     isResultExist: true,
   })
@@ -68,6 +69,7 @@ router.get('/:id', (req, res) => {
   })
   res.render('show', {
     forksmartFood,
+    title: 'ForkSmart',
     vitamin: forksmartData.vitamin,
     mineral: forksmartData.mineral
   })

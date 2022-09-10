@@ -26,17 +26,4 @@ router.get('/diary', (req, res) => {
     .catch(error => console.log(error))
 })
 
-router.get('/diary/:id', (req, res) => {
-  const id = req.params.id
-  return Bodytest.findById(id)
-    .lean()
-    .then((bodytest) => {
-      res.render('diary', {
-        bodytest,
-        title: "ForkSmart",
-      })
-    })
-    .catch(error => console.log(error))
-})
-
 module.exports = router
