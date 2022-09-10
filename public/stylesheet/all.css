@@ -5070,7 +5070,7 @@ body {
 }
 .diary .table-wrapper {
   width: 100%;
-  height: 75%;
+  height: 70vh;
   overflow: scroll;
 }
 .diary .mood {
