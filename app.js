@@ -3,7 +3,6 @@ const app = express()
 const PORT = process.env.PORT || 3000
 const exphbs = require('express-handlebars')
 const routes = require('./routes')
-const path = require('path')
 const flash = require('connect-flash')
 const session = require('express-session')
 const passport = require('passport')

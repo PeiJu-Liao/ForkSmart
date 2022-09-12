@@ -35,14 +35,14 @@
           <div class="nav__hambg">
             <ul class="nav__list">
               <li class="nav__list-item display-5 mb-4">
-                <a href="/foods?page=1&limit=8">
+                <a href="/foods?page=1&limit=8" class="hvr-wobble-bottom">
                   <span class="material-symbols-outlined display-5 align-top">
                     restaurant
                   </span>
                   聰明飲食</a>
               </li>
               <li class="nav__list-item display-5 mb-4">
-                <a href="/bodytest">
+                <a href="/bodytest" class="hvr-wobble-bottom">
                   <span class="material-symbols-outlined display-5 align-top">
                     emoji_people
                   </span>
@@ -50,19 +50,28 @@
                 </a>
               </li>
               <li class="nav__list-item display-5 mb-4">
-                <a href="/diary">
+                <a href="/diary" class="hvr-wobble-bottom">
                   <span class="material-symbols-outlined display-5 align-top">
                     book
                   </span>
                   健康日誌</a>
               </li>
               <li class="nav__list-item display-5">
-                <a href="/user/login">
+                {{#if isAuthenticated}}
+                <a href="/user/logout" class="hvr-wobble-bottom">
+                  <span class="material-symbols-outlined display-5 align-top">
+                    login
+                  </span>
+                  會員登出
+                </a>
+                {{else}}
+                <a href="/user/login" class="hvr-wobble-bottom">
                   <span class="material-symbols-outlined display-5 align-top">
                     login
                   </span>
                   會員登入
                 </a>
+                {{/if}}
               </li>
             </ul>
           </div>
@@ -96,11 +105,9 @@
               <a href="#">健康日誌</a>
             </li>
             {{/if}}
-            <li class="nav__item-login text-center rounded-3 me-6">
+            <li class="nav__item-login text-center rounded-3 me-6 hvr-shrink">
               {{#if isAuthenticated}}
-              <form action="/user/logout" method="POST">
-                <button type="submit" class="btn p-y px-6 text-light">登出</button>
-              </form>
+              <a href="/user/logout" class="link-light p-y px-6">登出</a>
               {{else}}
               <a href="/user/login" class="link-light p-y px-6">登入</a>
               {{/if}}

@@ -23,7 +23,7 @@ router.get('/register', forwardAuthenticated, (req, res) => {
 })
 
 // 登出頁面
-router.post('/logout', (req, res, next) => {
+router.get('/logout', (req, res, next) => {
   req.logout(function (err) {
     if (err) { return next(err) }
     req.flash('success_msg', '你已成功登出。')
