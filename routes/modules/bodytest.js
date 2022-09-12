@@ -2,12 +2,13 @@ const express = require('express')
 const router = express.Router()
 const Bodytest = require('../../models/Test')
 const hungrySympton = require('../../bodytest.json')
+const { ensureAuthenticated } = require('../../config/auth');
 
 router.get('/', (req, res) => {
-
   res.render('bodytest', {
     title: 'ForkSmart',
-    hungrySympton: hungrySympton.sympton
+    hungrySympton: hungrySympton.sympton,
+    login: true,
   })
 })
 

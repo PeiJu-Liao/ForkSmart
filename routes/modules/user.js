@@ -7,7 +7,7 @@ const { forwardAuthenticated } = require('../../config/auth');
 
 
 // 登入頁面
-router.get('/login', (req, res) => {
+router.get('/login', forwardAuthenticated, (req, res) => {
   res.render('login', {
     title: 'Fork Smart',
     layout: false
@@ -15,10 +15,19 @@ router.get('/login', (req, res) => {
 })
 
 // 註冊頁面
-router.get('/register', (req, res) => {
+router.get('/register', forwardAuthenticated, (req, res) => {
   res.render('register', {
     title: 'Fork Smart',
     layout: false
+  })
+})
+
+// 登出頁面
+router.post('/logout', (req, res, next) => {
+  req.logout(function (err) {
+    if (err) { return next(err) }
+    req.flash('success_msg', '你已成功登出。')
+    res.redirect('/user/login')
   })
 })
 
@@ -30,7 +39,6 @@ router.post('/login', (req, res, next) => {
     failureFlash: true
   })(req, res, next);
 })
-
 
 // Register
 router.post('/register', (req, res) => {
@@ -97,14 +105,6 @@ router.post('/register', (req, res) => {
   }
 
 
-})
-
-
-// Logout
-router.get('/logout', (req, res) => {
-  req.logout()
-  req.flash('success_msg', '你已成功登出。')
-  res.redirect('user/login')
 })
 
 module.exports = router

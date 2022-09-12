@@ -33,9 +33,9 @@ app.use(passport.session());
 app.use(flash())
 // setting local variable so we can use it anywhere in app
 app.use((req, res, next) => {
+  res.locals.isAuthenticated = req.isAuthenticated()
   res.locals.success_msg = req.flash('success_msg')
   res.locals.warning_msg = req.flash('warning_msg')
-  res.locals.member_situation = req.flash('member_situation')
   next()
 })
 

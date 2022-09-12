@@ -8,7 +8,11 @@
         <div class="header__title mt-6 text-dark text-center">
           <h2 class="mb-2 text-nowrap">掌握關鍵營養素</h2>
           <h2 class="mb-8 text-nowrap">吃出健康身體好</h2>
-          <p class="text-primary mb-10 fs-4">打擊全民營養不良，健康飲食從自身做起</p>
+          {{#if isAuthenticated}}
+          <p class="text-secondary fw-bold mb-1 fs-3" data-aos="fade-up-left" data-aos-duration="1500"> Welcome Back!
+          </p>
+          {{/if}}
+          <p class="text-primary mb-8 fs-4">打擊全民營養不良，健康飲食從自身做起</p>
           <a href="/user/register" class="btn btn__primary w-20 link-light">加入Fork Smart，馬上行動</a>
         </div>
       </div>

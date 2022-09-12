@@ -35,6 +35,13 @@
           <div class="nav__hambg">
             <ul class="nav__list">
               <li class="nav__list-item display-5 mb-4">
+                <a href="/foods?page=1&limit=8">
+                  <span class="material-symbols-outlined display-5 align-top">
+                    restaurant
+                  </span>
+                  聰明飲食</a>
+              </li>
+              <li class="nav__list-item display-5 mb-4">
                 <a href="/bodytest">
                   <span class="material-symbols-outlined display-5 align-top">
                     emoji_people
@@ -48,13 +55,6 @@
                     book
                   </span>
                   健康日誌</a>
-              </li>
-              <li class="nav__list-item display-5 mb-4">
-                <a href="/foods?page=1&limit=8">
-                  <span class="material-symbols-outlined display-5 align-top">
-                    restaurant
-                  </span>
-                  聰明飲食</a>
               </li>
               <li class="nav__list-item display-5">
                 <a href="/user/login">
@@ -74,20 +74,36 @@
 
         <div class="nav__menuWrap">
           <ul class="nav__menu d-flex align-items-center">
-            <li class="nav__item me-6">
-              <a href="/bodytest">健康體態</a>
-            </li>
-            {{!-- <li class="nav__item me-6" data-bs-toggle="modal" data-bs-target="#MemberRemind">
-              <a href="#">健康日誌</a>
-            </li> --}}
-            <li class="nav__item me-6">
-              <a href="/diary">健康日誌</a>
-            </li>
+
             <li class="nav__item me-6">
               <a href="/foods?page=1&limit=8">聰明飲食</a>
             </li>
+            {{#if isAuthenticated}}
+            <li class="nav__item me-6">
+              <a href="/bodytest">健康體態</a>
+            </li>
+            {{else}}
+            <li class="nav__item me-6" data-bs-toggle="modal" data-bs-target="#MemberRemind">
+              <a href="#">健康體態</a>
+            </li>
+            {{/if}}
+            {{#if isAuthenticated}}
+            <li class="nav__item me-6">
+              <a href="/diary">健康日誌</a>
+            </li>
+            {{else}}
+            <li class="nav__item me-6" data-bs-toggle="modal" data-bs-target="#MemberRemind">
+              <a href="#">健康日誌</a>
+            </li>
+            {{/if}}
             <li class="nav__item-login text-center rounded-3 me-6">
-              <a href="/user/login" class="link-light">登入</a>
+              {{#if isAuthenticated}}
+              <form action="/user/logout" method="POST">
+                <button type="submit" class="btn p-y px-6 text-light">登出</button>
+              </form>
+              {{else}}
+              <a href="/user/login" class="link-light p-y px-6">登入</a>
+              {{/if}}
             </li>
           </ul>
         </div>
@@ -108,7 +124,7 @@
             Fork Smart</h5>
           <div class="text-dark mt-2">
             <p class="mb-2 fs-5">目前尚不符合會員資格</p>
-            <p>一起成為會員，紀錄健康日誌吧</p>
+            <p>一起成為會員，紀錄健康生活吧!</p>
           </div>
           <div class="mt-8">
             <a href="/user/login">已經有會員資格</a>

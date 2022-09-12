@@ -6,8 +6,8 @@
         <div class="d-flex align-items-center border-bottom border-dark p-4">
           <img src="../images/andychen.jpeg" alt="avartar" class="rounded-circle img">
           <div class="ms-4 text-dark">
-            <p class="fw-bold fs-5">Austin Hsu</p>
-            <p>Your personal account</p>
+            <p class="fw-bold fs-5">{{name}}</p>
+            <p>Personal Account</p>
           </div>
         </div>
         <div class="list-group-flush list-group flex-row flex-md-column" id="list-tab" role="tablist">
@@ -87,7 +87,7 @@
                 <p class="mb-2 border-bottom border-primary mt-4 mt-md-0">使用者姓名修改</p>
                 <div class="mb-4">
                   <label for="name" class="form-label">使用者姓名</label>
-                  <input type="text" class="form-control" id="name" value="Austin Hsu">
+                  <input type="text" class="form-control" id="name" value="{{name}}">
                 </div>
                 <p class="mb-2 border-bottom border-primary">使用者密碼修改</p>
                 <div class="mb-3">
@@ -105,7 +105,7 @@
                 <p class="mb-2 border-bottom border-primary">使用者信箱修改</p>
                 <div class="mb-4">
                   <label for="email" class="form-label">使用者信箱</label>
-                  <input type="email" class="form-control" id="email" value="autin.hsu@gmail.com">
+                  <input type="email" class="form-control" id="email" value="{{email}}">
                 </div>
                 <p class="mb-2 border-bottom border-primary">使用者生日</p>
                 <div class="mb-4">
