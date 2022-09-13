@@ -1,0 +1,33 @@
+<article class="bodyresult bg-light-100 pb-10">
+  <div class="bodyresult__wrap">
+    <div class="container">
+
+    </div>
+  </div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <h2 class="fw-bold my-4 py-1 border-bottom border-dark fs-5 text-dark">營養補充資訊</h2>
+      <div class="col-10 col-md-8">
+        <table class="bodyresult__table table table-hover table-striped mt-6">
+          <caption>日期:{{test.date}}</caption>
+          <thead class="text-center text-dark">
+            <tr class="fw-bold">
+              <th>隱性飢餓</th>
+              <th>建議補充營養素</th>
+            </tr>
+          </thead>
+          <tbody class="text-center table-group-divider text-dark">
+            {{#each keyValueNutrition}}
+            <tr>
+              {{#each this}}
+              <td>{{this}}</td>
+              {{/each}}
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</article>

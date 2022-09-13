@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
 
-      <div class="col-md-4">
+      <div class="col-md-3">
         <div class="d-flex align-items-center border-bottom border-dark p-4">
           <img src="../images/andychen.jpeg" alt="avartar" class="rounded-circle img">
           <div class="ms-4 text-dark">
@@ -17,7 +17,7 @@
             href="#list-member" role="tab" aria-controls="list-member">個人基本資料</a>
         </div>
       </div>
-      <div class="col-md-8 ">
+      <div class="col-md-9">
 
         <div class="tab-content" id="nav-tabContent">
           {{!-- 健康日誌 --}}
@@ -60,7 +60,11 @@
 
                       <div class="mood__record p-4 d-flex flex-column text-dark d-none">
                         <div class="py2 text-start">
-                          <p class="mb-1 border-bottom border-primary fw-bold">隱性飢餓症狀:</p>
+                          <div class="d-flex align-items-center border-bottom border-primary mb-1">
+                            <p class="fw-bold me-2">隱性飢餓症狀:</p>
+                            <a href="/bodytest/{{this._id}}"
+                              class="bg-primary rounded-1 px-2 py-1 mb-1 hvr-wobble-skew link-light">營養補充</a>
+                          </div>
                           <p class="px-2">{{this.sympton}}</p>
                         </div>
                         <div class="py-2 text-start">

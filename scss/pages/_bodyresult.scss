@@ -1,0 +1,16 @@
+.bodyresult {
+  &__wrap {
+    background-image: linear-gradient(to bottom, rgba($color-light-100, 1),
+        rgba($color-secondary, 0.2)), url('../images/bg-orange.jpg');
+    background-size: cover;
+    background-position: bottom;
+    /* 多邊形clip-path新語法 */
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 20vh, 0 40vh);
+    clip-path: polygon(0 0, 100% 0, 100% 20vh, 0 40vh);
+    height: calc(100vh - 25rem);
+  }
+
+  &__table {
+    caption-side: top;
+  }
+}

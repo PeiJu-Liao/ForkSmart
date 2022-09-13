@@ -4801,10 +4801,6 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 55vh, 0 75vh);
   height: calc(100vh - 10rem);
 }
-.foods__wrap h2 {
-  font-size: 2.5rem;
-  margin-bottom: -2.5rem;
-}
 .foods__form {
   background-color: rgba(253, 245, 201, 0.5);
 }
@@ -5094,7 +5090,7 @@ body {
   position: absolute;
   top: 100%;
   right: 50%;
-  width: 400%;
+  width: 500%;
   max-width: 25rem;
   height: auto;
   border: 1px solid #EE8319;
@@ -5107,6 +5103,18 @@ body {
   .diary__tree {
     width: 20%;
   }
+}
+.bodyresult__wrap {
+  background-image: linear-gradient(to bottom, #fdf5c9, rgba(234, 87, 4, 0.2)), url("../images/bg-orange.jpg");
+  background-size: cover;
+  background-position: bottom;
+  /* 多邊形clip-path新語法 */
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 20vh, 0 40vh);
+  clip-path: polygon(0 0, 100% 0, 100% 20vh, 0 40vh);
+  height: calc(100vh - 25rem);
+}
+.bodyresult__table {
+  caption-side: top;
 }
 
 /*# sourceMappingURL=all.css.map */
