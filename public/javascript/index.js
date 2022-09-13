@@ -24,12 +24,8 @@ const swiper = new Swiper('.foodswiper', {
       spaceBetween: 16,
     }
   },
-
-  // And if we need scrollbar
-  // scrollbar: {
-  //   el: '.swiper-scrollbar',
-  // },
 });
+
 
 AOS.init({
   // Global settings:

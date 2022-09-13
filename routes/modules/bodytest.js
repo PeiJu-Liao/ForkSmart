@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const Bodytest = require('../../models/Test')
 const hungrySympton = require('../../bodytest.json').sympton
+const forksmartData = require('../../forksmart.json')
 
 router.get('/', (req, res) => {
   res.render('bodytest', {
@@ -39,6 +40,7 @@ router.get('/:id', (req, res) => {
       res.render('bodyResult', {
         title: 'ForkSmart',
         keyValueNutrition,
+        forksmartData: forksmartData.results,
         test
       })
     })

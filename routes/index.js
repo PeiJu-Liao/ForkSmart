@@ -14,6 +14,6 @@ router.use('/user', user)
 // TODO: 食物瀏覽頁 / 食物營養介紹
 router.use('/foods', foods)
 // TODO: 健康體態檢測頁面
-router.use('/bodytest', bodytest)
+router.use('/bodytest', ensureAuthenticated, bodytest)
 
 module.exports = router

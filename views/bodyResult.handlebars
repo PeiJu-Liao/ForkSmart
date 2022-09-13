@@ -6,17 +6,17 @@
   </div>
   <div class="container">
     <div class="row justify-content-center">
-      <h2 class="fw-bold my-4 py-1 border-bottom border-dark fs-5 text-dark">營養補充資訊</h2>
-      <div class="col-10 col-md-8">
-        <table class="bodyresult__table table table-hover table-striped mt-6">
-          <caption>日期:{{test.date}}</caption>
-          <thead class="text-center text-dark">
-            <tr class="fw-bold">
+      <h2 class="fw-bold my-4 py-1 border-bottom border-dark fs-5 text-dark" data-aos="fade-up">營養補充資訊</h2>
+      <div class="col-10">
+        <table class="bodyresult__table table table-hover table-bordered border-dark table-striped mt-6">
+          <caption class="mb-1" data-aos="fade-up">日期:{{test.date}}</caption>
+          <thead class="text-center text-dark" data-aos="fade-up">
+            <tr class="fw-bold fs-5">
               <th>隱性飢餓</th>
               <th>建議補充營養素</th>
             </tr>
           </thead>
-          <tbody class="text-center table-group-divider text-dark">
+          <tbody class="text-center table-group-divider text-dark" data-aos="fade-up">
             {{#each keyValueNutrition}}
             <tr>
               {{#each this}}
@@ -26,6 +26,40 @@
             {{/each}}
           </tbody>
         </table>
+      </div>
+      <h2 class="fw-bold my-4 py-1 border-bottom border-dark fs-5 text-dark" data-aos="fade-up">建議飲食</h2>
+
+      <div class="col-10">
+        <div class="food__cardWrap mb-16 swiper foodswiper" data-aos="fade-up">
+
+          <div class="swiper-wrapper">
+            {{!-- #1 --}}
+            {{#each forksmartData}}
+            <div class="swiper-slide">
+              <a href="/foods/{{this.id}}">
+                <div class="card border-0 text-dark mt-4">
+                  <figure class=" card__imgWrap">
+                    <img src="{{this.image}}" class="card__img" alt="apple">
+                    <figcaption class="card__caption fw-bold">{{this.name_en}}</figcaption>
+                  </figure>
+                  <div class="card-body">
+                    <h5 class="card-title py-1 border-bottom border-primary fw-bold">{{this.name}}</h5>
+                    <p class="card-text">
+                      <span class="material-icons align-top">
+                        calendar_month
+                      </span>
+                      {{this.month}}
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            {{/each}}
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
       </div>
 
     </div>

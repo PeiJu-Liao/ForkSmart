@@ -4317,6 +4317,11 @@ body {
   background-color: #ea5704;
 }
 
+.swiper-button-next {
+  right: -2rem;
+  color: #4E2F14;
+}
+
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -5105,7 +5110,7 @@ body {
   }
 }
 .bodyresult__wrap {
-  background-image: linear-gradient(to bottom, #fdf5c9, rgba(234, 87, 4, 0.2)), url("../images/bg-orange.jpg");
+  background-image: linear-gradient(to bottom, #fdf5c9, rgba(234, 87, 4, 0.2)), url("../images/orange-bf.jpg");
   background-size: cover;
   background-position: bottom;
   /* 多邊形clip-path新語法 */
