@@ -29,8 +29,8 @@
       </div>
       <h2 class="fw-bold my-4 py-1 border-bottom border-dark fs-5 text-dark" data-aos="fade-up">建議飲食</h2>
 
-      <div class="col-10">
-        <div class="food__cardWrap mb-16 swiper foodswiper" data-aos="fade-up">
+      <div class="col-12 position-relative">
+        <div class="food__cardWrap swiper foodswiper" data-aos="fade-up">
 
           <div class="swiper-wrapper">
             {{!-- #1 --}}
@@ -40,7 +40,7 @@
                 <div class="card border-0 text-dark mt-4">
                   <figure class=" card__imgWrap">
                     <img src="{{this.image}}" class="card__img" alt="apple">
-                    <figcaption class="card__caption fw-bold">{{this.name_en}}</figcaption>
+                    <figcaption class="card__caption fw-bold">{{this.category}}</figcaption>
                   </figure>
                   <div class="card-body">
                     <h5 class="card-title py-1 border-bottom border-primary fw-bold">{{this.name}}</h5>
@@ -56,9 +56,20 @@
             </div>
             {{/each}}
           </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-prev"></div>
+
+        </div>
+
+        <div class="swiper-control w-100">
+          <div class="swiper-button-next">
+            <span class="material-symbols-outlined fs-1">
+              arrow_right
+            </span>
+          </div>
+          <div class="swiper-button-prev">
+            <span class="material-symbols-outlined fs-1">
+              arrow_left
+            </span>
+          </div>
         </div>
       </div>
 

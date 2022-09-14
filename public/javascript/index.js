@@ -8,6 +8,10 @@ const swiper = new Swiper('.foodswiper', {
     delay: 3000,
     disableOnInteraction: true,
   },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 
   breakpoints: {
     // when window width is >= 576px

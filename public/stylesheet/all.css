@@ -4317,9 +4317,26 @@ body {
   background-color: #ea5704;
 }
 
-.swiper-button-next {
-  right: -2rem;
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: #EE8319;
   color: #4E2F14;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  box-shadow: 2px 4px 8px #4E2F14;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: "";
+}
+
+.swiper-button-next {
+  right: -1rem;
+}
+
+.swiper-button-prev {
+  left: -1rem;
 }
 
 @keyframes moveInLeft {
