@@ -2,8 +2,7 @@
 受到全球疫情影響，國民"健康"意識逐漸抬頭，但卻缺乏健康飲食的知識作為網站發想。
 
 ![forksmart](https://user-images.githubusercontent.com/101789715/189497620-7fc88116-9fa3-47ee-8cd8-debc7714fa7e.png)
-![動畫](https://user-images.githubusercontent.com/101789715/189498634-5c1e0427-ef14-4e67-a4a6-3a6a7fcda2b4.gif)
-
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/101789715/189836668-df5d196a-da41-4560-8007-63228f98cab6.gif)
 
 ## 專案安裝流程-Installation
 1. 開啟終端機terminal，將專案複製到本機
