@@ -10,8 +10,18 @@ require('./config/data')
 require('./config/passport')(passport)
 
 // Template Engine Setting
-app.engine('handlebars', exphbs.engine({ defaultLayout: 'main' }))
+const hbs = exphbs.create({
+  defaultLayout: 'main',
+  // create custom helpers
+  helpers: {
+    check_status: function (val1, val2) {
+      return val2.includes(val1)
+    }
+  }
+})
+app.engine('handlebars', hbs.engine)
 app.set('view engine', 'handlebars')
+
 // Static File
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))

@@ -16,34 +16,34 @@
             <p class="p-4">{{forksmartFood.description}}</p>
           </div>
           <div class="show__vitamin text-dark">
-            <h2 class="fs-4 py-1 border-bottom border-dark">Vitamin維他命</h2>
+            <h2 class="fs-4 py-1 border-bottom border-dark">Vitamin維他命<span class="fs-6">含量/100g</span></h2>
             <div class="show__vitamin-progress p-4 ">
               <div class="d-flex align-items-center justify-content-center mt-3">
                 <a href="#" role="button" class="mt-2 mt-md-0 me-4 show__vitamin-name text-nowrap hvr-float-shadow"
                   data-bs-toggle="modal" data-bs-target="#vitaminModal" data-name="#vitaminA-tab">維生素A</a>
                 <div class="bar" data-label="A">
-                  <div class="progressbar" data-done="{{forksmartFood.vitaminA}}">{{forksmartFood.vitaminA}}mg</div>
+                  <div class="progressbar" data-done="{{forksmartFood.vitaminA}}">{{forksmartFood.vitaminA}}%</div>
                 </div>
               </div>
               <div class="d-flex align-items-center justify-content-center mt-3">
                 <a href="#" role="button" class="mt-2 mt-md-0 me-4 show__vitamin-name text-nowrap hvr-float-shadow"
                   data-bs-toggle="modal" data-bs-target="#vitaminModal" data-name="#vitaminB-tab">維生素B</a>
                 <div class="bar" data-label="B">
-                  <div class="progressbar" data-done="{{forksmartFood.vitaminB}}">{{forksmartFood.vitaminB}}mg</div>
+                  <div class="progressbar" data-done="{{forksmartFood.vitaminB}}">{{forksmartFood.vitaminB}}%</div>
                 </div>
               </div>
               <div class="d-flex align-items-center justify-content-center mt-3">
                 <a href="#" role="button" class="mt-2 mt-md-0 me-4 show__vitamin-name text-nowrap hvr-float-shadow"
                   data-bs-toggle="modal" data-bs-target="#vitaminModal" data-name="#vitaminD-tab">維生素D</a>
                 <div class="bar" data-label="D">
-                  <div class="progressbar" data-done="{{forksmartFood.vitaminD}}">{{forksmartFood.vitaminD}}mg</div>
+                  <div class="progressbar" data-done="{{forksmartFood.vitaminD}}">{{forksmartFood.vitaminD}}%</div>
                 </div>
               </div>
               <div class="d-flex align-items-center justify-content-center mt-3">
                 <a href="#" role="button" class="mt-2 mt-md-0 me-4 show__vitamin-name text-nowrap hvr-float-shadow"
                   data-bs-toggle="modal" data-bs-target="#vitaminModal" data-name="#vitaminE-tab">維生素E</a>
-                <div class="bar" data-label="{{forksmartFood.vitaminE}}">
-                  <div class="progressbar" data-done="5">{{forksmartFood.vitaminE}}mg</div>
+                <div class="bar" data-label="E">
+                  <div class="progressbar" data-done="{{forksmartFood.vitaminE}}">{{forksmartFood.vitaminE}}%</div>
                 </div>
               </div>
             </div>
@@ -59,128 +59,63 @@
           <div class="text-dark">
             <h2 class="fs-4 py-1 border-bottom border-dark">新鮮月份</h2>
             <div class="row gx-3 flex-wrap my-2">
+              {{#each month}}
+              {{#if (check_status this ../seasonMonth)}}
               <div class="col-2 mt-2">
-                <div class="show__month show__month--1" data-label="Jan.">
+                <div class="show__month" data-label="{{this}}">
                   <span class="material-symbols-outlined d-block text-center pt-1">
                     calendar_month
                   </span>
                 </div>
               </div>
+              {{else}}
               <div class="col-2 mt-2">
-                <div class="show__month show__month--2" data-label="Feb.">
+                <div class="show__month show__nomonth" data-label="{{this}}">
                   <span class="material-symbols-outlined d-block text-center pt-1">
-                    calendar_month
+                    clear
                   </span>
                 </div>
               </div>
-              <div class="col-2 mt-2">
-                <div class="show__month show__month--3" data-label="Mar.">
-                  <span class="material-symbols-outlined d-block text-center pt-1">
-                    calendar_month
-                  </span>
-                </div>
-              </div>
-              <div class="col-2 mt-2">
-                <div class="show__month show__month--4" data-label="Apr.">
-                  <span class="material-symbols-outlined d-block text-center pt-1">
-                    calendar_month
-                  </span>
-                </div>
-              </div>
-              <div class="col-2 mt-2">
-                <div class="show__month show__month--5" data-label="May.">
-                  <span class="material-symbols-outlined d-block text-center pt-1">
-                    calendar_month
-                  </span>
-                </div>
-              </div>
-              <div class="col-2 mt-2">
-                <div class="show__month show__month--6" data-label="Jun.">
-                  <span class="material-symbols-outlined d-block text-center pt-1">
-                    calendar_month
-                  </span>
-                </div>
-              </div>
-              <div class="col-2 mt-2">
-                <div class="show__month show__month--7" data-label="Jul.">
-                  <span class="material-symbols-outlined d-block text-center pt-1">
-                    calendar_month
-                  </span>
-                </div>
-              </div>
-              <div class="col-2 mt-2">
-                <div class="show__month show__month--8" data-label="Aug.">
-                  <span class="material-symbols-outlined d-block text-center pt-1">
-                    calendar_month
-                  </span>
-                </div>
-              </div>
-              <div class="col-2 mt-2">
-                <div class="show__month show__month--9" data-label="Sep.">
-                  <span class="material-symbols-outlined d-block text-center pt-1">
-                    calendar_month
-                  </span>
-                </div>
-              </div>
-              <div class="col-2 mt-2">
-                <div class="show__month show__month--10" data-label="Oct.">
-                  <span class="material-symbols-outlined d-block text-center pt-1">
-                    calendar_month
-                  </span>
-                </div>
-              </div>
-              <div class="col-2 mt-2">
-                <div class="show__month show__month--11" data-label="Nov.">
-                  <span class="material-symbols-outlined d-block text-center pt-1">
-                    calendar_month
-                  </span>
-                </div>
-              </div>
-              <div class="col-2 mt-2">
-                <div class="show__month show__month--12" data-label="Dec.">
-                  <span class="material-symbols-outlined d-block text-center pt-1">
-                    calendar_month
-                  </span>
-                </div>
-              </div>
+              {{/if}}
+              {{/each}}
             </div>
           </div>
           <div class="show__mineral text-dark">
-            <h2 class="fs-4 py-1 border-bottom border-dark">Mineral礦物質</h2>
+            <h2 class="fs-4 py-1 border-bottom border-dark">Mineral礦物質<span class="fs-6">含量/100g</span></h2>
             <div class="show__mineral-progress p-4 ">
               <div class="d-flex align-items-center justify-content-center mt-3">
                 <a href="#" class="mt-2 mt-md-0 me-4 show__mineral-name text-nowrap hvr-float-shadow"
                   data-bs-toggle="modal" data-bs-target="#mineralModal" data-name="#mineral-calcium">鈣</a>
                 <div class="bar" data-label="calcium">
-                  <div class="progressbar" data-done="{{forksmartFood.calcium}}">{{forksmartFood.calcium}}mg</div>
+                  <div class="progressbar" data-done="{{forksmartFood.calcium}}">{{forksmartFood.calcium}}%</div>
                 </div>
               </div>
               <div class="d-flex align-items-center justify-content-center mt-3">
                 <a href="#" class="mt-2 mt-md-0 me-4 show__mineral-name text-nowrap hvr-float-shadow"
                   data-bs-toggle="modal" data-bs-target="#mineralModal" data-name="#mineral-iron">鐵</a>
                 <div class="bar" data-label="iron">
-                  <div class="progressbar" data-done="{{forksmartFood.iron}}">{{forksmartFood.iron}}mg</div>
+                  <div class="progressbar" data-done="{{forksmartFood.iron}}">{{forksmartFood.iron}}%</div>
                 </div>
               </div>
               <div class="d-flex align-items-center justify-content-center mt-3">
                 <a href="#" class="mt-2 mt-md-0 me-4 show__mineral-name text-nowrap hvr-float-shadow"
                   data-bs-toggle="modal" data-bs-target="#mineralModal" data-name="#mineral-magnesium">鎂</a>
                 <div class="bar" data-label="magnesium">
-                  <div class="progressbar" data-done="{{forksmartFood.magnesium}}">{{forksmartFood.magnesium}}mg</div>
+                  <div class="progressbar" data-done="{{forksmartFood.magnesium}}">{{forksmartFood.magnesium}}%</div>
                 </div>
               </div>
               <div class="d-flex align-items-center justify-content-center mt-3">
                 <a href="#" class="mt-2 mt-md-0 me-4 show__mineral-name text-nowrap hvr-float-shadow"
                   data-bs-toggle="modal" data-bs-target="#mineralModal" data-name="#mineral-zinc">鋅</a>
                 <div class="bar" data-label="zinc">
-                  <div class="progressbar" data-done="{{forksmartFood.zinc}}">{{forksmartFood.zinc}}mg</div>
+                  <div class="progressbar" data-done="{{forksmartFood.zinc}}">{{forksmartFood.zinc}}%</div>
                 </div>
               </div>
               <div class="d-flex align-items-center justify-content-center mt-3">
                 <a href="#" class="mt-2 mt-md-0 me-4 show__mineral-name text-nowrap hvr-float-shadow"
                   data-bs-toggle="modal" data-bs-target="#mineralModal" data-name="#mineral-iodine">碘</a>
                 <div class="bar" data-label="iodine">
-                  <div class="progressbar" data-done="{{forksmartFood.iodine}}">{{forksmartFood.iodine}}mg</div>
+                  <div class="progressbar" data-done="{{forksmartFood.iodine}}">{{forksmartFood.iodine}}%</div>
                 </div>
               </div>
             </div>

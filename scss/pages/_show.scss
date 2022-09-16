@@ -51,6 +51,7 @@
       align-items: center;
       justify-content: center;
       height: 100%;
+      max-width: 100%;
       width: 0;
       opacity: 0;
       transition: ease 2.5s;
@@ -73,10 +74,6 @@
     background-color: rgba($color-primary-light, 0.7);
     border-radius: 0.5rem;
 
-    &-noSeason {
-      background-color: $color-grey-light-1;
-    }
-
     span {
       font-size: 2rem;
     }
@@ -94,6 +91,15 @@
       text-align: center;
     }
 
+  }
+
+  &__nomonth {
+    background-color: $color-grey-light-2;
+
+    &::after {
+      color: $color-black;
+      background-color: $color-grey-light-1;
+    }
   }
 }
 

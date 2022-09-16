@@ -4925,6 +4925,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100%;
+  max-width: 100%;
   width: 0;
   opacity: 0;
   transition: ease 2.5s;
@@ -4941,9 +4942,6 @@ body {
   background-color: rgba(255, 185, 0, 0.7);
   border-radius: 0.5rem;
 }
-.show__month-noSeason {
-  background-color: #f4f4f4;
-}
 .show__month span {
   font-size: 2rem;
 }
@@ -4958,6 +4956,13 @@ body {
   background-color: rgba(238, 131, 25, 0.7);
   color: #4E2F14;
   text-align: center;
+}
+.show__nomonth {
+  background-color: #dbdbdb;
+}
+.show__nomonth::after {
+  color: #000;
+  background-color: #f4f4f4;
 }
 
 @media (min-width: 768px) {

@@ -63,15 +63,22 @@ router.get('/search2', (req, res) => {
 })
 
 router.get('/:id', (req, res) => {
+  const monthCard = {
+    "month": ["Jan.", "Feb.", "Mar.", "Apr.", "May", "Jun.", "Jul.", "Aug.", "Sep.", "Oct.", "Nov.", "Dec."]
+  }
+
   // find()只會回傳第一次為true的值
   const forksmartFood = forksmartData.results.find(item => {
     return item.id.toString() === req.params.id
   })
+
   res.render('show', {
     forksmartFood,
     title: 'ForkSmart',
+    month: monthCard.month,
+    seasonMonth: forksmartFood.season_month,
     vitamin: forksmartData.vitamin,
-    mineral: forksmartData.mineral
+    mineral: forksmartData.mineral,
   })
 })
 

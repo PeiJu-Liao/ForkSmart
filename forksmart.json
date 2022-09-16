@@ -8,18 +8,26 @@
       "image": "https://images.unsplash.com/photo-1569870499705-504209102861?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=415&q=80",
       "show_image1": "https://images.unsplash.com/photo-1612800694220-35a0a24e7f98?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=386&q=80",
       "show_image2": "https://images.unsplash.com/photo-1533893662125-43c54ffa3b41?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-      "vitaminA": 10,
-      "vitaminB": 10,
-      "vitaminC": 10,
-      "vitaminD": 15,
-      "vitaminE": 5,
-      "calcium": 5,
-      "iron": 10,
-      "magnesium": 10,
-      "zinc": 10,
-      "iodine": 10,
+      "vitaminA": 1,
+      "vitaminB": 2,
+      "vitaminC": 7,
+      "vitaminD": 0,
+      "vitaminE": 0,
+      "calcium": 4,
+      "iron": 1,
+      "magnesium": 1,
+      "zinc": 1,
+      "iodine": 0,
       "description": "自19世紀起威爾斯就有俗語說明蘋果和健康的關係：「一天一蘋果，醫生遠離我」（An apple a day keeps the doctor away）。初步的研究表示，蘋果可以降低罹患結腸癌、前列腺癌和肺癌的風險。蘋果皮含有熊果酸，在大鼠實驗中可以增加骨骼肌及褐色脂肪組織，減少白色脂肪組織，同時降低肥胖症、葡萄糖耐受不良以及脂肪肝疾病的風險。",
-      "month": "Sep.-Feb."
+      "month": "Sep.-Feb.",
+      "season_month": [
+        "Jan.",
+        "Feb.",
+        "Sep.",
+        "Oct.",
+        "Nov.",
+        "Dec."
+      ]
     },
     {
       "id": 2,
@@ -40,28 +48,47 @@
       "zinc": 10,
       "iodine": 10,
       "description": "酪梨被冠上金氏世界紀錄最營養的水果，含有維生素A、C、E及B 群，其中鉀離子和膳食纖維表現更為優異。 有別於其他水果，它的油脂含量相當豐富，也因此熱量和水果大不同！高纖高油脂的特性，讓它可以增加飽足感、抑制食欲，且酪梨將近一半是有益心血管的單元不飽和脂肪酸，能降低壞膽固醇（低密度膽固醇），改善發炎反應，比起動物性脂肪或烹調油是更健康的選擇。",
-      "month": "May-Mar."
+      "month": "May-Mar.",
+      "season_month": [
+        "Jan.",
+        "Feb.",
+        "May",
+        "Jun.",
+        "Jul.",
+        "Aug.",
+        "Sep.",
+        "Oct.",
+        "Nov.",
+        "Dec."
+      ]
     },
     {
       "id": 3,
-      "name": "榛果",
-      "name_en": "Hazelnut",
-      "category": "油脂堅果類",
-      "image": "https://images.unsplash.com/photo-1573851552153-816785fecf4a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
-      "show_image1": "https://images.unsplash.com/photo-1635843130314-c0b5cc832b79?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-      "show_image2": "https://images.unsplash.com/photo-1635843108103-9af0ea224a19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-      "vitaminA": 10,
-      "vitaminB": 5,
-      "vitaminC": 3,
-      "vitaminD": 2,
-      "vitaminE": 8,
-      "calcium": 5,
-      "iron": 10,
+      "name": "芋頭",
+      "name_en": "Taro",
+      "category": "雜糧類",
+      "image": "https://media.istockphoto.com/photos/eddoes-picture-id1200642688?k=20&m=1200642688&s=612x612&w=0&h=YlNM_sMn53D-fmU0AdjqmItKSg9kKd4SiyvsghFH8cE=",
+      "show_image1": "https://media.istockphoto.com/photos/taro-isolated-on-white-background-picture-id689180060?k=20&m=689180060&s=612x612&w=0&h=qSRp5iCNsoE04xpStJNSFdlVAgrWvFwamCgMqISVbJQ=",
+      "show_image2": "https://media.istockphoto.com/photos/stack-of-taro-on-a-market-stall-picture-id696673860?k=20&m=696673860&s=612x612&w=0&h=qV0mZud1wb8lT0iGpTUwxsfkECIyIjDqZhXcCdcfRC8=",
+      "vitaminA": 5,
+      "vitaminB": 6,
+      "vitaminC": 10,
+      "vitaminD": 10,
+      "vitaminE": 5,
+      "calcium": 3,
+      "iron": 5,
       "magnesium": 10,
-      "zinc": 10,
+      "zinc": 5,
       "iodine": 10,
-      "description": "榛果裡所含的營養素有蛋白質、脂肪、醣類、胡蘿蔔素、維生素 B群、鈣、磷、鐵。榛果中富含油脂，有利於其中脂肪性維生素在人體吸收。榛果有天然香氣，有開胃之功用且有補脾胃、益氣力、明目健行的功效。",
-      "month": "Jan.-Dec."
+      "description": "芋頭含有豐富的營養，低脂肪，且高纖維。其鉀含量高，有助排除人體多餘的鈉，幫助降低血壓，減少罹患心血管疾病。豐富的維他命B，包括葉酸以及核黃素（維他命B2），可以幫助提振精力，強化免疫系統，並促進皮膚，頭髮，以及指甲的健康，也可以保護心臟以及眼睛。",
+      "month": "Aug.- Dec.",
+      "season_month": [
+        "Aug.",
+        "Sep.",
+        "Oct.",
+        "Nov.",
+        "Dec."
+      ]
     },
     {
       "id": 4,
@@ -82,7 +109,18 @@
       "zinc": 10,
       "iodine": 10,
       "description": "木瓜還含有豐富的類胡蘿蔔素，包括β-胡蘿蔔素、茄紅素（Lycopene），都是強效的抗氧化物。且相較其他蔬果，人體更容易從木瓜中吸收抗氧化物。然而，慢性發炎是不少疾病的根源，有多份研究顯示，包括木瓜在內，許多富含抗氧化物的蔬果都能降低發炎風險。",
-      "month": "May-Sep."
+      "month": "May-Sep.",
+      "season_month": [
+        "Jan.",
+        "Feb.",
+        "Mar.",
+        "Apr.",
+        "May",
+        "Sep.",
+        "Oct.",
+        "Nov.",
+        "Dec."
+      ]
     },
     {
       "id": 5,
@@ -103,7 +141,17 @@
       "zinc": 10,
       "iodine": 10,
       "description": "南瓜含有許多抗氧化物，包括α-胡蘿蔔素、、β-隱黃素（β-cryptoxanthin），他們能夠中和自由基（Free radicals），並阻止自由基傷害細胞。而其β-胡蘿蔔素（Beta-carotene），能幫助身體生成維生素A，而研究顯示，維生素A 能增強免疫系統、對抗感染，因為缺乏維生素A可能會導致免疫功能下降，除此之外，南瓜還含有大量的維生素C，能增進白血球的生成，進而讓免疫細胞更有效地運作，並加快傷口癒合；其它營養素包括了維生素E、鐵、葉酸，這些也都有助於提升免疫功能。",
-      "month": "Mar.-Oct."
+      "month": "Mar.-Oct.",
+      "season_month": [
+        "Mar.",
+        "Apr.",
+        "May",
+        "Jun.",
+        "Jul.",
+        "Aug.",
+        "Sep.",
+        "Oct."
+      ]
     },
     {
       "id": 6,
@@ -124,7 +172,21 @@
       "zinc": 10,
       "iodine": 10,
       "description": "蛋白質是重要營養，由大豆製成的豆腐，是優質植物蛋白，可保持肌肉質量。含有稱為多酚的大豆皂苷，可以抑制脂肪堆積。對女生來說，大豆異黃酮的作用類似女性荷爾蒙，30、40歲後女性荷爾蒙分泌慢慢下降，造成容易發胖，豆腐可補充女性荷爾蒙。尤其，生理期前女性荷爾蒙雌激素減少，吃豆腐吸收大豆異黃酮，可補充雌激素。",
-      "month": "Jan.-Dec."
+      "month": "Jan.-Dec.",
+      "season_month": [
+        "Jan.",
+        "Feb.",
+        "Mar.",
+        "Apr.",
+        "May",
+        "Jun.",
+        "Jul.",
+        "Aug.",
+        "Sep.",
+        "Oct.",
+        "Nov.",
+        "Dec."
+      ]
     },
     {
       "id": 7,
@@ -145,7 +207,21 @@
       "zinc": 10,
       "iodine": 10,
       "description": "鮪魚肚肉中的不飽和脂肪酸內富含EPA和DHA，前者可促進血液流通、預防動脈硬化、增加良性膽固醇和減少中性脂肪，而後者則有活化腦細胞，降低膽固醇及建立視網膜的功效，而鮪魚肚肉還含有大量的維生素A、B6和E，對於肌膚保健、減緩有年期的不適，以及提高免疫力有很好的功效，此外，鮪魚中尚含有硒的成分，具有防止動脈硬化、抗衰老功用。",
-      "month": "Jan.-Dec."
+      "month": "Jan.-Dec.",
+      "season_month": [
+        "Jan.",
+        "Feb.",
+        "Mar.",
+        "Apr.",
+        "May",
+        "Jun.",
+        "Jul.",
+        "Aug.",
+        "Sep.",
+        "Oct.",
+        "Nov.",
+        "Dec."
+      ]
     },
     {
       "id": 8,
@@ -166,7 +242,18 @@
       "zinc": 10,
       "iodine": 10,
       "description": "青花菜，又稱西蘭花，百加利。該蔬菜源於義大利，和花椰菜、結球甘藍、翠綠花椰菜同為甘藍的變種。青花菜富含豐富維生素C和膳食纖維，還含有具強效抗癌性能的多種營養成分。每100克青花菜就含有89.2毫克的維生素C。當中發現一種叫做3,3'-二吲哚甲烷的物質，對人的先天免疫系統好比一個有效的調製器，具有抗病毒，抗細菌和抗腫瘤活性作用。",
-      "month": "Aug.-Apr."
+      "month": "Aug.-Apr.",
+      "season_month": [
+        "Jan.",
+        "Feb.",
+        "Mar.",
+        "Apr.",
+        "Aug.",
+        "Sep.",
+        "Oct.",
+        "Nov.",
+        "Dec."
+      ]
     },
     {
       "id": 9,
@@ -187,7 +274,21 @@
       "zinc": 10,
       "iodine": 10,
       "description": "優酪乳（yogurt或yoghurt）又稱為酸乳、酸乳酪、發酵乳，它在世界各地有各種不同的名稱。優酪乳中鈣的攝取要比從牛奶更容易，因為優酪乳中的鈣容易被吸收，濃度又高，食用後有預防骨質疏鬆症的功效，另外優酪乳乳酸的Ph值是3.5左右，而人體胃酸的Ph值是2.0-2.5；所以優酪乳是比人體胃酸來的鹼，飲用優酪乳是不會傷胃的，因此早上當早餐喝、餐後幫助消化或隨時飲用來補充營養皆可",
-      "month": "Jan.-Dec."
+      "month": "Jan.-Dec.",
+      "season_month": [
+        "Jan.",
+        "Feb.",
+        "Mar.",
+        "Apr.",
+        "May",
+        "Jun.",
+        "Jul.",
+        "Aug.",
+        "Sep.",
+        "Oct.",
+        "Nov.",
+        "Dec."
+      ]
     },
     {
       "id": 10,
@@ -208,7 +309,20 @@
       "zinc": 10,
       "iodine": 10,
       "description": "菠菜有助防失智、助記憶、抗氧化！菠菜富含抗氧化物質，例如穀胱甘肽，效果比多酚還要好，同時可消解β類澱粉蛋白產生的毒性；一項動物實驗中從小吃菠菜的動物就算老了，記憶力與學習力還是很高，還能讓已有記憶障礙的動物病情轉好。不僅熱量低，也富含鉀，有助排鈉消腫；富含鐵質也可改善缺鐵性貧血。",
-      "month": "Dec.-Feb."
+      "month": "Dec.-Feb.",
+      "season_month": [
+        "Feb.",
+        "Mar.",
+        "Apr.",
+        "May",
+        "Jun.",
+        "Jul.",
+        "Aug.",
+        "Sep.",
+        "Oct.",
+        "Nov.",
+        "Dec."
+      ]
     },
     {
       "id": 11,
@@ -229,7 +343,14 @@
       "zinc": 10,
       "iodine": 10,
       "description": "秋葵含有的膳食纖維，大多屬於水溶性膳食纖維，不但吃了會有飽足感，對控制體重有幫助。且水溶性膳食纖維還有刺激腸道蠕動、避免便祕發生、促進消化的作用，對大腸癌預防也有幫助。其中秋葵內還含有果膠、牛乳聚糖等，具有幫助消化、治療胃炎和胃潰瘍、護腸胃之功效，而且它分泌的黏蛋白，有保護胃壁的作用。",
-      "month": "May-Sep."
+      "month": "May-Sep.",
+      "season_month": [
+        "May",
+        "Jun.",
+        "Jul.",
+        "Aug.",
+        "Sep."
+      ]
     },
     {
       "id": 12,
@@ -250,7 +371,21 @@
       "zinc": 10,
       "iodine": 10,
       "description": "花生是豆科植物落花生的種子，所以又稱「落花生」，而台灣人則習慣稱它為「土豆」。花生的食療效果能，預防心血管疾病，其不飽和脂肪酸、膽鹼等營養成分，可增加毛細血管的性，預防心臟病、高血壓、腦溢血的產生，防止膽固醇在血管沈澱、堆積而引起動脈硬化。花生還具有止血功效，其外皮含有可對抗纖維蛋白溶解的成分，可改善血小板的質量，加強毛細血管的收縮功能。",
-      "month": "Jan.-Dec."
+      "month": "Jan.-Dec.",
+      "season_month": [
+        "Jan.",
+        "Feb.",
+        "Mar.",
+        "Apr.",
+        "May",
+        "Jun.",
+        "Jul.",
+        "Aug.",
+        "Sep.",
+        "Oct.",
+        "Nov.",
+        "Dec."
+      ]
     },
     {
       "id": 13,
@@ -271,7 +406,11 @@
       "zinc": 10,
       "iodine": 10,
       "description": "柚子含有柚皮甙、維生素C、鈣、蛋白質等營養素外，熱量也很低。柚子的維生素C的含量為檸檬的3倍、蘋果的8倍，表皮更含有珍貴的精油成分，是一般柑桔類的4倍，還含有天然果膠和高纖維，有助於養顏美容、傷口癒合。此外，柚子還含有豐富的礦物質、酵素、檸檬酸。柚子的纖維不易消化，吃太多會造成腹部脹氣、腸胃蠕動過快，因此腸胃功能欠佳者應少食。柚子也會妨礙避孕藥的吸收，另外，服用抗過敏藥的患者食用柚子，則可能會導致頭昏、心悸、心律失常的問題。",
-      "month": "Sep.-Oct."
+      "month": "Sep.-Oct.",
+      "season_month": [
+        "Sep.",
+        "Oct."
+      ]
     },
     {
       "id": 14,
@@ -292,7 +431,21 @@
       "zinc": 10,
       "iodine": 10,
       "description": "起司以奶類為原料，含有豐富的蛋白質和脂質，乳源包括家牛、水牛、家山羊或綿羊等。製作過程中通常加入凝乳酶，造成其中的酪蛋白凝結，使乳品酸化，再將固體分離、壓製為成品。大多起司呈乳白色到金黃色，含有豐富的蛋白質、脂肪、鈣、磷、維他命A、維生素B12等。現代也有用脫脂牛奶作的低脂肪起司。",
-      "month": "Jan.-Dec."
+      "month": "Jan.-Dec.",
+      "season_month": [
+        "Jan.",
+        "Feb.",
+        "Mar.",
+        "Apr.",
+        "May",
+        "Jun.",
+        "Jul.",
+        "Aug.",
+        "Sep.",
+        "Oct.",
+        "Nov.",
+        "Dec."
+      ]
     },
     {
       "id": 15,
@@ -313,7 +466,12 @@
       "zinc": 10,
       "iodine": 10,
       "description": "帶皮的馬鈴薯含多種維生素和類黃酮、檞皮素等植化素，有助心臟健康、降血壓、提升免疫力、防癌。馬鈴薯為茄科食物，生長過程中會產生茄鹼（Glycoalkaloid），又稱為龍葵鹼或龍葵素。茄鹼是種天然毒素，可幫助植物對抗病蟲害，但卻可能導致急性中毒。 尤其當馬鈴薯發芽時，茄鹼會增加5～6倍，且茄鹼有熱穩定性，即使烹煮也難以破壞毒性， 若吃到可能導致嘔吐、腹痛、腹瀉等急性中毒症狀。 因此，當家中的馬鈴薯發芽了，還是建議整顆丟掉，不要只將發芽部分挖除。",
-      "month": "Jan.-Mar."
+      "month": "Jan.-Mar.",
+      "season_month": [
+        "Jan.",
+        "Feb.",
+        "Mar."
+      ]
     },
     {
       "id": 16,
@@ -334,7 +492,13 @@
       "zinc": 10,
       "iodine": 10,
       "description": "荔枝性質溫和所含的營養素有醣類、檸檬酸、維生素B群、維生素C、葉酸、磷、鉀及鎂等。荔枝富有葡萄糖，有助血液的循環，加上有維生素C預防雀斑的發生，適合老年人、產婦及體質虛弱者。每次食用最好以300克為最高上限，若吃太多容易上火，易會造成食慾不振。",
-      "month": "Sep.-Oct."
+      "month": "May.-Aug.",
+      "season_month": [
+        "May",
+        "Jun.",
+        "Jul.",
+        "Aug."
+      ]
     },
     {
       "id": 17,
@@ -355,7 +519,14 @@
       "zinc": 10,
       "iodine": 10,
       "description": "椰子含有糖類、脂肪、蛋白質、維生素及多種微量元素，能夠有效的補充人體需要的營養成分，提高人體的抗病能力和免疫功能。椰汁含有豐富的鉀、鎂等礦物質，可糾正脫水和電解質紊亂，有利尿的作用，能幫助腎臟的毒素從尿液中排出。椰肉及椰汁均有殺滅腸道寄生蟲的作用，飲其汁或食其肉均可驅除腸道害蟲，恢復腸道的正常消化，且無毒副作用，是理想的殺蟲食品。椰子中含有大量的糖分，特別適合低糖者食用。",
-      "month": "Mar.-Jul."
+      "month": "Mar.-Jul.",
+      "season_month": [
+        "Mar.",
+        "Apr.",
+        "May",
+        "Jun.",
+        "Jul."
+      ]
     },
     {
       "id": 18,
@@ -376,28 +547,49 @@
       "zinc": 10,
       "iodine": 10,
       "description": "芒果中不論是那一品種均含有胡蘿蔔素，其中愛文、土芒果的ß-胡蘿蔔素其抗氧化力強，為人體所需維他命A的原料，有預防癌症，使細胞良性分化，使化療期黏膜細胞發育正常，分泌潤滑黏液，使胃、食道、肺、大腸、直腸、乳房、子宮等黏膜細胞快速復原。維他命A及胡蘿蔔素可使癌化之細胞加速凋亡，芒果的葉酸能抑制癌細胞訊號傳遞，加上有纖維令腸胃蠕動，致癌物質不易留在人體中，芒果中的多酚亦屬抗氧化作用，令癌細胞不易生長。",
-      "month": "May.- Sep."
+      "month": "May.- Sep.",
+      "season_month": [
+        "May",
+        "Jun.",
+        "Jul.",
+        "Aug.",
+        "Sep."
+      ]
     },
     {
       "id": 19,
-      "name": "芋頭",
-      "name_en": "Taro",
-      "category": "雜糧類",
-      "image": "https://media.istockphoto.com/photos/eddoes-picture-id1200642688?k=20&m=1200642688&s=612x612&w=0&h=YlNM_sMn53D-fmU0AdjqmItKSg9kKd4SiyvsghFH8cE=",
-      "show_image1": "https://media.istockphoto.com/photos/taro-isolated-on-white-background-picture-id689180060?k=20&m=689180060&s=612x612&w=0&h=qSRp5iCNsoE04xpStJNSFdlVAgrWvFwamCgMqISVbJQ=",
-      "show_image2": "https://media.istockphoto.com/photos/stack-of-taro-on-a-market-stall-picture-id696673860?k=20&m=696673860&s=612x612&w=0&h=qV0mZud1wb8lT0iGpTUwxsfkECIyIjDqZhXcCdcfRC8=",
-      "vitaminA": 10,
-      "vitaminB": 10,
-      "vitaminC": 50,
-      "vitaminD": 15,
-      "vitaminE": 5,
-      "calcium": 10,
-      "iron": 5,
-      "magnesium": 10,
-      "zinc": 10,
-      "iodine": 10,
-      "description": "芋頭含有豐富的營養，低脂肪，且高纖維。其鉀含量高，有助排除人體多餘的鈉，幫助降低血壓，減少罹患心血管疾病。豐富的維他命B，包括葉酸以及核黃素（維他命B2），可以幫助提振精力，強化免疫系統，並促進皮膚，頭髮，以及指甲的健康，也可以保護心臟以及眼睛。",
-      "month": "Aug.- Dec."
+      "name": "榛果",
+      "name_en": "Hazelnut",
+      "category": "油脂堅果類",
+      "image": "https://images.unsplash.com/photo-1573851552153-816785fecf4a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
+      "show_image1": "https://images.unsplash.com/photo-1635843130314-c0b5cc832b79?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "show_image2": "https://images.unsplash.com/photo-1635843108103-9af0ea224a19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "vitaminA": 8,
+      "vitaminB": 3,
+      "vitaminC": 3,
+      "vitaminD": 1,
+      "vitaminE": 8,
+      "calcium": 5,
+      "iron": 7,
+      "magnesium": 1,
+      "zinc": 3,
+      "iodine": 2,
+      "description": "榛果裡所含的營養素有蛋白質、脂肪、醣類、胡蘿蔔素、維生素 B群、鈣、磷、鐵。榛果中富含油脂，有利於其中脂肪性維生素在人體吸收。榛果有天然香氣，有開胃之功用且有補脾胃、益氣力、明目健行的功效。",
+      "month": "Jan.-Dec.",
+      "season_month": [
+        "Jan.",
+        "Feb.",
+        "Mar.",
+        "Apr.",
+        "May",
+        "Jun.",
+        "Jul.",
+        "Aug.",
+        "Sep.",
+        "Oct.",
+        "Nov.",
+        "Dec."
+      ]
     },
     {
       "id": 20,
@@ -418,7 +610,21 @@
       "zinc": 10,
       "iodine": 10,
       "description": "芝麻的主要營養成分除了有優質的脂質之外，也含有蛋白質、膳食纖維、維生素B、E，以及鉀、鎂、鋅、鐵等其他微量礦物質，與珍貴的營養素。規律的攝取芝麻可以降低膽固醇和三酸甘油脂，可減少心血管疾病風險。芝麻含鐵量及含鎂量可以幫助女生身體補充容易流失的鐵質，而且能降低白髮與落髮機率，可有助於降低血壓與穩定緊張情緒，幫助改善睡眠。當中的植物性雌激素，對於面臨更年期雌激素下降的女性來說，能有助於改善熱潮紅和其他低雌激素症狀。",
-      "month": "Jan.-Dec."
+      "month": "Jan.-Dec.",
+      "season_month": [
+        "Jan.",
+        "Feb.",
+        "Mar.",
+        "Apr.",
+        "May",
+        "Jun.",
+        "Jul.",
+        "Aug.",
+        "Sep.",
+        "Oct.",
+        "Nov.",
+        "Dec."
+      ]
     },
     {
       "id": 21,
@@ -439,7 +645,21 @@
       "zinc": 10,
       "iodine": 10,
       "description": "杏仁有豐富的膳食纖維，脂肪和不飽和脂肪酸，可以幫助潤腸道，緩解便秘，降低膽固醇。其富含的油脂，除了可以增加飽足感，其內含有的「鎂」可以說是穩定血糖的功臣，除了牽動人體細胞內超過 300個酵素，還能維持細胞功能並刺激胰島素分泌，進而降低血糖。而杏仁中的鎂含量高，加上健康脂肪與纖維相輔相乘，正好成為糖尿病患者的理想選擇。",
-      "month": "Jan.-Dec."
+      "month": "Jan.-Dec.",
+      "season_month": [
+        "Jan.",
+        "Feb.",
+        "Mar.",
+        "Apr.",
+        "May",
+        "Jun.",
+        "Jul.",
+        "Aug.",
+        "Sep.",
+        "Oct.",
+        "Nov.",
+        "Dec."
+      ]
     },
     {
       "id": 22,
@@ -460,7 +680,21 @@
       "zinc": 10,
       "iodine": 10,
       "description": "一隻蝦熱量僅有約12大卡，大約90％的熱量皆來自蛋白質，幾乎不含碳水化合物，屬於高蛋白、低GI（Glycemic index,GI）食物的一員。因此，蝦子不只非常適合有減醣需求的朋友食用，其同時也含有豐富的礦物質硒、碘、鐵、鋅、鎂，以及維生素B12、菸鹼酸、蝦紅素等營養素。",
-      "month": "Jan.-Dec."
+      "month": "Jan.-Dec.",
+      "season_month": [
+        "Jan.",
+        "Feb.",
+        "Mar.",
+        "Apr.",
+        "May",
+        "Jun.",
+        "Jul.",
+        "Aug.",
+        "Sep.",
+        "Oct.",
+        "Nov.",
+        "Dec."
+      ]
     },
     {
       "id": 23,
@@ -481,7 +715,21 @@
       "zinc": 10,
       "iodine": 10,
       "description": "葵花子含有豐富的不飽和脂肪酸、葉酸、植物固醇和複合亞油酸，具有抗炎、減少膽固醇的功效，可預防動脈硬化症；含有大量複合亞油酸，具有抗癌、降低膽固醇、預防心臟病和防止肥胖等作用，也具有抗氧化作用，可直接遏阻致癌物，保護組織，抑制癌細胞分裂，促進癌細胞死亡，因此可預防癌症和心血管疾病。",
-      "month": "Jan.-Dec."
+      "month": "Jan.-Dec.",
+      "season_month": [
+        "Jan.",
+        "Feb.",
+        "Mar.",
+        "Apr.",
+        "May",
+        "Jun.",
+        "Jul.",
+        "Aug.",
+        "Sep.",
+        "Oct.",
+        "Nov.",
+        "Dec."
+      ]
     }
   ],
   "vitamin": {
