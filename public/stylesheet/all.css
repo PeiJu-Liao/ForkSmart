@@ -4790,9 +4790,9 @@ body {
 }
 .login__form,
 .register__form {
-  min-height: calc(100vh - 8rem);
+  min-height: calc(100vh - 6rem);
   background-color: rgba(253, 245, 201, 0.7);
-  width: 85%;
+  width: 90%;
 }
 .login__banner,
 .register__banner {
