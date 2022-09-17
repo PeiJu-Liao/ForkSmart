@@ -24,7 +24,7 @@
     top: 1rem;
     left: 3rem;
     // radial-gradient從中心往外擴散...
-    background-image: radial-gradient(#f59d55 1%,
+    background-image: radial-gradient($color-primary 1%,
         $color-secondary 100%);
     z-index: 100; //中
     // 轉場效果與速度

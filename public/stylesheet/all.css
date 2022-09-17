@@ -4444,7 +4444,7 @@ body {
   position: absolute;
   top: 1rem;
   left: 3rem;
-  background-image: radial-gradient(#f59d55 1%, #ea5704 100%);
+  background-image: radial-gradient(#EE8319 1%, #ea5704 100%);
   z-index: 100;
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
 }
@@ -4594,7 +4594,7 @@ body {
 }
 
 .header__title {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 .header__banner-img {
   object-fit: contain;
@@ -4602,7 +4602,7 @@ body {
 
 @media (min-width: 768px) {
   .header__title {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 }
 @media (min-width: 992px) {
@@ -4688,7 +4688,7 @@ body {
   position: relative;
 }
 .hungryWarning__card h3 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 .hungryWarning__card:hover {
   transition: all 0.3s;
